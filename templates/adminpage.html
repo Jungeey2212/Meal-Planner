@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <!-- Optionally reuse your existing CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Minimal additional styling for the admin table -->
+  <style>
+    body {
+      font-family: "Open Sans", sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    .admin-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .admin-container h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .admin-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .admin-table th,
+    .admin-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    .admin-table th {
+      background-color: #f5f5f5;
+      font-weight: 600;
+    }
+
+    /* Optional: zebra-striping for readability */
+    .admin-table tr:nth-child(even) {
+      background-color: #fdfdfd;
+    }
+  </style>
+</head>
+<body>
+  <div class="admin-container">
+    <h1>Admin Page</h1>
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>Name/Alias</th>
+          <th>Gym Days</th>
+          <th>Gym Time</th>
+          <th>Fitness Target</th>
+          <th>Diet</th>
+          <th>Current Diet</th>
+          <th>Other Diet Details</th>
+          <th>Dietary Requirement</th>
+          <th>Diet Strictness</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Sample Row #1 -->
+        <tr>
+          <td>Simon</td>
+          <td>3</td>
+          <td>60 mins</td>
+          <td>Weight Loss</td>
+          <td>Omnivore</td>
+          <td>Balanced</td>
+          <td>–</td>
+          <td>None</td>
+          <td>Moderate</td>
+        </tr>
+
+        <!-- Sample Row #2 -->
+        <tr>
+          <td>Karuna</td>
+          <td>5</td>
+          <td>90 mins</td>
+          <td>Toning</td>
+          <td>Vegan</td>
+          <td>High-Protein</td>
+          <td>–</td>
+          <td>Gluten-Free</td>
+          <td>High</td>
+        </tr>
+
+        <!-- Sample Row #3 -->
+        <tr>
+          <td>Tazrin</td>
+          <td>2</td>
+          <td>30 mins</td>
+          <td>Endurance</td>
+          <td>Paleo</td>
+          <td>Balanced</td>
+          <td>–</td>
+          <td>None</td>
+          <td>Low</td>
+        </tr>
+
+        <!-- Sample Row #4 -->
+        <tr>
+          <td>Mahesh</td>
+          <td>4</td>
+          <td>45 mins</td>
+          <td>Muscle Gain</td>
+          <td>Keto</td>
+          <td>Calorie Surplus</td>
+          <td>–</td>
+          <td>None</td>
+          <td>Strict</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fitness Profile - Page 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form action="/submit" method="post">
+        <!-- for meals & Preferences -->
+        <label for="meals_per_day_input">How many times do you eat in a day?</label>
+        <input type="number" id="meals_per_day_input" name="meals_per_day" min="1" max="10" required>
+
+        <label for="meal_preference">Do you prefer processed/ready-to-eat meals or home-cooked meals?</label>
+        <select id="meal_preference" name="meal_preference" required>
+            <option value="">-- Please choose an option --</option>
+            <option value="Processed">Processed / Ready-to-eat meals</option>
+            <option value="Home_cooked">Home-cooked meals</option>
+            <option value="Both">Both equally</option>
+        </select>
+
+        <!-- Budget & Nutrition -->
+        <label for="grocery_budget_input">Average weekly grocery shopping budget? ($)</label>
+        <input type="number" id="grocery_budget_input" name="grocery_budget" min="1" step="1" required>
+
+        <label for="nutritional_awareness">Are you aware of your daily nutritional needs?</label>
+        <select id="nutritional_awareness" name="nutritional_awareness" required>
+            <option value="">-- Please choose an option --</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Somewhat">Somewhat</option>
+        </select>
+
+        <p>Do you have any specific nutritional needs? (Select all that apply)</p>
+        <div class="nutritional-options">
+            <label><input type="checkbox" name="specific_nutrition[]" value="High_protein"> High Protein</label>
+            <label><input type="checkbox" name="specific_nutrition[]" value="High_fiber"> High Fiber</label>
+            <label><input type="checkbox" name="specific_nutrition[]" value="Low_carb"> Low Carb</label>
+            <label><input type="checkbox" name="specific_nutrition[]" value="Low_fat"> Low Fat</label>
+            <label><input type="checkbox" name="specific_nutrition[]" value="Low_sodium"> Low Sodium</label>
+            <label><input type="checkbox" name="specific_nutrition[]" value="Balanced_diet"> Balanced Diet</label>
+            <label><input type="checkbox" name="specific_nutrition[]" value="Other"> Other (please specify below)</label>
+        </div>
+        <input type="text" id="nutrition_other_text" name="nutrition_other_text" placeholder="Enter your specific need">
+
+        <a class="previouspage" href="form2.html">Previous Page</a>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
