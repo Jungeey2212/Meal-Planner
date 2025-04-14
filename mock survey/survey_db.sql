@@ -7,7 +7,7 @@ CREATE TABLE recipes (
   protein DECIMAL(5,2),
   carbs DECIMAL(5,2),
   fat DECIMAL(5,2),
-  ingredients TEXT,homenoene
+  ingredients TEXT,homenoeneksajdasjd
   instructions TEXT
 );
 
