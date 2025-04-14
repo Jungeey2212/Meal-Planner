@@ -13,22 +13,7 @@ CREATE TABLE administrators (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
--- Gym Members table
-CREATE TABLE members (
-    member_id INT(10) AUTO_INCREMENT PRIMARY KEY,
-    first_name VARCHAR(50) NOT NULL,
-    last_name VARCHAR(50) NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    age INT(3),
-    gender VARCHAR(10),
-    occupation VARCHAR(100),
-    daily_activity_level VARCHAR(25),
-    cooking_preference VARCHAR(50),
-    weekly_budget DECIMAL(10,2),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
+
 
 -- Nutritionists/Dieticians table
 CREATE TABLE nutritionists (
