@@ -3,40 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Fitness Profile - Page 1</title>
-    <link rel="stylesheet" href="{{ rul_for('static', filename='static/styles.css') }}">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
-    <form action="form2.html" method="get">
-        <!-- for personal Info -->
-        <label for="gymDays">Your Age Range?</label>
-        <select id="gymDays" name="gymDays" required>
-            <option value="">-- Please choose an option --</option>
-            <option value="12-18">12-18</option>
-            <option value="19-25">19-25</option>
-            <option value="26-32">26-32</option>
-            <option value="33-64">33-64</option>
-            <option value="65+">65+</option>
-        </select>
+    <div class="form-container">
+        <form action="form1.html" method="get">
+            <label for="ageRange">Your Age Range?</label>
+            <select id="ageRange" name="ageRange" required>
+                <option value="">-- Please choose an option --</option>
+                <option value="12-18">12-18</option>
+                <option value="19-25">19-25</option>
+                <option value="26-32">26-32</option>
+                <option value="33-64">33-64</option>
+                <option value="65+">65+</option>
+            </select>
 
-        <label for="gender">Your Gender?</label>
-        <select id="gender" name="gender" required>
-            <option value="">-- Please choose an option --</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Other">Other</option>
-        </select>
+            <label for="gender">Your Sex?</label>
+            <select id="gender" name="gender" required>
+                <option value="">-- Please choose an option --</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
 
-        <!-- for fitness goal -->
-        <label for="fitnessTarget">What's your fitness target?</label>
-        <select id="fitnessTarget" name="fitnessTarget">
-            <option value="lose weight">Lose Weight</option>
-            <option value="gain muscle">Gain Muscle</option>
-            <option value="improve stamina">Improve Stamina</option>
-            <option value="general fitness">General Fitness</option>
-        </select>
+            <label for="weightSlider">What is your current weight? (<span id="weightValue">90</span> kg)</label>
+            <input type="range" id="weightSlider" name="weight" min="40" max="140" value="90" step="5" oninput="updateWeightValue()">
+                        
+            <label for="heightSlider">What is your height? (<span id="heightValue">170</span> cm)</label>
+            <input type="range" id="heightSlider" name="height" min="140" max="220" value="170" step="5" oninput="updateHeightValue()">
 
-        <a class="nextpage" href="form2.html">Next Page</a
-    </form>
-    <script src="'{{ url_for('static', filename='script.js') }}"></script>
+            <p> Your BMI :<strong id="bmiValue">---</strong></p>
+            
+            <label for="fitnessTarget">What's your fitness target?</label>
+            <select id="fitnessTarget" name="fitnessTarget">
+                <option value="lose weight">Lose Weight</option>
+                <option value="gain muscle">Gain Muscle</option>
+                <option value="improve stamina">Improve Stamina</option>
+                <option value="general fitness">General Fitness</option>
+            </select>
+
+            <button type="submit">Next Page</button>
+        </form>
+    </div>
+    <script src="static/js/script.js"></script>
 </body>
 </html>

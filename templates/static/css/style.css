@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin: 12px 0 6px;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.nutritional-options {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.nutritional-options label {
+    font-weight:lighter;
+}
+
+.toggle-checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .toggle-checkbox-group input[type="checkbox"] {
+    display: none;
+  }
+  
+  .toggle-checkbox-group label {
+    padding: 10px 16px;
+    border-radius: 999px;
+    background-color: #eee;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .toggle-checkbox-group input[type="checkbox"]:checked + label {
+    background-color: #0056d6;
+    color: white;
+  }
+
+ 
+  .final_submit:hover {
+    background-color:rgb(12, 172, 6);
+  }
+  
