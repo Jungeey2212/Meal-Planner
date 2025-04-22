@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Fitness Profile - Page 1</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ rul_for('static', filename='static/styles.css') }}">
 </head>
 <body>
     <form action="form2.html" method="get">
@@ -35,7 +35,8 @@
             <option value="general fitness">General Fitness</option>
         </select>
 
-        <a class="nextpage" href="form2.html">Next Page</a>
+        <a class="nextpage" href="form2.html">Next Page</a
     </form>
+    <script src="'{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
