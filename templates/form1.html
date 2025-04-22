@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fitness Profile - Page 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form action="form2.html" method="get">
+        <!-- for personal Info -->
+        <label for="gymDays">Your Age Range?</label>
+        <select id="gymDays" name="gymDays" required>
+            <option value="">-- Please choose an option --</option>
+            <option value="12-18">12-18</option>
+            <option value="19-25">19-25</option>
+            <option value="26-32">26-32</option>
+            <option value="33-64">33-64</option>
+            <option value="65+">65+</option>
+        </select>
+
+        <label for="gender">Your Gender?</label>
+        <select id="gender" name="gender" required>
+            <option value="">-- Please choose an option --</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <!-- for fitness goal -->
+        <label for="fitnessTarget">What's your fitness target?</label>
+        <select id="fitnessTarget" name="fitnessTarget">
+            <option value="lose weight">Lose Weight</option>
+            <option value="gain muscle">Gain Muscle</option>
+            <option value="improve stamina">Improve Stamina</option>
+            <option value="general fitness">General Fitness</option>
+        </select>
+
+        <a class="nextpage" href="form2.html">Next Page</a>
+    </form>
+</body>
+</html>

@@ -1,0 +1,134 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #f0f4f8);
+  color: #333;
+}
+
+/* Meal Plan Container */
+.meal-plan {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+.meal-plan h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  font-weight: 700;
+}
+.day h2 {
+  border-bottom: 2px solid #007BFF;
+  padding-bottom: 10px;
+  color: #007BFF;
+  margin-bottom: 20px;
+}
+
+/* Meal Category Labels */
+.meal-category {
+  font-weight: 600;
+  margin: 20px 0 10px;
+  color: #2c3e50;
+}
+
+/* Meal Cards */
+.meal {
+  display: inline-block;
+  width: calc(25% - 20px);
+  margin: 10px;
+  vertical-align: top;
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.meal:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.meal a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Meal Content and Macros */
+.meal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.macros {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #666;
+  text-align: right;
+}
+
+/* Meal Images on Hover */
+.meal img {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  width: 150px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.meal:hover img {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.5);
+}
+
+/* Week Navigation */
+.week-nav {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.week-nav a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.week-nav a:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .meal {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .meal {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
