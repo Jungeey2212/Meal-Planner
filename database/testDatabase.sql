@@ -1,10 +1,4 @@
-INSERT INTO Meals (MealName)
-VALUES ('Chicken Ceasar Salad');
-
-INSERT INTO MealNutrition (
-	Protein_g
-)
-
-VALUES (
-	42.5
-    );
+UPDATE mealnutrition
+SET meal = 'Chicken Caesar Salad'
+WHERE NutritionID = 1;
+SELECT * FROM mealnutrition
