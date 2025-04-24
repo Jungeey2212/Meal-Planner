@@ -8,7 +8,9 @@
 <body>
     <div class="form-container">
         <form action="form2.html" method="get">
-            <label for="ageRange">Your Age Range?</label>
+
+            <!-- This will ask for age range -->
+            <label for="ageRange">Your Age Range ?</label>
             <select id="ageRange" name="ageRange" required>
                 <option value="">-- Please choose an option --</option>
                 <option value="12-18">12-18</option>
@@ -18,7 +20,8 @@
                 <option value="65+">65+</option>
             </select>
 
-            <label for="gender">Your Sex?</label>
+            <!-- This will ask for gender -->
+            <label for="gender">Your Gender ?</label>
             <select id="gender" name="gender" required>
                 <option value="">-- Please choose an option --</option>
                 <option value="Male">Male</option>
@@ -26,7 +29,8 @@
                 <option value="Other">Other</option>
             </select>
 
-            <label for="weightSlider">What is your current weight? (<span id="weightValue">90</span> kg)</label>
+            <!-- This will ask for current weight and height using sliders. I used javascript to update value in real time here-->
+            <label for="weightSlider">What is your current weight ? (<span id="weightValue">90</span> kg)</label>
             <input type="range" id="weightSlider" name="weight" min="40" max="140" value="90" step="5" oninput="updateWeightValue()">
                         
             <label for="heightSlider">What is your height? (<span id="heightValue">170</span> cm)</label>
@@ -34,18 +38,21 @@
 
             <p> Your BMI :<strong id="bmiValue">---</strong></p>
             
-            <label for="fitnessTarget">What's your fitness target?</label>
+            <label for="fitnessTarget">What's your fitness target ?</label>
             <select id="fitnessTarget" name="fitnessTarget">
                 <option value="Lose weight">Lose Weight</option>
                 <option value="Gain muscle">Gain Muscle</option>
                 <option value="Improve stamina">Improve Stamina</option>
                 <option value="General fitness">General Fitness</option>
-                <option value="Bulking
+                <option value="Bulking">Bulking</option>
             </select>
 
+            <!-- Pressing submit will take you to next page -->
             <button type="submit">Next Page</button>
-        </form>
+        </div>
+      </form>
     </div>
     <script src="static/js/script.js"></script>
-</body>
-</html>
+  </body>
+
+  </html>

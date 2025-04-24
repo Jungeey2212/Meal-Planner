@@ -10,17 +10,20 @@
 <body>
     <div class="form-container">
         <form action="/submit" method="post">
+            <!-- This will ask how many meals they eat in a day -->
             <label for="meals_per_day_input">How many times do you eat in a day?</label>
-            <input type="number" id="meals_per_day_input" name="meals_per_day" min="1" max="10" required>
+            <input type="number" id="meals_per_day_input" name="meals_per_day" min="1" max="5" required>
 
+            <!-- This will ask if they prefer home cooked meal or read-to-eat ones -->
             <label for="meal_preference">Do you prefer processed/ready-to-eat meals or home-cooked meals?</label>
             <select id="meal_preference" name="meal_preference" required>
                 <option value="">-- Please choose an option --</option>
-                <option value="Processed">Processed / Ready-to-eat meals</option>
-                <option value="Home_cooked">Home-cooked meals</option>
+                <option value="Processed"> Prefer Processed / Ready-to-eat meals more</option>
+                <option value="Home_cooked">Prefer Home-cooked meals more</option>
                 <option value="Both">Both equally</option>
             </select>
 
+            <!-- This will ask how much they spend on grocery shopping each week -->
             <label for="grocery_budget_input">Average weekly grocery shopping budget? ($)</label>
             <input type="number" id="grocery_budget_input" name="grocery_budget" min="0" step="5" required>
 
@@ -32,6 +35,7 @@
                 <option value="Somewhat">Somewhat</option>
             </select>
 
+            <!-- This will ask if they are looking for any specific nutrient goal in the meal plan -->
             <label>Do you have any specific nutritional needs? (Select all that apply)</label>
             <div class="toggle-checkbox-group">
                 <input type="checkbox" id="high_protein" name="specific_nutrition[]" value="High_protein">
@@ -56,6 +60,7 @@
                 <label for="nutrition_other">Other</label>
             </div>
 
+            <!-- This will ask how many weeks would they like us to make the meal plan for. Minimum 2 weeks and maximum 4 weeks ! -->
             <label for="planDuration">How many weeks would you like the plan for? (2–4 weeks)</label>
             <select id="planDuration" name="plan_duration" required>
                 <option value=""" disabled selected>Selected your option</option>"
@@ -64,9 +69,9 @@
                 <option value="4">4 Weeks</option>
             </select>
 
-
-
             <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                
+                <!-- This will submit the options selected and the next thing you see is the meal plan. Maybe after a few seconds of processing. -->
                 <a href="form2.html"><button type="button">Previous Page</button></a>
                 <button class="final_submit" type="submit">Submit Responses</button>
             </div>

@@ -10,6 +10,8 @@
 <body>
   <div class="form-container">
     <form action="form3.html" method="get">
+
+      <!-- This will ask for occuputation -->
       <label for="occupation">Your occupation?</label>
       <select id="occupation" name="occupation" required>
         <option value="">-- Please choose an option --</option>
@@ -25,11 +27,13 @@
         <option value="Remote_worker">Work from Home / Remote Worker</option>
       </select>
 
+      <!-- This will ask how many times they go to the gym in a week using a slider. Also javascript here -->
       <label for="gymdaysSlider">
         How many days do you go to the gym every week? (<span id="gymdaysValue">3</span> Days)
       </label>
       <input type="range" id="gymdaysSlider" name="gym_days" min="0" max="7" value="3" step="1">
 
+      <!-- This will ask for daily average activity level  -->
       <label for="activity_level">Your daily activity level?</label>
       <select id="activity_level" name="activity_level" required>
         <option value="">-- Please choose an option --</option>
@@ -40,6 +44,7 @@
         <option value="Extremely_active">Extremely Active</option>
       </select>
 
+      <!-- This will ask if they like to cook at home -->
       <label for="cook_home">Do you frequently cook at home?</label>
       <select id="cook_home" name="cook_home" required>
         <option value="">-- Please choose an option --</option>
@@ -47,6 +52,7 @@
         <option value="No">No</option>
       </select>
 
+      <!-- This will ask what their diet is  -->
       <label for="dietcurrent">What is your current diet?</label>
       <select id="dietcurrent" name="dietcurrent" required onchange="toggleOtherDietField()">
         <option value="vegan">Vegan</option>
@@ -58,6 +64,7 @@
       </select>
       <input type="text" id="otherDietField" name="otherDietField" placeholder="Please specify" style="display: none;">
 
+      <!-- This will ask if they eat snacks between main meals  -->
       <label>Do you eat snacks between meals?</label>
       <div class="toggle-group">
         <input type="radio" id="yes" name="snack" value="Yes">
@@ -67,6 +74,7 @@
         <label for="no" class="right">NO</label>
       </div>
 
+      <!-- This will ask if they have any allergies or dietary requirements -->
       <label for="dietaries">Do you have any dietary requirements?</label>
       <select id="dietaries" name="dietaries" required onchange="toggleOtherDietaryField()">
         <option value="NF">Nut Allergy</option>
@@ -80,7 +88,7 @@
       <input type="text" id="otherDietaryField" name="otherDietaryField" placeholder="Please specify"
         style="display: none;">
 
-      <!-- This is for a list that asks for any dislikes  -->
+      <!-- This is for a list that asks for any dislikes. I put 100 things here using ChatGPT  -->
       <label for="disliked_ingredients">Are there any ingredients you dislike or want to avoid? (Ctrl + Click to select
         multiple)</label>
       <select class="listIngredients" id="disliked_ingredients" name="disliked_ingredients[]" multiple>
@@ -187,10 +195,10 @@
         <option value="Zucchini">Zucchini</option>
       </select>
 
-
       <div class="form-navigation">
+        <!-- Clicking on this will take you to the third final form -->
         <a href="form1.html"><button type="button">Previous Page</button></a>
-        <button type="submit" class="final_submit">Next Page</button>
+        <button type="submit">Next Page</button>
       </div>
     </form>
   </div>
