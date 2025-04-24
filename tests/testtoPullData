@@ -1,0 +1,26 @@
+import mysql.connector
+
+# Connect to MySQL database
+connection = mysql.connector.connect(
+    host='localhost',
+    user='root',
+    password='ISBS304',
+    database='mealplans'
+)
+
+cursor = connection.cursor()
+
+# Query to read the 'name' column from the 'users' table
+cursor.execute("SELECT Calories_cal FROM mealnutrition")
+
+# Fetch all rows from the executed query
+rows = cursor.fetchall()
+
+# Print each name
+print("Here you go")
+for row in rows:
+    print(row[0])
+
+# Close the connection
+cursor.close()
+connection.close()
