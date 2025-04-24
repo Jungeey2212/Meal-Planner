@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/templates/form1.html"
+    "livePreview.defaultPreviewPath": "/templates/form1.html",
+    "C_Cpp.errorSquiggles": "enabled"
 }

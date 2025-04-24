@@ -7,6 +7,17 @@ window.onload = function () {
   const heightSlider = document.getElementById("heightSlider");
   const heightLabel = document.getElementById("heightValue");
 
+  const gymSlider = document.getElementById("gymdaysSlider");
+  const gymLabel = document.getElementById("gymdaysValue");
+
+  if (gymSlider && gymLabel) {
+    gymSlider.oninput = function () {
+      gymLabel.textContent = gymSlider.value;
+    };
+
+    gymLabel.textContent = gymSlider.value;
+  }
+
   // BMI output
   const bmiLabel = document.getElementById("bmiValue");
 
@@ -24,6 +35,7 @@ window.onload = function () {
       bmiLabel.textContent = bmi;
     }
   }
+
 
   if (weightSlider && heightSlider) {
     weightSlider.oninput = updateSlidersAndBMI;

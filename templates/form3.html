@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Fitness Profile - Page 3</title>
-    <link rel="stylesheet" href="static/css/style.css"> 
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
+
 <body>
     <div class="form-container">
         <form action="/submit" method="post">
@@ -20,7 +22,7 @@
             </select>
 
             <label for="grocery_budget_input">Average weekly grocery shopping budget? ($)</label>
-            <input type="number" id="grocery_budget_input" name="grocery_budget" min="1" step="1" required>
+            <input type="number" id="grocery_budget_input" name="grocery_budget" min="0" step="5" required>
 
             <label for="nutritional_awareness">Are you aware of your daily nutritional needs?</label>
             <select id="nutritional_awareness" name="nutritional_awareness" required>
@@ -31,28 +33,37 @@
             </select>
 
             <label>Do you have any specific nutritional needs? (Select all that apply)</label>
-<div class="toggle-checkbox-group">
-  <input type="checkbox" id="high_protein" name="specific_nutrition[]" value="High_protein">
-  <label for="high_protein">High Protein</label>
+            <div class="toggle-checkbox-group">
+                <input type="checkbox" id="high_protein" name="specific_nutrition[]" value="High_protein">
+                <label for="high_protein">High Protein</label>
 
-  <input type="checkbox" id="high_fiber" name="specific_nutrition[]" value="High_fiber">
-  <label for="high_fiber">High Fiber</label>
+                <input type="checkbox" id="high_fiber" name="specific_nutrition[]" value="High_fiber">
+                <label for="high_fiber">High Fiber</label>
 
-  <input type="checkbox" id="low_carb" name="specific_nutrition[]" value="Low_carb">
-  <label for="low_carb">Low Carb</label>
+                <input type="checkbox" id="low_carb" name="specific_nutrition[]" value="Low_carb">
+                <label for="low_carb">Low Carb</label>
 
-  <input type="checkbox" id="low_fat" name="specific_nutrition[]" value="Low_fat">
-  <label for="low_fat">Low Fat</label>
+                <input type="checkbox" id="low_fat" name="specific_nutrition[]" value="Low_fat">
+                <label for="low_fat">Low Fat</label>
 
-  <input type="checkbox" id="low_sodium" name="specific_nutrition[]" value="Low_sodium">
-  <label for="low_sodium">Low Sodium</label>
+                <input type="checkbox" id="low_sodium" name="specific_nutrition[]" value="Low_sodium">
+                <label for="low_sodium">Low Sodium</label>
 
-  <input type="checkbox" id="balanced_diet" name="specific_nutrition[]" value="Balanced_diet">
-  <label for="balanced_diet">Balanced Diet</label>
+                <input type="checkbox" id="balanced_diet" name="specific_nutrition[]" value="Balanced_diet">
+                <label for="balanced_diet">Balanced Diet</label>
 
-  <input type="checkbox" id="nutrition_other" name="specific_nutrition[]" value="Other">
-  <label for="nutrition_other">Other</label>
-</div>
+                <input type="checkbox" id="nutrition_other" name="specific_nutrition[]" value="Other">
+                <label for="nutrition_other">Other</label>
+            </div>
+
+            <label for="planDuration">How many weeks would you like the plan for? (2–4 weeks)</label>
+            <select id="planDuration" name="plan_duration" required>
+                <option value=""" disabled selected>Selected your option</option>"
+                <option value="2">2 Weeks</option>
+                <option value="3">3 Weeks</option>
+                <option value="4">4 Weeks</option>
+            </select>
+
 
 
             <div style="display: flex; justify-content: space-between; margin-top: 20px;">
@@ -63,4 +74,5 @@
     </div>
     <script src="static/js/script.js"></script>
 </body>
+
 </html>
