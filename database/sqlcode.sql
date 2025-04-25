@@ -1,5 +1,3 @@
-DROP DATABASE IF EXISTS mealplans;
-
 CREATE DATABASE IF NOT EXISTS mealplans;
 
 CREATE TABLE meals (
