@@ -1,29 +1,28 @@
-TRUNCATE TABLE meals;
-SELECT * FROM meals;
+CREATE DATABASE IF NOT EXISTS mealplans;
 
--- CREATE TABLE meals (
---   NutritionID     INT             AUTO_INCREMENT PRIMARY KEY,
---   MealName        VARCHAR(255)    NOT NULL,
---   Calories_cal    INT             NULL,
---   Protein_g		  DECIMAl(6,2)	  NOT NULL,
---   Carbs_g		  DECIMAL(6.2)	  NOT NULL,
---   Sugars_g        DECIMAL(6,2)    NULL,
---   Fibers_g        DECIMAL(6,2)    NULL,
---   Fat_g           DECIMAL(6,2)    NULL,
---   SatFat_g        DECIMAL(6,2)    NULL,
---   UnsatFat_g      DECIMAL(6,2)    NULL,
---   Cholesterol_mg  INT             NULL,
---   Sodium_mg       INT             NULL,
---   Calcium_mg      INT             NULL,
---   Iron_mg         DECIMAL(6,2)    NULL,
---   Ingredients     TEXT            NULL,
---   DietCategory    VARCHAR(100)    NULL,
---   DietNotes       TEXT            NULL,
---   IsHomeCooked    BOOLEAN         NOT NULL DEFAULT FALSE,
---   IsMealorSnack   ENUM('Meal','Snack') NOT NULL
--- ) 
--- ENGINE=InnoDB
--- DEFAULT CHARSET = utf8mb4;
+CREATE TABLE meals (
+  NutritionID     INT             AUTO_INCREMENT PRIMARY KEY,
+  MealName        VARCHAR(255)    NOT NULL,
+  Calories_cal    INT             NULL,
+  Protein_g		  DECIMAl(6,2)	  NOT NULL,
+  Carbs_g		  DECIMAL(6.2)	  NOT NULL,
+  Sugars_g        DECIMAL(6,2)    NULL,
+  Fibers_g        DECIMAL(6,2)    NULL,
+  Fat_g           DECIMAL(6,2)    NULL,
+  SatFat_g        DECIMAL(6,2)    NULL,
+  UnsatFat_g      DECIMAL(6,2)    NULL,
+  Cholesterol_mg  INT             NULL,
+  Sodium_mg       INT             NULL,
+  Calcium_mg      INT             NULL,
+  Iron_mg         DECIMAL(6,2)    NULL,
+  Ingredients     TEXT            NULL,
+  DietCategory    VARCHAR(100)    NULL,
+  DietNotes       TEXT            NULL,
+  IsHomeCooked    BOOLEAN         NOT NULL DEFAULT FALSE,
+  IsMealorSnack   ENUM('Meal','Snack') NOT NULL
+) 
+ENGINE=InnoDB
+DEFAULT CHARSET = utf8mb4;
 SELECT * FROM meals;
 
 INSERT INTO meals (
@@ -72,59 +71,59 @@ VALUES
  'eggplant, sour cream, oats, cucumber, spices, tofu, broccoli, multigrain bread, olive oil, onion',
  'Vegetarian', 'Contains Gluten', TRUE, 'Meal'),
 
-('Paneer Butter Masala', 388, 12.8, 38.5, 2.3, 4.0, 2.0, 9.7, 50, 358, 54, 1.8,
+('Paneer Butter Masala', 388, 12.8, 38.5, 2.3, 4.0, 2.0, 9.7, 0, 50, 358, 54, 1.8,
  'pumpkin seeds, pasta, lentils, broccoli, paneer, chickpeas, almonds, bell pepper, whole wheat tortillas',
  'Vegetarian', 'Contains Gluten', TRUE, 'Meal'),
 
-('Vegetarian Chili', 366, 28.0, 49.5, 3.6, 5.9, 4.5, 9.2, 30, 649, 116, 3.0,
+('Vegetarian Chili', 366, 28.0, 49.5, 3.6, 5.9, 4.5, 9.2, 0, 30, 649, 116, 3.0,
  'coconut milk, sesame oil, black beans, mushrooms, cheese, lentils, parsley, cucumber, chickpeas, olive oil, pasta, milk, paneer, kale',
  'Vegetarian', 'Contains Gluten', TRUE, 'Meal'),
 
-('Tofu Scramble Breakfast Bowl', 528, 11.1, 52.4, 3.1, 5.7, 5.4, 9.6, 20, 439, 117, 1.9,
+('Tofu Scramble Breakfast Bowl', 528, 11.1, 52.4, 3.1, 5.7, 5.4, 9.6, 0, 20, 439, 117, 1.9,
  'avocado, basil, carrot, coriander, lemon juice, soy sauce, paneer, garlic, broccoli, pumpkin seeds, quinoa, cheese',
  'Vegetarian', 'Egg-Free', TRUE, 'Meal'),
 
-('Vegetable Biryani', 352, 24.3, 51.1, 3.0, 3.6, 4.1, 14.4, 0, 561, 130, 2.7,
+('Vegetable Biryani', 352, 24.3, 51.1, 3.0, 3.6, 4.1, 14.4, 0, 0, 561, 130, 2.7,
  'sunflower seeds, kale, cottage cheese, multigrain bread, avocado, whole wheat tortillas, tempeh, cheese, cauliflower, basil',
  'Vegetarian', 'Contains Gluten', TRUE, 'Meal'),
 
-('Chickpea & Spinach Stew', 303, 19.6, 47.7, 5.3, 8.6, 1.4, 19.9, 40, 300, 142, 3.1,
+('Chickpea & Spinach Stew', 303, 19.6, 47.7, 5.3, 8.6, 1.4, 19.9, 0, 40, 300, 142, 3.1,
  'cauliflower, milk, sesame oil, tomatoes, eggs, lentils, tempeh, tofu, olive oil, sour cream, cheese, whole wheat tortillas',
  'Vegetarian', 'NF', TRUE, 'Meal'),
 
-('Miso Ramen with Tofu', 303, 12.6, 36.7, 8.4, 5.8, 5.5, 8.5, 0, 433, 199, 1.9,
+('Miso Ramen with Tofu', 303, 12.6, 36.7, 8.4, 5.8, 5.5, 8.5, 0, 0, 433, 199, 1.9,
  'spices, soy sauce, sesame oil, yogurt, quinoa, zucchini, lentils, basil, cottage cheese, spinach, lemon juice',
  'Vegetarian', 'Egg-Free', TRUE, 'Meal'),
 
-('Veggie Tikka Masala', 519, 24.0, 48.2, 8.1, 9.9, 1.2, 8.8, 60, 337, 188, 3.3,
+('Veggie Tikka Masala', 519, 24.0, 48.2, 8.1, 9.9, 1.2, 8.8, 0, 60, 337, 188, 3.3,
  'broccoli, chickpeas, cashews, garlic, sesame oil, cottage cheese, avocado, sour cream, mushrooms, eggs, coriander, almonds, kale, whole wheat tortillas',
  'Vegetarian', 'GF', TRUE, 'Meal'),
 
-('Peanut Butter Banana Oatmeal', 445, 11.8, 49.1, 7.0, 4.8, 4.2, 14.3, 50, 378, 167, 2.3,
+('Peanut Butter Banana Oatmeal', 445, 11.8, 49.1, 7.0, 4.8, 4.2, 14.3, 0, 50, 378, 167, 2.3,
  'almonds, garlic, black beans, lentils, soy sauce, brown rice, lemon juice, oats, multigrain bread, cottage cheese, broccoli',
  'Vegetarian', 'Egg-Free', TRUE, 'Meal'),
 
-('Vegan Mushroom Tacos', 408, 18.5, 46.2, 6.3, 7.8, 1.4, 5.9, 30, 706, 168, 1.6,
+('Vegan Mushroom Tacos', 408, 18.5, 46.2, 6.3, 7.8, 1.4, 5.9, 0, 30, 706, 168, 1.6,
  'paneer, onion, zucchini, coriander, soy sauce, tempeh, yogurt, tomatoes, lentils, peanuts, pumpkin seeds',
  'Vegetarian', 'GF', TRUE, 'Meal'),
 
-('Vegetarian Sushi Rolls', 392, 14.6, 59.2, 8.3, 5.1, 4.2, 8.2, 30, 753, 70, 3.2,
+('Vegetarian Sushi Rolls', 392, 14.6, 59.2, 8.3, 5.1, 4.2, 0, 8.2, 30, 753, 70, 3.2,
  'cottage cheese, avocado, coconut milk, sour cream, oats, garlic, sesame oil, quinoa, coriander, milk, multigrain bread, spices, olive oil',
  'Vegetarian', 'GF', TRUE, 'Meal'),
 
-('Vegetable Gyoza', 585, 16.1, 59.7, 7.9, 3.7, 5.2, 17.9, 40, 330, 54, 1.6,
+('Vegetable Gyoza', 585, 16.1, 59.7, 7.9, 3.7, 5.2, 17.9, 0, 40, 330, 54, 1.6,
  'tofu, sunflower seeds, pumpkin seeds, parsley, cashews, whole wheat tortillas, oats, almonds, milk, avocado',
  'Vegetarian', 'NF', TRUE, 'Meal'),
 
-('Curried Pumpkin Soup', 306, 33.0, 35.4, 3.0, 5.9, 6.5, 16.3, 50, 349, 150, 1.3,
+('Curried Pumpkin Soup', 306, 33.0, 35.4, 3.0, 5.9, 6.5, 0, 16.3, 50, 349, 150, 1.3,
  'onion, carrot, sunflower seeds, broccoli, spinach, cheese, lentils, sweet potato, ginger',
  'Vegetarian', 'Egg-Free', TRUE, 'Meal'),
 
-('Three Bean Salad', 491, 13.5, 39.2, 5.4, 7.2, 4.3, 7.8, 40, 369, 217, 1.6,
+('Three Bean Salad', 491, 13.5, 39.2, 5.4, 7.2, 4.3, 7.8, 0, 40, 369, 217, 1.6,
  'carrot, pumpkin seeds, avocado, cashews, bell pepper, cauliflower, lentils, sesame oil, ginger, coconut milk, eggplant, zucchini, eggs',
  'Vegetarian', 'NF', TRUE, 'Meal'),
 
-('Herbed Couscous with Vegetables', 362, 17.9, 40.7, 9.7, 8.5, 4.2, 7.5, 50, 549, 205, 2.9,
+('Herbed Couscous with Vegetables', 362, 17.9, 40.7, 9.7, 8.5, 4.2, 7.5, 0, 50, 549, 205, 2.9,
  'mushrooms, lemon juice, peanuts, quinoa, garlic, almonds, whole wheat tortillas, cottage cheese, pumpkin seeds, sunflower seeds, sesame oil, basil, spices, tempeh',
  'Vegetarian', 'NF', TRUE, 'Meal');
 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fitness Profile - Page 1</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <form action="/submit-target" method="get">
+
+            <label for="fitnessTarget">What's your fitness target ?</label>
+            <select id="fitnessTarget" name="fitnessTarget">
+                <option value="Lose weight">Lose Weight</option>
+                <option value="Gain muscle">Gain Muscle</option>
+                <option value="Improve stamina">Improve Stamina</option>
+                <option value="General fitness">General Fitness</option>
+                <option value="Bulking">Bulking</option>
+            </select>
+            <!-- Pressing submit will take you to next page -->
+            <button class="final_submit" type="submit">Submit Responses</button>
+    </div>
+    </form>
+    </div>
+    <script src="static/js/script.js"></script>
+</body>

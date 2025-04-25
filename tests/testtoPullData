@@ -1,26 +1,50 @@
+#!/usr/bin/env python3
 import mysql.connector
+from mysql.connector import Error
 
-# Connect to MySQL database
-connection = mysql.connector.connect(
-    host='localhost',
-    user='root',
-    password='ISBS304',
-    database='mealplans'
-)
+def main():
+    # ─── Your MySQL credentials ───────────────────────────────────────
+    config = {
+        "host":     "localhost",
+        "user":     "root",
+        "password": "ISBS304",
+        "database": "mealplans"
+    }
 
-cursor = connection.cursor()
+    try:
+        conn = mysql.connector.connect(**config)
+        cursor = conn.cursor()
 
-# Query to read the 'name' column from the 'users' table
-cursor.execute("SELECT Calories_cal FROM mealnutrition")
+        # 1) Fetch only the low-calorie meals
+        query = """
+            SELECT Meal, Calories_cal
+            FROM mealnutrition
+            WHERE Calories_cal <= 500
+        """
+        cursor.execute(query)
+        low_cal_rows = cursor.fetchall()  # e.g. [('Salad', 320), ('Soup', 180), ...]
 
-# Fetch all rows from the executed query
-rows = cursor.fetchall()
+        # 2) Print each low-calorie meal
+        print("Meals with < 500 kcal:")
+        for meal, cal in low_cal_rows:
+            print(f" - {meal}: {cal} kcal")
 
-# Print each name
-print("Here you go")
-for row in rows:
-    print(row[0])
+        # 3) Count how many meals match
+        count = len(low_cal_rows)
+        print(f"\nNumber of meals with < 500 kcal: {count}")
 
-# Close the connection
-cursor.close()
-connection.close()
+        # 4) Sum their calories
+        total_cal = sum(cal for _, cal in low_cal_rows)
+        print(f"Total calories across those {count} meals: {total_cal} kcal")
+
+    except Error as e:
+        print("MySQL error:", e)
+
+    finally:
+        if cursor:
+            cursor.close()
+        if conn and conn.is_connected():
+            conn.close()
+
+if __name__ == "__main__":
+    main()
