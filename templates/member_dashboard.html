@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Member Dashboard - F45 Gym Meal Planner</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f8ff;
+    }
+    .navbar {
+      background-color: #2e8b57;
+      padding: 15px 30px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1 {
+      color: #2e8b57;
+      margin-bottom: 20px;
+    }
+    p {
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .button-group {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+    .button-group a {
+      background-color: #2e8b57;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .button-group a:hover {
+      background-color: #256f46;
+    }
+  </style>
+</head>
+<body>
+
+<div class="navbar">
+  <div><strong>F45 Member Dashboard</strong></div>
+  <div>
+    <a href="index.html">Logout</a>
+  </div>
+</div>
+
+<div class="container">
+    <h1 id="welcome-text"></h1>
+
+ 
+
+  <div class="button-group">
+    <a href="survey1.php">Start Survey</a>
+    <a href="view_meal_plan.php">View Meal Plan</a>
+  </div>
+</div>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const name = urlParams.get('name');
+  if (name) {
+    document.getElementById('welcome-text').textContent = "Welcome, " + name;
+  }
+</script>
+
+</body>
+</html>
