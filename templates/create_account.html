@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Account - F45 Gym</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      width: 100%;
+      background-color: #2e8b57;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 12px;
+      margin-top: 40px;
+      width: 90%;
+      max-width: 550px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h2 {
+      color: #2e8b57;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 25px;
+      background-color: #2e8b57;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #256f46;
+    }
+
+    .go-back {
+      margin-top: 20px;
+    }
+
+    .go-back a {
+      color: #2e8b57;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .go-back a:hover {
+      text-decoration: underline;
+    }
+
+    .success-message {
+      display: none;
+      margin-top: 20px;
+      color: green;
+      font-weight: bold;
+      background-color: #dff0d8;
+      padding: 15px;
+      border-radius: 6px;
+      border: 1px solid #c3e6cb;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div><strong>F45 Meal Planner</strong></div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="#">Survey</a>
+      <a href="admin_login.html">Admin</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Create Your Member Account</h2>
+
+    <form id="registerForm" onsubmit="handleRegistration(event)">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required placeholder="Create a password">
+
+      <label for="confirm-password">Confirm Password</label>
+      <input type="password" id="confirm-password" name="confirm-password" required placeholder="Re-enter password">
+
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="">Select</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Non-binary</option>
+        <option>Prefer not to say</option>
+      </select>
+
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" min="12" required placeholder="Enter your age">
+
+      <label for="goal">Fitness Goal</label>
+      <select id="goal" name="goal" required>
+        <option value="">Select goal</option>
+        <option>Lose Weight</option>
+        <option>Build Muscle</option>
+        <option>Maintain Fitness</option>
+      </select>
+
+      <label for="diet">Dietary Preference</label>
+      <select id="diet" name="diet" required>
+        <option value="">Select</option>
+        <option>Vegetarian</option>
+        <option>Vegan</option>
+        <option>Keto</option>
+        <option>Balanced</option>
+      </select>
+
+      <label for="allergies">Allergies (optional)</label>
+      <input type="text" id="allergies" name="allergies" placeholder="e.g. nuts, gluten">
+
+      <button type="submit">Register</button>
+    </form>
+
+    <div class="success-message" id="successMessage">
+      ✅ Registration successful! Please go to the <a href="index.html">home page</a> to log in.
+    </div>
+
+    <div class="go-back">
+      <a href="index.html">← Go back to login</a>
+    </div>
+  </div>
+
+  <script>
+    function handleRegistration(e) {
+      e.preventDefault(); // prevent form from submitting
+      document.getElementById('registerForm').style.display = 'none';
+      document.getElementById('successMessage').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard - F45 Gym Meal Planner</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f8ff;
+    }
+    .navbar {
+      background-color: #2e8b57;
+      padding: 15px 30px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+    .dashboard {
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #2e8b57;
+      margin-bottom: 30px;
+    }
+    .card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    .card h2 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+    .card p {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<div class="navbar">
+  <div><strong>F45 Admin Dashboard</strong></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="admin.html">Logout</a>
+  </div>
+</div>
+
+<div class="dashboard">
+  <h1>Welcome, Admin!</h1>
+
+  <div class="card">
+    <h2>👤 Members Registered</h2>
+    <p>Total members: none</p>
+  </div>
+
+  <div class="card">
+    <h2>🥗 Meals Available</h2>
+    <p>Total meals in database: none</p>
+  </div>
+
+  <div class="card">
+    <h2>📋 Surveys Completed</h2>
+    <p>Surveys filled: none</p>
+  </div>
+
+</div>
+
+</body>
+</html>
