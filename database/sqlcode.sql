@@ -31,6 +31,8 @@ INSERT INTO meals (
   Ingredients, DietCategory, DietNotes, IsHomeCooked, IsMealorSnack
 )
 VALUES
+
+  -- Omnivore Meals
 ('Crispy Chilli Turkey Noodles', 520, 35, 40, 6, 2, 25, 5, 18, 75, 950, 70, 2.1,
  'Turkey mince, udon noodles, garlic, chili flakes, soy sauce, honey, spring onions, sesame oil',
  'Carnivore', 'Contains soy and gluten', TRUE, 'Meal'),
@@ -126,7 +128,8 @@ VALUES
 ('Herbed Couscous with Vegetables', 362, 17.9, 40.7, 9.7, 8.5, 4.2, 7.5, 0, 50, 549, 205, 2.9,
  'mushrooms, lemon juice, peanuts, quinoa, garlic, almonds, whole wheat tortillas, cottage cheese, pumpkin seeds, sunflower seeds, sesame oil, basil, spices, tempeh',
  'Vegetarian', 'NF', TRUE, 'Meal'),
- 
+
+  -- Vegetarian Meals
  ('Meal2', 520, 35, 40, 6, 2, 25, 5, 18, 75, 950, 70, 2.1,
  'Turkey mince, udon noodles, garlic, chili flakes, soy sauce, honey, spring onions, sesame oil',
  'Carnivore', 'Contains soy and gluten', TRUE, 'Meal'),
@@ -221,7 +224,69 @@ VALUES
  
   ('Meal25', 362, 17.9, 40.7, 9.7, 8.5, 4.2, 7.5, 0, 50, 549, 205, 2.9,
  'mushrooms, lemon juice, peanuts, quinoa, garlic, almonds, whole wheat tortillas, cottage cheese, pumpkin seeds, sunflower seeds, sesame oil, basil, spices, tempeh',
- 'Vegetarian', 'NF', TRUE, 'Meal');
+ 'Vegetarian', 'NF', TRUE, 'Meal'),
+
+  -- Carnivore Meals 
+
+('Grilled Ribeye Steak', 650, 55, 0, 0, 0, 50, 20, 30, 140, 90, 20, 3.5,
+  'ribeye steak, salt, pepper', 'Carnivore', 'GF, NF, No Fish', 'Yes', 'Meal'),
+  
+('Baked Chicken Thighs', 400, 38, 0, 0, 0, 25, 7, 18, 120, 85, 15, 1.5,
+  'chicken thighs, olive oil, garlic powder', 'Carnivore', 'GF, NF, No Fish', 'Yes', 'Meal'),
+  
+('Pork Belly Slices', 600, 30, 0, 0, 0, 55, 20, 35, 110, 70, 10, 1.8,
+  'pork belly, salt, paprika', 'Carnivore', 'GF, NF', 'Yes', 'Meal'),
+  
+('Lamb Chops', 550, 40, 0, 0, 0, 45, 18, 27, 115, 95, 25, 3.2,
+  'lamb chops, rosemary, salt, pepper', 'Carnivore', 'GF, NF, No Fish', 'Yes', 'Meal'),
+  
+('Beef Liver Fry', 320, 42, 3, 1, 0, 12, 4, 8, 400, 90, 30, 6.0,
+  'beef liver, butter, salt, onion powder', 'Carnivore', 'GF, NF, No Fish', 'Yes', 'Meal'),
+  
+('Grilled Turkey Breast', 280, 48, 0, 0, 0, 6, 2, 4, 90, 75, 15, 1.0,
+  'turkey breast, olive oil, black pepper', 'Carnivore', 'GF, NF, No Fish', 'Yes', 'Meal'),
+  
+('Duck Breast with Skin', 500, 35, 0, 0, 0, 40, 15, 25, 115, 100, 20, 2.5,
+  'duck breast, thyme, salt', 'Carnivore', 'GF, NF, No Fish', 'Yes', 'Meal'),
+  
+('Tuna Steak Seared', 400, 50, 0, 0, 0, 18, 5, 13, 70, 60, 20, 2.0,
+  'tuna steak, sesame oil, salt', 'Carnivore', 'GF, NF, No Pork', 'Yes', 'Meal'),
+  
+('Meatballs (Beef Only)', 470, 38, 2, 0.5, 0, 32, 12, 20, 100, 85, 22, 2.8,
+  'ground beef, egg, salt, pepper', 'Carnivore', 'GF, NF, No Fish', 'Yes', 'Meal'),
+  
+('Pan-fried Salmon', 450, 42, 0, 0, 0, 30, 8, 22, 95, 85, 20, 1.5,
+  'salmon fillet, lemon, butter, salt', 'Carnivore', 'GF, NF, No Pork', 'Yes', 'Meal'),
+  
+('Roasted Quail', 330, 30, 0, 0, 0, 22, 8, 14, 90, 60, 15, 2.2,
+  'quail, butter, rosemary, pepper', 'Carnivore', 'GF, NF, No Fish', 'Yes', 'Meal'),
+  
+('Venison Steak', 400, 50, 0, 0, 0, 18, 5, 13, 95, 65, 20, 4.0,
+  'venison steak, garlic powder, salt', 'Carnivore', 'GF, NF, No Fish', 'Yes', 'Meal'),
+  
+('Sardines Grilled', 300, 34, 0, 0, 0, 18, 6, 12, 80, 350, 25, 2.5,
+  'sardines, olive oil, lemon', 'Carnivore', 'GF, NF, No Pork', 'Yes', 'Meal'),
+  
+('Beef Short Ribs', 700, 45, 0, 0, 0, 60, 22, 38, 130, 120, 25, 3.0,
+  'beef short ribs, salt, pepper', 'Carnivore', 'GF, NF, No Fish', 'Yes', 'Meal'),
+  
+('Grilled Chicken Wings', 450, 35, 0, 0, 0, 30, 10, 20, 110, 140, 18, 1.6,
+  'chicken wings, paprika, salt', 'Carnivore', 'GF, NF, No Fish', 'Yes', 'Snack'),
+  
+('Roasted Duck Legs', 600, 38, 0, 0, 0, 50, 18, 32, 125, 105, 22, 2.7,
+  'duck legs, garlic, thyme, olive oil', 'Carnivore', 'GF, NF, No Fish', 'Yes', 'Meal'),
+  
+('Pork Chops', 520, 40, 0, 0, 0, 40, 15, 25, 115, 90, 18, 2.0, 
+  'pork chops, sage, salt', 'Carnivore', 'GF, NF', 'Yes', 'Meal'),
+  
+('Smoked Salmon', 350, 32, 1, 0.5, 0, 20, 6, 14, 70, 400, 22, 1.2,
+  'smoked salmon, dill, salt', 'Carnivore', 'GF, NF, No Pork', 'No', 'Snack'),
+  
+('Grilled Kangaroo Fillet', 360, 48, 0, 0, 0, 15, 5, 10, 90, 80, 20, 4.5,
+  'kangaroo fillet, pepper, salt', 'Carnivore', 'GF, NF, No Fish', 'Yes', 'Meal'),
+  
+('Roast Goose', 700, 42, 0, 0, 0, 60, 22, 38, 130, 120, 30, 2.8,
+  'goose, olive oil, rosemary', 'Carnivore', 'GF, NF, No Fish', 'Yes', 'Meal');
  
 
  
