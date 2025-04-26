@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filtered Meals</title>
+</head>
+<body>
+    <h2>Recommended Meals</h2>
+
+    {% if meals %}
+        <table border="1" cellpadding="8">
+            <thead>
+                <tr>
+                    <th>Meal</th>
+                    <th>Calories</th>
+                    <th>Protein (g)</th>
+                    <th>Carbs (g)</th>
+                    <th>Sugars (g)</th>
+                    <th>Fibers (g)</th>
+                    <th>Fat (g)</th>
+                    <th>Saturated Fat (g)</th>
+                    <th>Unsaturated Fat (g)</th>
+                    <th>Cholesterol (mg)</th>
+                    <th>Sodium (mg)</th>
+                    <th>Calcium (mg)</th>
+                    <th>Iron (mg)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% set total_calories = 0 %}
+                {% set total_protein = 0 %}
+                {% set total_carbs = 0 %}
+                {% set total_sugars = 0 %}
+                {% set total_fibers = 0 %}
+                {% set total_fat = 0 %}
+                {% set total_satfat = 0 %}
+                {% set total_unsatfat = 0 %}
+                {% set total_cholesterol = 0 %}
+                {% set total_sodium = 0 %}
+                {% set total_calcium = 0 %}
+                {% set total_iron = 0 %}
+
+                {% for meal in meals %}
+                <tr>
+                    <td>{{ meal.MealName }}</td>
+                    <td>{{ meal.Calories_cal }}</td>
+                    <td>{{ meal.Protein_g }}</td>
+                    <td>{{ meal.Carbs_g }}</td>
+                    <td>{{ meal.Sugars_g }}</td>
+                    <td>{{ meal.Fibers_g }}</td>
+                    <td>{{ meal.Fat_g }}</td>
+                    <td>{{ meal.SatFat_g }}</td>
+                    <td>{{ meal.UnsatFat_g }}</td>
+                    <td>{{ meal.Cholesterol_mg }}</td>
+                    <td>{{ meal.Sodium_mg }}</td>
+                    <td>{{ meal.Calcium_mg }}</td>
+                    <td>{{ meal.Iron_mg }}</td>
+                </tr>
+
+                {% set total_calories = total_calories + meal.Calories_cal %}
+                {% set total_protein = total_protein + meal.Protein_g %}
+                {% set total_carbs = total_carbs + meal.Carbs_g %}
+                {% set total_sugars = total_sugars + meal.Sugars_g %}
+                {% set total_fibers = total_fibers + meal.Fibers_g %}
+                {% set total_fat = total_fat + meal.Fat_g %}
+                {% set total_satfat = total_satfat + meal.SatFat_g %}
+                {% set total_unsatfat = total_unsatfat + meal.UnsatFat_g %}
+                {% set total_cholesterol = total_cholesterol + meal.Cholesterol_mg %}
+                {% set total_sodium = total_sodium + meal.Sodium_mg %}
+                {% set total_calcium = total_calcium + meal.Calcium_mg %}
+                {% set total_iron = total_iron + meal.Iron_mg %}
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h3>Nutrition Totals:</h3>
+        <ul>
+            <li>Total Calories: {{ total_calories }} kcal</li>
+            <li>Total Protein: {{ total_protein }} g</li>
+            <li>Total Carbs: {{ total_carbs }} g</li>
+            <li>Total Sugars: {{ total_sugars }} g</li>
+            <li>Total Fibers: {{ total_fibers }} g</li>
+            <li>Total Fat: {{ total_fat }} g</li>
+            <li>Total Saturated Fat: {{ total_satfat }} g</li>
+            <li>Total Unsaturated Fat: {{ total_unsatfat }} g</li>
+            <li>Total Cholesterol: {{ total_cholesterol }} mg</li>
+            <li>Total Sodium: {{ total_sodium }} mg</li>
+            <li>Total Calcium: {{ total_calcium }} mg</li>
+            <li>Total Iron: {{ total_iron }} mg</li>
+        </ul>
+
+    {% else %}
+        <p>No meals found for your profile.</p>
+    {% endif %}
+</body>
+</html>
