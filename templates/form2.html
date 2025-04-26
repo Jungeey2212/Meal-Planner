@@ -3,206 +3,268 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fitness Profile - Page 2</title>
-  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
   <div class="form-container">
-    <form action="form3.html" method="get">
+    <!-- Progress bar -->
+    <div class="progress-container">
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 66.6%"></div>
+      </div>
+      <div class="progress-steps">
+        <div class="progress-step">1</div>
+        <div class="progress-step active">2</div>
+        <div class="progress-step">3</div>
+      </div>
+      <p class="progress-text">Step 2 of 3: Lifestyle & Diet</p>
+    </div>
 
-      <!-- This will ask for occuputation -->
-      <label for="occupation">Your occupation?</label>
-      <select id="occupation" name="occupation" required>
-        <option value="">-- Please choose an option --</option>
-        <option value="Labourer">Labourer (Constant heavy lifting)</option>
-        <option value="Office_worker">Office Worker</option>
-        <option value="Retail_worker">Retail Worker</option>
-        <option value="Hospitality_worker">Hospitality Worker</option>
-        <option value="Student">Student</option>
-        <option value="Healthcare_worker">Healthcare Worker</option>
-        <option value="Transport_worker">Transport/Logistics Worker</option>
-        <option value="Construction_worker">Construction Worker</option>
-        <option value="Fitness_professional">Fitness/Sports Professional</option>
-        <option value="Remote_worker">Work from Home / Remote Worker</option>
-      </select>
+    <!-- Flash Messages -->
+    {% if get_flashed_messages() %}
+        {% for category, message in get_flashed_messages(with_categories=true) %}
+            <div class="flash-message {{ category }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
 
-      <!-- This will ask how many times they go to the gym in a week using a slider. Also javascript here -->
-      <label for="gymdaysSlider">
-        How many days do you go to the gym every week? (<span id="gymdaysValue">3</span> Days)
-      </label>
-      <input type="range" id="gymdaysSlider" name="gym_days" min="0" max="7" value="3" step="1">
+    <h1>Your Lifestyle & Diet</h1>
 
-      <!-- This will ask for daily average activity level  -->
-      <label for="activity_level">Your daily activity level?</label>
-      <select id="activity_level" name="activity_level" required>
-        <option value="">-- Please choose an option --</option>
-        <option value="Sedentary">Sedentary</option>
-        <option value="Lightly_active">Lightly Active</option>
-        <option value="Moderately_active">Moderately Active</option>
-        <option value="Very_active">Very Active</option>
-        <option value="Extremely_active">Extremely Active</option>
-      </select>
-
-      <!-- This will ask if they like to cook at home -->
-      <label for="cook_home">Do you frequently cook at home?</label>
-      <select id="cook_home" name="cook_home" required>
-        <option value="">-- Please choose an option --</option>
-        <option value="Yes">Yes</option>
-        <option value="No">No</option>
-      </select>
-
-      <!-- This will ask what their diet is  -->
-      <label for="dietcurrent">What is your current diet?</label>
-      <select id="dietcurrent" name="dietcurrent" required onchange="toggleOtherDietField()">
-        <option value="vegan">Vegan</option>
-        <option value="vegetarian">Vegetarian</option>
-        <option value="omnivore">Omnivore</option>
-        <option value="mixed_mostlymeat">Mixed, mostly meat</option>
-        <option value="mixed_mostlyveggies">Mixed, mostly vegetables</option>
-        <option value="other_diet">Other</option>
-      </select>
-      <input type="text" id="otherDietField" name="otherDietField" placeholder="Please specify" style="display: none;">
-
-      <!-- This will ask if they eat snacks between main meals  -->
-      <label>Do you eat snacks between meals?</label>
-      <div class="toggle-group">
-        <input type="radio" id="yes" name="snack" value="Yes">
-        <label for="yes" class="left">YES</label>
-
-        <input type="radio" id="no" name="snack" value="No">
-        <label for="no" class="right">NO</label>
+    <form id="fitnessForm2" action="{{ url_for('form3') }}" method="get" novalidate>
+      <div class="form-group">
+        <label for="occupation" id="occupationLabel">Your occupation</label>
+        <select id="occupation" name="occupation" required aria-required="true" aria-labelledby="occupationLabel">
+          <option value="">-- Please choose an option --</option>
+          <option value="Labourer">Labourer (Constant heavy lifting)</option>
+          <option value="Office_worker">Office Worker</option>
+          <option value="Retail_worker">Retail Worker</option>
+          <option value="Hospitality_worker">Hospitality Worker</option>
+          <option value="Student">Student</option>
+          <option value="Healthcare_worker">Healthcare Worker</option>
+          <option value="Transport_worker">Transport/Logistics Worker</option>
+          <option value="Construction_worker">Construction Worker</option>
+          <option value="Fitness_professional">Fitness/Sports Professional</option>
+          <option value="Remote_worker">Work from Home / Remote Worker</option>
+        </select>
+        <div class="error-message" id="occupation-error"></div>
       </div>
 
-      <!-- This will ask if they have any allergies or dietary requirements -->
-      <label for="dietaries">Do you have any dietary requirements?</label>
-      <select id="dietaries" name="dietaries" required onchange="toggleOtherDietaryField()">
-        <option value="NF">Nut Allergy</option>
-        <option value="GF">Gluten Intolerant</option>
-        <option value="DF">Lactose Intolerant</option>
-        <option value="NoPork">No Pork</option>
-        <option value="Halal">Halal</option>
-        <option value="noSF">No Sea Food</option>
-        <option value="other_dietary">Other</option>
-      </select>
-      <input type="text" id="otherDietaryField" name="otherDietaryField" placeholder="Please specify"
-        style="display: none;">
+      <div class="form-group">
+        <label for="gymdaysSlider" id="gymdaysLabel">
+          How many days do you go to the gym every week? (<span id="gymdaysValue">3</span> Days)
+        </label>
+        <input type="range" id="gymdaysSlider" name="gym_days" min="0" max="7" value="3" step="1"
+          aria-labelledby="gymdaysLabel" aria-valuemin="0" aria-valuemax="7" aria-valuenow="3">
+      </div>
 
-      <!-- This is for a list that asks for any dislikes. I put 100 things here using ChatGPT  -->
-      <label for="disliked_ingredients">Are there any ingredients you dislike or want to avoid? (Ctrl + Click to select
-        multiple)</label>
-      <select class="listIngredients" id="disliked_ingredients" name="disliked_ingredients[]" multiple>
-        <option value="Anchovies">Anchovies</option>
-        <option value="Anise">Anise</option>
-        <option value="Artichoke">Artichoke</option>
-        <option value="Asparagus">Asparagus</option>
-        <option value="Avocado">Avocado</option>
-        <option value="Bacon">Bacon</option>
-        <option value="Banana">Banana</option>
-        <option value="Basil">Basil</option>
-        <option value="Beef liver">Beef liver</option>
-        <option value="Beetroot">Beetroot</option>
-        <option value="Broccoli">Broccoli</option>
-        <option value="Brussels sprouts">Brussels sprouts</option>
-        <option value="Cabbage">Cabbage</option>
-        <option value="Capers">Capers</option>
-        <option value="Cardamom">Cardamom</option>
-        <option value="Carob">Carob</option>
-        <option value="Cauliflower">Cauliflower</option>
-        <option value="Chicken liver">Chicken liver</option>
-        <option value="Chili peppers">Chili peppers</option>
-        <option value="Cilantro">Cilantro</option>
-        <option value="Cinnamon">Cinnamon</option>
-        <option value="Cloves">Cloves</option>
-        <option value="Cocoa powder">Cocoa powder</option>
-        <option value="Coconut">Coconut</option>
-        <option value="Coriander">Coriander</option>
-        <option value="Crab">Crab</option>
-        <option value="Cucumber">Cucumber</option>
-        <option value="Curry leaves">Curry leaves</option>
-        <option value="Dark chocolate">Dark chocolate</option>
-        <option value="Dates">Dates</option>
-        <option value="Dill">Dill</option>
-        <option value="Duck">Duck</option>
-        <option value="Eggplant">Eggplant</option>
-        <option value="Fennel">Fennel</option>
-        <option value="Garlic">Garlic</option>
-        <option value="Ginger">Ginger</option>
-        <option value="Gummy bears">Gummy bears</option>
-        <option value="Habanero peppers">Habanero peppers</option>
-        <option value="Ham">Ham</option>
-        <option value="Horseradish">Horseradish</option>
-        <option value="Hot dogs">Hot dogs</option>
-        <option value="Ice cream">Ice cream</option>
-        <option value="Jalapeños">Jalapeños</option>
-        <option value="Jelly beans">Jelly beans</option>
-        <option value="Kale">Kale</option>
-        <option value="Kimchi">Kimchi</option>
-        <option value="Kiwi">Kiwi</option>
-        <option value="Leeks">Leeks</option>
-        <option value="Licorice">Licorice</option>
-        <option value="Lobster">Lobster</option>
-        <option value="Mackerel">Mackerel</option>
-        <option value="Mango">Mango</option>
-        <option value="Marshmallows">Marshmallows</option>
-        <option value="Mayonnaise">Mayonnaise</option>
-        <option value="Milk chocolate">Milk chocolate</option>
-        <option value="Mint">Mint</option>
-        <option value="Mushrooms">Mushrooms</option>
-        <option value="Nutmeg">Nutmeg</option>
-        <option value="Octopus">Octopus</option>
-        <option value="Okra">Okra</option>
-        <option value="Olives">Olives</option>
-        <option value="Onion">Onion</option>
-        <option value="Oregano">Oregano</option>
-        <option value="Papaya">Papaya</option>
-        <option value="Parsley">Parsley</option>
-        <option value="Parsnip">Parsnip</option>
-        <option value="Pepperoni">Pepperoni</option>
-        <option value="Pickles">Pickles</option>
-        <option value="Pineapple">Pineapple</option>
-        <option value="Portobello mushrooms">Portobello mushrooms</option>
-        <option value="Prunes">Prunes</option>
-        <option value="Prosciutto">Prosciutto</option>
-        <option value="Radish">Radish</option>
-        <option value="Raisins">Raisins</option>
-        <option value="Rocket (arugula)">Rocket (arugula)</option>
-        <option value="Rosemary">Rosemary</option>
-        <option value="Salami">Salami</option>
-        <option value="Salmon">Salmon</option>
-        <option value="Sage">Sage</option>
-        <option value="Sardines">Sardines</option>
-        <option value="Sauerkraut">Sauerkraut</option>
-        <option value="Scallions">Scallions</option>
-        <option value="Seitan">Seitan</option>
-        <option value="Shallots">Shallots</option>
-        <option value="Shiitake mushrooms">Shiitake mushrooms</option>
-        <option value="Shrimp">Shrimp</option>
-        <option value="Spinach">Spinach</option>
-        <option value="Squid">Squid</option>
-        <option value="Star anise">Star anise</option>
-        <option value="Tempeh">Tempeh</option>
-        <option value="Thyme">Thyme</option>
-        <option value="Tofu">Tofu</option>
-        <option value="Tuna">Tuna</option>
-        <option value="Turmeric">Turmeric</option>
-        <option value="Turnip">Turnip</option>
-        <option value="Vanilla extract">Vanilla extract</option>
-        <option value="Veal">Veal</option>
-        <option value="Wasabi">Wasabi</option>
-        <option value="Watercress">Watercress</option>
-        <option value="White chocolate">White chocolate</option>
-        <option value="Zucchini">Zucchini</option>
-      </select>
+      <div class="form-group">
+        <label for="activity_level" id="activityLevelLabel">Your daily activity level</label>
+        <select id="activity_level" name="activity_level" required aria-required="true" aria-labelledby="activityLevelLabel">
+          <option value="">-- Please choose an option --</option>
+          <option value="Sedentary">Sedentary (Little or no exercise)</option>
+          <option value="Lightly_active">Lightly Active (Light exercise 1-3 days/week)</option>
+          <option value="Moderately_active">Moderately Active (Moderate exercise 3-5 days/week)</option>
+          <option value="Very_active">Very Active (Hard exercise 6-7 days/week)</option>
+          <option value="Extremely_active">Extremely Active (Professional athlete level)</option>
+        </select>
+        <div class="error-message" id="activity_level-error"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="cook_home" id="cookHomeLabel">Do you frequently cook at home?</label>
+        <select id="cook_home" name="cook_home" required aria-required="true" aria-labelledby="cookHomeLabel">
+          <option value="">-- Please choose an option --</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="Sometimes">Sometimes</option>
+        </select>
+        <div class="error-message" id="cook_home-error"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="dietcurrent" id="dietCurrentLabel">What is your current diet?</label>
+        <select id="dietcurrent" name="dietcurrent" required aria-required="true" aria-labelledby="dietCurrentLabel" 
+          onchange="toggleOtherDietField()">
+          <option value="">-- Please choose an option --</option>
+          <option value="vegan">Vegan</option>
+          <option value="vegetarian">Vegetarian</option>
+          <option value="omnivore">Omnivore</option>
+          <option value="mixed_mostlymeat">Mixed, mostly meat</option>
+          <option value="mixed_mostlyveggies">Mixed, mostly vegetables</option>
+          <option value="other_diet">Other</option>
+        </select>
+        <input type="text" id="otherDietField" name="otherDietField" placeholder="Please specify" 
+          style="display: none;" aria-labelledby="dietCurrentLabel">
+        <div class="error-message" id="dietcurrent-error"></div>
+      </div>
+
+      <div class="form-group">
+        <fieldset>
+          <legend>Do you eat snacks between meals?</legend>
+          <div class="toggle-group">
+            <input type="radio" id="yes" name="snack" value="Yes" required aria-required="true">
+            <label for="yes" class="left">YES</label>
+
+            <input type="radio" id="no" name="snack" value="No">
+            <label for="no" class="right">NO</label>
+          </div>
+          <div class="error-message" id="snack-error"></div>
+        </fieldset>
+      </div>
+
+      <div class="form-group">
+        <label for="dietaries" id="dietariesLabel">Do you have any dietary requirements?</label>
+        <select id="dietaries" name="dietaries" required aria-required="true" aria-labelledby="dietariesLabel" 
+          onchange="toggleOtherDietaryField()">
+          <option value="None">None</option>
+          <option value="NF">Nut Allergy</option>
+          <option value="GF">Gluten Intolerant</option>
+          <option value="DF">Lactose Intolerant</option>
+          <option value="NoPork">No Pork</option>
+          <option value="Halal">Halal</option>
+          <option value="noSF">No Sea Food</option>
+          <option value="other_dietary">Other</option>
+        </select>
+        <input type="text" id="otherDietaryField" name="otherDietaryField" placeholder="Please specify"
+          style="display: none;" aria-labelledby="dietariesLabel">
+        <div class="error-message" id="dietaries-error"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="disliked_ingredients" id="dislikedLabel">
+          Are there any ingredients you dislike or want to avoid?
+          <span class="helper-text">(Ctrl + Click or Cmd + Click to select multiple)</span>
+        </label>
+        <select class="listIngredients" id="disliked_ingredients" name="disliked_ingredients[]" multiple
+          aria-labelledby="dislikedLabel">
+          <option value="Anchovies">Anchovies</option>
+          <option value="Anise">Anise</option>
+          <option value="Artichoke">Artichoke</option>
+          <option value="Asparagus">Asparagus</option>
+          <option value="Avocado">Avocado</option>
+          <option value="Bacon">Bacon</option>
+          <option value="Banana">Banana</option>
+          <option value="Basil">Basil</option>
+          <option value="Beef liver">Beef liver</option>
+          <option value="Beetroot">Beetroot</option>
+          <option value="Broccoli">Broccoli</option>
+          <option value="Brussels sprouts">Brussels sprouts</option>
+          <option value="Cabbage">Cabbage</option>
+          <option value="Capers">Capers</option>
+          <option value="Cardamom">Cardamom</option>
+          <option value="Carob">Carob</option>
+          <option value="Cauliflower">Cauliflower</option>
+          <option value="Chicken liver">Chicken liver</option>
+          <option value="Chili peppers">Chili peppers</option>
+          <option value="Cilantro">Cilantro</option>
+          <option value="Cinnamon">Cinnamon</option>
+          <option value="Cloves">Cloves</option>
+          <option value="Cocoa powder">Cocoa powder</option>
+          <option value="Coconut">Coconut</option>
+          <option value="Coriander">Coriander</option>
+          <option value="Crab">Crab</option>
+          <option value="Cucumber">Cucumber</option>
+          <option value="Curry leaves">Curry leaves</option>
+          <option value="Dark chocolate">Dark chocolate</option>
+          <option value="Dates">Dates</option>
+          <option value="Dill">Dill</option>
+          <option value="Duck">Duck</option>
+          <option value="Eggplant">Eggplant</option>
+          <option value="Fennel">Fennel</option>
+          <option value="Garlic">Garlic</option>
+          <option value="Ginger">Ginger</option>
+          <option value="Gummy bears">Gummy bears</option>
+          <option value="Habanero peppers">Habanero peppers</option>
+          <option value="Ham">Ham</option>
+          <option value="Horseradish">Horseradish</option>
+          <option value="Hot dogs">Hot dogs</option>
+          <option value="Ice cream">Ice cream</option>
+          <option value="Jalapeños">Jalapeños</option>
+          <option value="Jelly beans">Jelly beans</option>
+          <option value="Kale">Kale</option>
+          <option value="Kimchi">Kimchi</option>
+          <option value="Kiwi">Kiwi</option>
+          <option value="Leeks">Leeks</option>
+          <option value="Licorice">Licorice</option>
+          <option value="Lobster">Lobster</option>
+          <option value="Mackerel">Mackerel</option>
+          <option value="Mango">Mango</option>
+          <option value="Marshmallows">Marshmallows</option>
+          <option value="Mayonnaise">Mayonnaise</option>
+          <option value="Milk chocolate">Milk chocolate</option>
+          <option value="Mint">Mint</option>
+          <option value="Mushrooms">Mushrooms</option>
+          <option value="Nutmeg">Nutmeg</option>
+          <option value="Octopus">Octopus</option>
+          <option value="Okra">Okra</option>
+          <option value="Olives">Olives</option>
+          <option value="Onion">Onion</option>
+          <option value="Oregano">Oregano</option>
+          <option value="Papaya">Papaya</option>
+          <option value="Parsley">Parsley</option>
+          <option value="Parsnip">Parsnip</option>
+          <option value="Pepperoni">Pepperoni</option>
+          <option value="Pickles">Pickles</option>
+          <option value="Pineapple">Pineapple</option>
+          <option value="Portobello mushrooms">Portobello mushrooms</option>
+          <option value="Prunes">Prunes</option>
+          <option value="Prosciutto">Prosciutto</option>
+          <option value="Radish">Radish</option>
+          <option value="Raisins">Raisins</option>
+          <option value="Rocket (arugula)">Rocket (arugula)</option>
+          <option value="Rosemary">Rosemary</option>
+          <option value="Salami">Salami</option>
+          <option value="Salmon">Salmon</option>
+          <option value="Sage">Sage</option>
+          <option value="Sardines">Sardines</option>
+          <option value="Sauerkraut">Sauerkraut</option>
+          <option value="Scallions">Scallions</option>
+          <option value="Seitan">Seitan</option>
+          <option value="Shallots">Shallots</option>
+          <option value="Shiitake mushrooms">Shiitake mushrooms</option>
+          <option value="Shrimp">Shrimp</option>
+          <option value="Spinach">Spinach</option>
+          <option value="Squid">Squid</option>
+          <option value="Star anise">Star anise</option>
+          <option value="Tempeh">Tempeh</option>
+          <option value="Thyme">Thyme</option>
+          <option value="Tofu">Tofu</option>
+          <option value="Tuna">Tuna</option>
+          <option value="Turmeric">Turmeric</option>
+          <option value="Turnip">Turnip</option>
+          <option value="Vanilla extract">Vanilla extract</option>
+          <option value="Veal">Veal</option>
+          <option value="Wasabi">Wasabi</option>
+          <option value="Watercress">Watercress</option>
+          <option value="White chocolate">White chocolate</option>
+          <option value="Zucchini">Zucchini</option>
+        </select>
+      </div>
 
       <div class="form-navigation">
-        <!-- Clicking on this will take you to the third final form -->
-        <a href="form1.html"><button type="button">Previous Page</button></a>
-        <button type="submit">Next Page</button>
+        <a href="{{ url_for('form1') }}"><button type="button" class="btn-secondary">Previous Page</button></a>
+        <button type="submit" class="btn-primary">Next Page</button>
       </div>
     </form>
+
+    <!-- Dark Mode toggle -->
+    <div class="theme-toggle">
+      <label for="darkModeToggle" class="theme-toggle-label">
+          <input type="checkbox" id="darkModeToggle">
+          <span class="toggle-track">
+              <span class="toggle-indicator">
+                  <span class="toggle-icon toggle-icon-light">☀️</span>
+                  <span class="toggle-icon toggle-icon-dark">🌙</span>
+              </span>
+          </span>
+      </label>
+    </div>
   </div>
-  <script src="static/js/script.js"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 
 </html>

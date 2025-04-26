@@ -1,0 +1,161 @@
+2025-04-26 23:27:49,558 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-26 23:27:49,558 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 23:29:32,966 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-26 23:29:32,966 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 23:29:43,666 - INFO - 127.0.0.1 - - [26/Apr/2025 23:29:43] "[33mGET /submit-target?ageRange=19-25&gender=Male&weight=90&height=170&fitnessTarget=General+fitness HTTP/1.1[0m" 404 -
+2025-04-26 23:29:43,795 - INFO - 127.0.0.1 - - [26/Apr/2025 23:29:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 23:29:43,795 - INFO - 127.0.0.1 - - [26/Apr/2025 23:29:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-26 23:29:45,961 - INFO - 127.0.0.1 - - [26/Apr/2025 23:29:45] "GET / HTTP/1.1" 200 -
+2025-04-26 23:29:45,994 - INFO - 127.0.0.1 - - [26/Apr/2025 23:29:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 23:29:45,995 - INFO - 127.0.0.1 - - [26/Apr/2025 23:29:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-26 23:31:27,951 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-26 23:31:27,951 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 23:31:33,312 - INFO - 127.0.0.1 - - [26/Apr/2025 23:31:33] "GET / HTTP/1.1" 200 -
+2025-04-26 23:31:33,422 - INFO - 127.0.0.1 - - [26/Apr/2025 23:31:33] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-04-26 23:31:33,423 - INFO - 127.0.0.1 - - [26/Apr/2025 23:31:33] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-04-26 23:31:54,109 - INFO - 127.0.0.1 - - [26/Apr/2025 23:31:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 23:32:32,951 - INFO - 127.0.0.1 - - [26/Apr/2025 23:32:32] "GET /form2?ageRange=19-25&gender=Male&weight=90&height=185&fitnessTarget=Gain+muscle HTTP/1.1" 200 -
+2025-04-26 23:32:32,994 - INFO - 127.0.0.1 - - [26/Apr/2025 23:32:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 23:32:32,998 - INFO - 127.0.0.1 - - [26/Apr/2025 23:32:32] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-26 23:33:05,669 - INFO - 127.0.0.1 - - [26/Apr/2025 23:33:05] "GET /form3?occupation=Retail_worker&gym_days=2&activity_level=Lightly_active&cook_home=Yes&dietcurrent=omnivore&otherDietField=&snack=Yes&dietaries=DF&otherDietaryField= HTTP/1.1" 200 -
+2025-04-26 23:33:05,732 - INFO - 127.0.0.1 - - [26/Apr/2025 23:33:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 23:33:05,734 - INFO - 127.0.0.1 - - [26/Apr/2025 23:33:05] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-26 23:33:21,026 - INFO - Executing query: 
+        SELECT m.NutritionID, m.MealName, m.Calories_cal, m.Protein_g, 
+               m.Carbs_g, m.Fibers_g, m.Fat_g, m.Calcium_mg, m.Iron_mg,
+               m.Ingredients, m.DietNotes, dc.CategoryName, m.IsHomeCooked, 
+               m.IsMealorSnack
+        FROM meals m
+        JOIN diet_categories dc ON m.CategoryID = dc.CategoryID
+        WHERE 1=1 AND m.IsMealorSnack = 'Meal'
+         AND m.CategoryID = %(diet_category)s AND (m.Protein_g >= %(high_protein)s) AND (m.Protein_g >= %(young_adult_protein)s) AND (m.Calories_cal <= %(overweight_calories)s AND m.Fat_g <= %(overweight_fat)s) AND (m.DietNotes LIKE '%DF%') AND m.IsHomeCooked = TRUE ORDER BY m.Protein_g DESC, m.Calories_cal DESC LIMIT %(limit)s
+2025-04-26 23:33:21,026 - INFO - With parameters: {'diet_category': 5, 'high_protein': 40, 'young_adult_protein': 30, 'overweight_calories': 600, 'overweight_fat': 20, 'limit': 20}
+2025-04-26 23:33:21,095 - INFO - Query executed: Form data: {"activity_level": "Lightly_active", "ageRange": "19-25", "cook_home": "Yes", "dietaries": "DF", "dietcurrent": "omnivore", "fitnessTarget": "Gain muscle", "gender": "Male", "gym_days": "2", "height": "185", "occupation": "Retail_worker", "otherDietField": "", "otherDietaryField": "", "snack": "Yes", "weight": "90", "meals_per_day": "3", "meal_preference": "Home_cooked", "grocery_budget": "100", "nutritional_awareness": "Yes", "specific_nutrition[]": "High_protein", "plan_duration": "3", "specific_nutrition": ["High_protein"]}, Results: 0
+2025-04-26 23:33:21,164 - INFO - 127.0.0.1 - - [26/Apr/2025 23:33:21] "POST /submit HTTP/1.1" 200 -
+2025-04-26 23:33:21,250 - INFO - 127.0.0.1 - - [26/Apr/2025 23:33:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 23:33:21,254 - INFO - 127.0.0.1 - - [26/Apr/2025 23:33:21] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-26 23:33:33,903 - ERROR - Exception on /sample-meal-plan [GET]
+Traceback (most recent call last):
+  File "c:\Users\simon\scoop\apps\python\current\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\simon\scoop\apps\python\current\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\simon\scoop\apps\python\current\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\simon\scoop\apps\python\current\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Coding work\ISBS304 Project Assignment\Meal-Planner\app.py", line 49, in decorated_function
+    return f(conn=conn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Coding work\ISBS304 Project Assignment\Meal-Planner\app.py", line 431, in sample_meal_plan
+    return render_template('sample_meal_plan.html', meal_plan=meal_plan, diet=diet_category, calories=max_calories)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\simon\scoop\apps\python\current\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\simon\scoop\apps\python\current\Lib\site-packages\jinja2\environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\simon\scoop\apps\python\current\Lib\site-packages\jinja2\environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\simon\scoop\apps\python\current\Lib\site-packages\jinja2\environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\simon\scoop\apps\python\current\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\simon\scoop\apps\python\current\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\simon\scoop\apps\python\current\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: sample_meal_plan.html
+2025-04-26 23:33:33,933 - ERROR - Server error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-04-26 23:33:33,938 - INFO - 127.0.0.1 - - [26/Apr/2025 23:33:33] "[35m[1mGET /sample-meal-plan?diet=omnivore&calories=2000 HTTP/1.1[0m" 500 -
+2025-04-26 23:33:33,962 - INFO - 127.0.0.1 - - [26/Apr/2025 23:33:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 23:33:33,964 - INFO - 127.0.0.1 - - [26/Apr/2025 23:33:33] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-26 23:33:38,008 - INFO - 127.0.0.1 - - [26/Apr/2025 23:33:38] "[32mPOST /submit HTTP/1.1[0m" 302 -
+2025-04-26 23:33:38,016 - INFO - 127.0.0.1 - - [26/Apr/2025 23:33:38] "GET / HTTP/1.1" 200 -
+2025-04-26 23:33:38,053 - INFO - 127.0.0.1 - - [26/Apr/2025 23:33:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 23:33:38,055 - INFO - 127.0.0.1 - - [26/Apr/2025 23:33:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-26 23:33:39,612 - INFO - 127.0.0.1 - - [26/Apr/2025 23:33:39] "GET /form2?ageRange=19-25&gender=Male&weight=90&height=185&fitnessTarget=Gain+muscle HTTP/1.1" 200 -
+2025-04-26 23:33:39,640 - INFO - 127.0.0.1 - - [26/Apr/2025 23:33:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 23:33:39,644 - INFO - 127.0.0.1 - - [26/Apr/2025 23:33:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-26 23:33:41,344 - INFO - 127.0.0.1 - - [26/Apr/2025 23:33:41] "GET /form3?occupation=Retail_worker&gym_days=2&activity_level=Lightly_active&cook_home=Yes&dietcurrent=omnivore&otherDietField=&snack=Yes&dietaries=DF&otherDietaryField= HTTP/1.1" 200 -
+2025-04-26 23:33:41,386 - INFO - 127.0.0.1 - - [26/Apr/2025 23:33:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-26 23:33:41,386 - INFO - 127.0.0.1 - - [26/Apr/2025 23:33:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 23:33:42,206 - INFO - Executing query: 
+        SELECT m.NutritionID, m.MealName, m.Calories_cal, m.Protein_g, 
+               m.Carbs_g, m.Fibers_g, m.Fat_g, m.Calcium_mg, m.Iron_mg,
+               m.Ingredients, m.DietNotes, dc.CategoryName, m.IsHomeCooked, 
+               m.IsMealorSnack
+        FROM meals m
+        JOIN diet_categories dc ON m.CategoryID = dc.CategoryID
+        WHERE 1=1 AND m.IsMealorSnack = 'Meal'
+         AND m.CategoryID = %(diet_category)s AND (m.Protein_g >= %(high_protein)s) AND (m.Protein_g >= %(young_adult_protein)s) AND (m.Calories_cal <= %(overweight_calories)s AND m.Fat_g <= %(overweight_fat)s) AND (m.DietNotes LIKE '%DF%') AND m.IsHomeCooked = TRUE ORDER BY m.Protein_g DESC, m.Calories_cal DESC LIMIT %(limit)s
+2025-04-26 23:33:42,206 - INFO - With parameters: {'diet_category': 5, 'high_protein': 40, 'young_adult_protein': 30, 'overweight_calories': 600, 'overweight_fat': 20, 'limit': 20}
+2025-04-26 23:33:42,211 - INFO - Query executed: Form data: {"activity_level": "Lightly_active", "ageRange": "19-25", "cook_home": "Yes", "dietaries": "DF", "dietcurrent": "omnivore", "fitnessTarget": "Gain muscle", "gender": "Male", "gym_days": "2", "height": "185", "occupation": "Retail_worker", "otherDietField": "", "otherDietaryField": "", "snack": "Yes", "weight": "90", "meals_per_day": "3", "meal_preference": "Home_cooked", "grocery_budget": "100", "nutritional_awareness": "Yes", "plan_duration": "3"}, Results: 0
+2025-04-26 23:33:42,212 - INFO - 127.0.0.1 - - [26/Apr/2025 23:33:42] "POST /submit HTTP/1.1" 200 -
+2025-04-26 23:33:42,274 - INFO - 127.0.0.1 - - [26/Apr/2025 23:33:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-26 23:33:42,275 - INFO - 127.0.0.1 - - [26/Apr/2025 23:33:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 23:36:46,947 - INFO - 127.0.0.1 - - [26/Apr/2025 23:36:46] "[33mGET /submit-target?ageRange=19-25&gender=Male&weight=70&height=170&fitnessTarget=Improve+stamina HTTP/1.1[0m" 404 -
+2025-04-26 23:36:46,973 - INFO - 127.0.0.1 - - [26/Apr/2025 23:36:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 23:36:46,975 - INFO - 127.0.0.1 - - [26/Apr/2025 23:36:46] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-26 23:36:48,128 - INFO - 127.0.0.1 - - [26/Apr/2025 23:36:48] "GET / HTTP/1.1" 200 -
+2025-04-26 23:39:56,917 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-26 23:39:56,918 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 23:40:04,005 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:04] "GET / HTTP/1.1" 200 -
+2025-04-26 23:40:04,090 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:04] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-26 23:40:04,092 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 23:40:12,993 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:12] "GET /form2?ageRange=26-32&gender=Male&weight=90&height=185&fitnessTarget=Gain+muscle HTTP/1.1" 200 -
+2025-04-26 23:40:13,026 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 23:40:13,029 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-26 23:40:17,403 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:17] "GET /form3?occupation=Retail_worker&gym_days=2&activity_level=Lightly_active&cook_home=Yes&dietcurrent=omnivore&otherDietField=&snack=Yes&dietaries=DF&otherDietaryField= HTTP/1.1" 200 -
+2025-04-26 23:40:17,438 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 23:40:17,439 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-26 23:40:19,847 - INFO - Executing query: 
+        SELECT m.NutritionID, m.MealName, m.Calories_cal, m.Protein_g, 
+               m.Carbs_g, m.Fibers_g, m.Fat_g, m.Calcium_mg, m.Iron_mg,
+               m.Ingredients, m.DietNotes, dc.CategoryName, m.IsHomeCooked, 
+               m.IsMealorSnack
+        FROM meals m
+        JOIN diet_categories dc ON m.CategoryID = dc.CategoryID
+        WHERE 1=1 AND m.IsMealorSnack = 'Meal'
+         AND m.CategoryID = %(diet_category)s AND (m.Protein_g >= %(high_protein)s) AND (m.Protein_g >= %(young_adult_protein)s) AND (m.Calories_cal <= %(overweight_calories)s AND m.Fat_g <= %(overweight_fat)s) AND (m.DietNotes LIKE '%DF%') AND m.IsHomeCooked = TRUE ORDER BY m.Protein_g DESC, m.Calories_cal DESC LIMIT %(limit)s
+2025-04-26 23:40:19,847 - INFO - With parameters: {'diet_category': 5, 'high_protein': 40, 'young_adult_protein': 30, 'overweight_calories': 600, 'overweight_fat': 20, 'limit': 20}
+2025-04-26 23:40:19,854 - INFO - Query executed: Form data: {"activity_level": "Lightly_active", "ageRange": "26-32", "cook_home": "Yes", "dietaries": "DF", "dietcurrent": "omnivore", "fitnessTarget": "Gain muscle", "gender": "Male", "gym_days": "2", "height": "185", "occupation": "Retail_worker", "otherDietField": "", "otherDietaryField": "", "snack": "Yes", "weight": "90", "meals_per_day": "3", "meal_preference": "Home_cooked", "grocery_budget": "100", "nutritional_awareness": "Yes", "plan_duration": "3"}, Results: 0
+2025-04-26 23:40:19,928 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:19] "POST /submit HTTP/1.1" 200 -
+2025-04-26 23:40:19,974 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 23:40:19,975 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-26 23:40:22,905 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:22] "GET / HTTP/1.1" 200 -
+2025-04-26 23:40:22,934 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 23:40:22,937 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-26 23:40:24,680 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:24] "GET /form2?ageRange=26-32&gender=Male&weight=90&height=185&fitnessTarget=Gain+muscle HTTP/1.1" 200 -
+2025-04-26 23:40:24,710 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 23:40:24,712 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-26 23:40:27,950 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:27] "GET /form3?occupation=Retail_worker&gym_days=2&activity_level=Lightly_active&cook_home=Yes&dietcurrent=omnivore&otherDietField=&snack=Yes&dietaries=None&otherDietaryField= HTTP/1.1" 200 -
+2025-04-26 23:40:27,996 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 23:40:27,998 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:27] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-04-26 23:40:28,661 - INFO - Executing query: 
+        SELECT m.NutritionID, m.MealName, m.Calories_cal, m.Protein_g, 
+               m.Carbs_g, m.Fibers_g, m.Fat_g, m.Calcium_mg, m.Iron_mg,
+               m.Ingredients, m.DietNotes, dc.CategoryName, m.IsHomeCooked, 
+               m.IsMealorSnack
+        FROM meals m
+        JOIN diet_categories dc ON m.CategoryID = dc.CategoryID
+        WHERE 1=1 AND m.IsMealorSnack = 'Meal'
+         AND m.CategoryID = %(diet_category)s AND (m.Protein_g >= %(high_protein)s) AND (m.Protein_g >= %(young_adult_protein)s) AND (m.Calories_cal <= %(overweight_calories)s AND m.Fat_g <= %(overweight_fat)s) AND m.IsHomeCooked = TRUE ORDER BY m.Protein_g DESC, m.Calories_cal DESC LIMIT %(limit)s
+2025-04-26 23:40:28,661 - INFO - With parameters: {'diet_category': 5, 'high_protein': 40, 'young_adult_protein': 30, 'overweight_calories': 600, 'overweight_fat': 20, 'limit': 20}
+2025-04-26 23:40:28,665 - INFO - Query executed: Form data: {"activity_level": "Lightly_active", "ageRange": "26-32", "cook_home": "Yes", "dietaries": "None", "dietcurrent": "omnivore", "fitnessTarget": "Gain muscle", "gender": "Male", "gym_days": "2", "height": "185", "occupation": "Retail_worker", "otherDietField": "", "otherDietaryField": "", "snack": "Yes", "weight": "90", "meals_per_day": "3", "meal_preference": "Home_cooked", "grocery_budget": "100", "nutritional_awareness": "Yes", "plan_duration": "3"}, Results: 0
+2025-04-26 23:40:28,666 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:28] "POST /submit HTTP/1.1" 200 -
+2025-04-26 23:40:28,704 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-26 23:40:28,707 - INFO - 127.0.0.1 - - [26/Apr/2025 23:40:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -

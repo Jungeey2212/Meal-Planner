@@ -3,81 +3,165 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness Profile - Page 3</title>
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
     <div class="form-container">
-        <form action="/submit" method="post">
-            <!-- This will ask how many meals they eat in a day -->
-            <label for="meals_per_day_input">How many times do you eat in a day?</label>
-            <input type="number" id="meals_per_day_input" name="meals_per_day" min="1" max="5" required>
+        <!-- Progress bar -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 100%"></div>
+            </div>
+            <div class="progress-steps">
+                <div class="progress-step">1</div>
+                <div class="progress-step">2</div>
+                <div class="progress-step active">3</div>
+            </div>
+            <p class="progress-text">Step 3 of 3: Meal Preferences</p>
+        </div>
 
-            <!-- This will ask if they prefer home cooked meal or read-to-eat ones -->
-            <label for="meal_preference">Do you prefer processed/ready-to-eat meals or home-cooked meals?</label>
-            <select id="meal_preference" name="meal_preference" required>
-                <option value="">-- Please choose an option --</option>
-                <option value="Processed"> Prefer Processed / Ready-to-eat meals more</option>
-                <option value="Home_cooked">Prefer Home-cooked meals more</option>
-                <option value="Both">Both equally</option>
-            </select>
+        <!-- Flash Messages -->
+        {% if get_flashed_messages() %}
+            {% for category, message in get_flashed_messages(with_categories=true) %}
+                <div class="flash-message {{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
 
-            <!-- This will ask how much they spend on grocery shopping each week -->
-            <label for="grocery_budget_input">Average weekly grocery shopping budget? ($)</label>
-            <input type="number" id="grocery_budget_input" name="grocery_budget" min="0" step="5" required>
+        <h1>Your Meal Preferences</h1>
 
-            <label for="nutritional_awareness">Are you aware of your daily nutritional needs?</label>
-            <select id="nutritional_awareness" name="nutritional_awareness" required>
-                <option value="">-- Please choose an option --</option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-                <option value="Somewhat">Somewhat</option>
-            </select>
-
-            <!-- This will ask if they are looking for any specific nutrient goal in the meal plan -->
-            <label>Do you have any specific nutritional needs? (Select all that apply)</label>
-            <div class="toggle-checkbox-group">
-                <input type="checkbox" id="high_protein" name="specific_nutrition[]" value="High_protein">
-                <label for="high_protein">High Protein</label>
-
-                <input type="checkbox" id="high_fiber" name="specific_nutrition[]" value="High_fiber">
-                <label for="high_fiber">High Fiber</label>
-
-                <input type="checkbox" id="low_carb" name="specific_nutrition[]" value="Low_carb">
-                <label for="low_carb">Low Carb</label>
-
-                <input type="checkbox" id="low_fat" name="specific_nutrition[]" value="Low_fat">
-                <label for="low_fat">Low Fat</label>
-
-                <input type="checkbox" id="low_sodium" name="specific_nutrition[]" value="Low_sodium">
-                <label for="low_sodium">Low Sodium</label>
-
-                <input type="checkbox" id="balanced_diet" name="specific_nutrition[]" value="Balanced_diet">
-                <label for="balanced_diet">Balanced Diet</label>
-
-                <input type="checkbox" id="nutrition_other" name="specific_nutrition[]" value="Other">
-                <label for="nutrition_other">Other</label>
+        <form id="fitnessForm3" action="{{ url_for('submit') }}" method="post" novalidate>
+            <div class="form-group">
+                <label for="meals_per_day_input" id="mealsPerDayLabel">How many times do you eat in a day?</label>
+                <input type="number" id="meals_per_day_input" name="meals_per_day" min="1" max="8" value="3" required 
+                    aria-required="true" aria-labelledby="mealsPerDayLabel">
+                <div class="error-message" id="meals_per_day_input-error"></div>
             </div>
 
-            <!-- This will ask how many weeks would they like us to make the meal plan for. Minimum 2 weeks and maximum 4 weeks ! -->
-            <label for="planDuration">How many weeks would you like the plan for? (2–4 weeks)</label>
-            <select id="planDuration" name="plan_duration" required>
-                <option value=""" disabled selected>Selected your option</option>"
-                <option value="2">2 Weeks</option>
-                <option value="3">3 Weeks</option>
-                <option value="4">4 Weeks</option>
-            </select>
+            <div class="form-group">
+                <label for="meal_preference" id="mealPreferenceLabel">
+                    Do you prefer processed/ready-to-eat meals or home-cooked meals?
+                </label>
+                <select id="meal_preference" name="meal_preference" required aria-required="true" 
+                    aria-labelledby="mealPreferenceLabel">
+                    <option value="">-- Please choose an option --</option>
+                    <option value="Processed">Prefer Processed / Ready-to-eat meals more</option>
+                    <option value="Home_cooked">Prefer Home-cooked meals more</option>
+                    <option value="Both">Both equally</option>
+                </select>
+                <div class="error-message" id="meal_preference-error"></div>
+            </div>
 
-            <div style="display: flex; justify-content: space-between; margin-top: 20px;">
-                
-                <!-- This will submit the options selected and the next thing you see is the meal plan. Maybe after a few seconds of processing. -->
-                <a href="form2.html"><button type="button">Previous Page</button></a>
-                <button class="final_submit" type="submit">Submit Responses</button>
+            <div class="form-group">
+                <label for="grocery_budget_input" id="groceryBudgetLabel">
+                    Average weekly grocery shopping budget? ($)
+                </label>
+                <input type="number" id="grocery_budget_input" name="grocery_budget" min="0" step="5" value="100" 
+                    required aria-required="true" aria-labelledby="groceryBudgetLabel">
+                <div class="error-message" id="grocery_budget_input-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="nutritional_awareness" id="nutritionalAwarenessLabel">
+                    Are you aware of your daily nutritional needs?
+                </label>
+                <select id="nutritional_awareness" name="nutritional_awareness" required aria-required="true" 
+                    aria-labelledby="nutritionalAwarenessLabel">
+                    <option value="">-- Please choose an option --</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Somewhat">Somewhat</option>
+                </select>
+                <div class="error-message" id="nutritional_awareness-error"></div>
+            </div>
+
+            <div class="form-group">
+                <fieldset>
+                    <legend>Do you have any specific nutritional needs?</legend>
+                    <p class="helper-text">(Select all that apply)</p>
+                    <div class="toggle-checkbox-group">
+                        <input type="checkbox" id="high_protein" name="specific_nutrition[]" value="High_protein">
+                        <label for="high_protein">High Protein</label>
+
+                        <input type="checkbox" id="high_fiber" name="specific_nutrition[]" value="High_fiber">
+                        <label for="high_fiber">High Fiber</label>
+
+                        <input type="checkbox" id="low_carb" name="specific_nutrition[]" value="Low_carb">
+                        <label for="low_carb">Low Carb</label>
+
+                        <input type="checkbox" id="low_fat" name="specific_nutrition[]" value="Low_fat">
+                        <label for="low_fat">Low Fat</label>
+
+                        <input type="checkbox" id="low_sodium" name="specific_nutrition[]" value="Low_sodium">
+                        <label for="low_sodium">Low Sodium</label>
+
+                        <input type="checkbox" id="balanced_diet" name="specific_nutrition[]" value="Balanced_diet">
+                        <label for="balanced_diet">Balanced Diet</label>
+
+                        <input type="checkbox" id="nutrition_other" name="specific_nutrition[]" value="Other">
+                        <label for="nutrition_other">Other</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="form-group">
+                <label for="planDuration" id="planDurationLabel">
+                    How many weeks would you like the plan for?
+                </label>
+                <select id="planDuration" name="plan_duration" required aria-required="true" 
+                    aria-labelledby="planDurationLabel">
+                    <option value="">-- Please choose an option --</option>
+                    <option value="2">2 Weeks</option>
+                    <option value="3">3 Weeks</option>
+                    <option value="4">4 Weeks</option>
+                </select>
+                <div class="error-message" id="planDuration-error"></div>
+            </div>
+
+            <div class="form-navigation">
+                <a href="{{ url_for('form2') }}"><button type="button" class="btn-secondary">Previous Page</button></a>
+                <button type="submit" class="btn-primary final_submit">Generate Meal Plan</button>
             </div>
         </form>
+
+        <!-- Dark Mode toggle -->
+        <div class="theme-toggle">
+            <label for="darkModeToggle" class="theme-toggle-label">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="toggle-track">
+                    <span class="toggle-indicator">
+                        <span class="toggle-icon toggle-icon-light">☀️</span>
+                        <span class="toggle-icon toggle-icon-dark">🌙</span>
+                    </span>
+                </span>
+            </label>
+        </div>
     </div>
-    <script src="static/js/script.js"></script>
+
+    <!-- Loading overlay for form submission -->
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+        <div class="loading-spinner"></div>
+        <p>Generating your personalized meal plan...</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        // Show loading overlay on form submission
+        document.getElementById('fitnessForm3').addEventListener('submit', function(event) {
+            // Validate form first
+            if (!formValidator.validateForm(this)) {
+                event.preventDefault();
+                return;
+            }
+            
+            // Show loading overlay
+            document.getElementById('loadingOverlay').style.display = 'flex';
+        });
+    </script>
 </body>
 
 </html>

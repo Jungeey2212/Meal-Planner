@@ -126,7 +126,116 @@ VALUES
   'kangaroo fillet, pepper, salt', 1, 'GF, NF, No Fish', TRUE, 'Meal'),
   
 ('Roast Goose', 700, 42, 0, 0, 0, 60, 22, 38, 130, 120, 30, 2.8,
-  'goose, olive oil, rosemary', 1, 'GF, NF, No Fish', TRUE, 'Meal');
+  'goose, olive oil, rosemary', 1, 'GF, NF, No Fish', TRUE, 'Meal'),
+  
+  ('Crispy Chilli Turkey Noodles', 520, 35, 40, 6, 2, 25, 5, 18, 75, 950, 70, 2.1,
+ 'Turkey mince, udon noodles, garlic, chili flakes, soy sauce, honey, spring onions, sesame oil', 1, 'Contains soy and gluten', TRUE, 'Meal'),
+
+('Spicy Lamb & Feta Meatballs', 620, 38, 12, 5, 2, 45, 18, 20, 110, 700, 220, 3.0,
+ 'Lamb mince, feta cheese, onion, garlic, chili flakes, parsley, egg, breadcrumbs, olive oil, tomato sauce', 1, 'Contains dairy and gluten', TRUE, 'Meal'),
+
+('Grilled Ribeye Steak', 750, 60, 2, 0, 0, 55, 25, 30, 150, 500, 40, 4.2,
+ 'Ribeye steak, salt, pepper, butter', 1, 'Gluten-free', TRUE, 'Meal'),
+
+('BBQ Pulled Pork', 680, 48, 10, 7, 1, 45, 15, 25, 130, 1100, 60, 2.7,
+ 'Pork shoulder, BBQ sauce, onion powder, garlic powder', 1, 'Contains sugar', TRUE, 'Meal'),
+
+('Garlic Butter Chicken Thighs', 550, 40, 5, 1, 0, 35, 12, 20, 95, 600, 50, 2.5,
+ 'Chicken thighs, garlic, butter, thyme, parsley', 1, 'Gluten-free', TRUE, 'Meal'),
+
+('Beef and Bacon Skewers', 620, 45, 4, 2, 0, 48, 18, 25, 140, 950, 45, 3.5,
+ 'Beef cubes, bacon strips, black pepper, olive oil', 1, 'Gluten-free', TRUE, 'Meal'),
+
+('Sausage and Egg Bake', 480, 32, 6, 2, 0, 30, 10, 18, 95, 800, 110, 2.2,
+ 'Pork sausages, eggs, cheddar cheese, spinach', 1, 'Contains dairy', TRUE, 'Meal'),
+
+('Butter-Seared Lamb Chops', 700, 50, 2, 0, 0, 55, 20, 28, 150, 700, 40, 4.1,
+ 'Lamb chops, butter, rosemary, salt', 1, 'Gluten-free', TRUE, 'Meal'),
+
+('Cheddar Stuffed Burgers', 710, 50, 8, 2, 0, 50, 20, 30, 135, 900, 150, 3.8,
+ 'Beef mince, cheddar cheese, garlic, onion powder', 1, 'Contains dairy', TRUE, 'Meal'),
+
+('Honey Glazed Chicken Wings', 620, 38, 15, 8, 0, 40, 12, 25, 110, 800, 60, 2.6,
+ 'Chicken wings, honey, soy sauce, ginger, garlic', 1, 'Contains soy', TRUE, 'Meal'),
+
+('Classic Beef Meatballs', 580, 42, 5, 1, 1, 40, 15, 22, 125, 600, 80, 3.5,
+ 'Beef mince, parmesan, egg, garlic, parsley', 1, 'Contains dairy', TRUE, 'Meal'),
+
+('Pork Belly Bites', 760, 42, 5, 2, 0, 65, 25, 35, 170, 950, 35, 2.5,
+ 'Pork belly, black pepper, sea salt', 1, 'Gluten-free', TRUE, 'Snack'),
+
+('Smoked Beef Brisket', 680, 55, 3, 1, 0, 45, 18, 25, 140, 750, 45, 4.0,
+ 'Beef brisket, paprika, garlic powder, salt, pepper', 1, 'Gluten-free', TRUE, 'Meal'),
+
+('Lamb Liver Fry', 430, 35, 5, 2, 1, 28, 9, 15, 320, 400, 45, 8.1,
+ 'Lamb liver, onions, garlic, turmeric, cumin', 1, 'Gluten-free', TRUE, 'Meal'),
+
+('Chicken Bacon Wraps', 600, 42, 8, 4, 0, 40, 15, 22, 120, 850, 75, 2.8,
+ 'Chicken breast, bacon, cream cheese, chives', 1, 'Contains dairy', TRUE, 'Meal'),
+
+('Duck Breast with Orange Glaze', 650, 45, 10, 6, 1, 45, 18, 25, 155, 700, 40, 3.6,
+ 'Duck breast, orange zest, honey, butter', 1, 'Contains sugar', TRUE, 'Meal'),
+
+('Spicy Beef Jerky', 300, 25, 4, 2, 0, 18, 7, 10, 85, 1200, 20, 3.2,
+ 'Beef strips, soy sauce, chili flakes, garlic powder', 1, 'Contains soy', TRUE, 'Snack'),
+
+('Crispy Chicken Skin Bites', 450, 30, 2, 0, 0, 35, 15, 18, 105, 900, 35, 2.4,
+ 'Chicken skin, paprika, salt, pepper', 1, 'Gluten-free', TRUE, 'Snack'),
+
+('Herb Roasted Turkey Breast', 520, 40, 5, 2, 0, 30, 10, 18, 90, 700, 50, 2.8,
+ 'Turkey breast, rosemary, thyme, olive oil', 1, 'Gluten-free', TRUE, 'Meal'),
+
+('Venison Steak', 550, 48, 3, 0, 0, 30, 12, 16, 95, 500, 45, 5.0,
+ 'Venison steak, salt, pepper, garlic', 1, 'Gluten-free', TRUE, 'Meal'),
+
+('Beef Heart Stew', 610, 50, 6, 3, 1, 40, 14, 22, 210, 600, 55, 8.5,
+ 'Beef heart, onions, carrots, beef broth, pepper', 1, 'Gluten-free', TRUE, 'Meal'),
+
+('Ham and Egg Muffins', 480, 30, 4, 1, 0, 35, 12, 18, 105, 850, 70, 2.9,
+ 'Ham slices, eggs, cheddar cheese, spinach', 1, 'Contains dairy', TRUE, 'Meal'),
+
+('Bacon Wrapped Meatloaf', 730, 50, 8, 3, 0, 55, 20, 30, 140, 1000, 90, 3.8,
+ 'Beef mince, bacon, onion, garlic, tomato paste', 1, 'Contains gluten', TRUE, 'Meal'),
+
+('Crispy Duck Legs', 660, 48, 5, 1, 0, 50, 20, 25, 160, 650, 45, 3.4,
+ 'Duck legs, salt, black pepper, thyme', 1, 'Gluten-free', TRUE, 'Meal'),
+
+('Beef and Egg Breakfast Bowl', 580, 40, 6, 2, 0, 40, 12, 25, 115, 750, 80, 3.0,
+ 'Ground beef, eggs, spinach, butter', 1, 'Contains dairy', TRUE, 'Meal'),
+
+('Lamb Kebabs', 600, 45, 5, 2, 1, 40, 16, 22, 140, 650, 40, 4.2,
+ 'Lamb mince, cumin, paprika, onions, garlic', 1, 'Gluten-free', TRUE, 'Meal'),
+
+('Creamy Chicken Alfredo', 680, 40, 12, 5, 1, 50, 18, 28, 120, 850, 130, 2.9,
+ 'Chicken breast, heavy cream, parmesan cheese, butter, garlic', 1, 'Contains dairy', TRUE, 'Meal'),
+
+('Pepperoni Stuffed Chicken', 580, 42, 4, 2, 0, 40, 15, 20, 115, 900, 60, 3.2,
+ 'Chicken breast, pepperoni, mozzarella cheese, spinach', 1, 'Contains dairy', TRUE, 'Meal'),
+
+('Turkey Meatloaf', 550, 38, 8, 3, 1, 30, 10, 18, 90, 700, 75, 2.6,
+ 'Ground turkey, eggs, onion, garlic, tomato paste', 1, 'Contains gluten', TRUE, 'Meal'),
+
+('Carnivore Pizza', 780, 50, 8, 3, 0, 60, 22, 35, 140, 950, 160, 4.1,
+ 'Beef mince, bacon, ham, mozzarella cheese, pepperoni', 1, 'Contains dairy', TRUE, 'Meal'),
+
+('Sizzling Beef Fajitas', 640, 45, 10, 4, 1, 40, 15, 22, 130, 750, 90, 3.5,
+ 'Beef strips, bell peppers, onions, olive oil', 1, 'Contains soy', TRUE, 'Meal'),
+
+('Grilled Sausage Platter', 720, 50, 5, 2, 0, 55, 20, 30, 150, 1000, 80, 3.6,
+ 'Pork sausages, mustard, pickles', 1, 'Gluten-free', TRUE, 'Meal'),
+
+('Baked Chicken Drumsticks', 580, 42, 4, 1, 0, 38, 14, 20, 120, 800, 70, 3.0,
+ 'Chicken drumsticks, paprika, garlic powder, olive oil', 1, 'Gluten-free', TRUE, 'Meal'),
+
+('Bacon Wrapped Scallops', 440, 30, 3, 0, 0, 30, 12, 18, 90, 600, 45, 2.5,
+ 'Scallops, bacon, lemon zest, butter', 1, 'Contains seafood', TRUE, 'Meal'),
+
+('Grilled Lamb Ribs', 740, 55, 6, 2, 0, 55, 20, 30, 160, 850, 55, 4.5,
+ 'Lamb ribs, rosemary, thyme, garlic', 1, 'Gluten-free', TRUE, 'Meal'),
+
+('Steak and Egg Plate', 680, 50, 2, 1, 0, 48, 18, 28, 135, 700, 90, 3.5,
+ 'Sirloin steak, eggs, butter, salt', 1, 'Gluten-free', TRUE, 'Meal');
+
 
 
 -- Vegan meals (CategoryID = 3)

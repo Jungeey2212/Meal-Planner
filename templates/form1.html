@@ -2,57 +2,116 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness Profile - Page 1</title>
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <div class="form-container">
-        <form action="form2.html" method="get">
-
-            <!-- This will ask for age range -->
-            <label for="ageRange">Your Age Range ?</label>
-            <select id="ageRange" name="ageRange" required>
-                <option value="">-- Please choose an option --</option>
-                <option value="12-18">12-18</option>
-                <option value="19-25">19-25</option>
-                <option value="26-32">26-32</option>
-                <option value="33-64">33-64</option>
-                <option value="65+">65+</option>
-            </select>
-
-            <!-- This will ask for gender -->
-            <label for="gender">Your Gender ?</label>
-            <select id="gender" name="gender" required>
-                <option value="">-- Please choose an option --</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
-            </select>
-
-            <!-- This will ask for current weight and height using sliders. I used javascript to update value in real time here-->
-            <label for="weightSlider">What is your current weight ? (<span id="weightValue">90</span> kg)</label>
-            <input type="range" id="weightSlider" name="weight" min="40" max="140" value="90" step="5" oninput="updateWeightValue()">
-                        
-            <label for="heightSlider">What is your height? (<span id="heightValue">170</span> cm)</label>
-            <input type="range" id="heightSlider" name="height" min="140" max="220" value="170" step="5" oninput="updateHeightValue()">
-
-            <p> Your BMI :<strong id="bmiValue">---</strong></p>
-            
-            <label for="fitnessTarget">What's your fitness target ?</label>
-            <select id="fitnessTarget" name="fitnessTarget">
-                <option value="Lose weight">Lose Weight</option>
-                <option value="Gain muscle">Gain Muscle</option>
-                <option value="Improve stamina">Improve Stamina</option>
-                <option value="General fitness">General Fitness</option>
-                <option value="Bulking">Bulking</option>
-            </select>
-
-            <!-- Pressing submit will take you to next page -->
-            <button type="submit">Next Page</button>
+        <!-- Progress bar -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 33.3%"></div>
+            </div>
+            <div class="progress-steps">
+                <div class="progress-step active">1</div>
+                <div class="progress-step">2</div>
+                <div class="progress-step">3</div>
+            </div>
+            <p class="progress-text">Step 1 of 3: Basic Information</p>
         </div>
-      </form>
-    </div>
-    <script src="static/js/script.js"></script>
-  </body>
 
-  </html>
+        <!-- Flash Messages -->
+        {% if get_flashed_messages() %}
+            {% for category, message in get_flashed_messages(with_categories=true) %}
+                <div class="flash-message {{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <h1>Your Fitness Profile</h1>
+        
+        <form id="fitnessForm1" action="{{ url_for('form2') }}" method="get" novalidate>
+            <div class="form-group">
+                <label for="ageRange" id="ageRangeLabel">Your Age Range</label>
+                <select id="ageRange" name="ageRange" aria-labelledby="ageRangeLabel" required aria-required="true">
+                    <option value="">-- Please choose an option --</option>
+                    <option value="12-18">12-18</option>
+                    <option value="19-25">19-25</option>
+                    <option value="26-32">26-32</option>
+                    <option value="33-64">33-64</option>
+                    <option value="65+">65+</option>
+                </select>
+                <div class="error-message" id="ageRange-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="gender" id="genderLabel">Your Gender</label>
+                <select id="gender" name="gender" aria-labelledby="genderLabel" required aria-required="true">
+                    <option value="">-- Please choose an option --</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                <div class="error-message" id="gender-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="weightSlider" id="weightLabel">
+                    What is your current weight? (<span id="weightValue">90</span> kg)
+                </label>
+                <input type="range" id="weightSlider" name="weight" min="40" max="140" value="90" step="5" 
+                    aria-labelledby="weightLabel" aria-valuemin="40" aria-valuemax="140" aria-valuenow="90">
+            </div>
+            
+            <div class="form-group">
+                <label for="heightSlider" id="heightLabel">
+                    What is your height? (<span id="heightValue">170</span> cm)
+                </label>
+                <input type="range" id="heightSlider" name="height" min="140" max="220" value="170" step="5" 
+                    aria-labelledby="heightLabel" aria-valuemin="140" aria-valuemax="220" aria-valuenow="170">
+            </div>
+
+            <div class="result-card">
+                <p>Your BMI: <strong id="bmiValue">---</strong> 
+                   <span id="bmiCategory" class="bmi-category"></span>
+                </p>
+                <div id="bmiDescription" class="bmi-description"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="fitnessTarget" id="fitnessTargetLabel">What's your fitness target?</label>
+                <select id="fitnessTarget" name="fitnessTarget" aria-labelledby="fitnessTargetLabel" required aria-required="true">
+                    <option value="">-- Please choose an option --</option>
+                    <option value="Lose weight">Lose Weight</option>
+                    <option value="Gain muscle">Gain Muscle</option>
+                    <option value="Improve stamina">Improve Stamina</option>
+                    <option value="General fitness">General Fitness</option>
+                    <option value="Bulking">Bulking</option>
+                </select>
+                <div class="error-message" id="fitnessTarget-error"></div>
+            </div>
+
+            <div class="form-navigation">
+                <button type="button" class="btn-secondary" disabled>Previous</button>
+                <button type="submit" class="btn-primary">Next Page</button>
+            </div>
+        </form>
+        <!-- Dark Mode toggle -->
+        <div class="theme-toggle">
+            <label for="darkModeToggle" class="theme-toggle-label">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="toggle-track">
+                    <span class="toggle-indicator">
+                        <span class="toggle-icon toggle-icon-light">☀️</span>
+                        <span class="toggle-icon toggle-icon-dark">🌙</span>
+                    </span>
+                </span>
+            </label>
+        </div>
+
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

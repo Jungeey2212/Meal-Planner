@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .error-container {
+            text-align: center;
+            padding: 40px;
+        }
+        
+        .error-code {
+            font-size: 120px;
+            color: var(--primary-color);
+            margin: 0;
+            line-height: 1;
+        }
+        
+        .error-message {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        
+        .error-description {
+            color: #666;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="error-container">
+            <h1 class="error-code">404</h1>
+            <p class="error-message">Page Not Found</p>
+            <p class="error-description">The page you're looking for doesn't exist or has been moved.</p>
+            <a href="{{ url_for('form1') }}">
+                <button class="btn-primary">Go to Homepage</button>
+            </a>
+        </div>
+        
+        <!-- Dark Mode toggle -->
+        <div class="theme-toggle">
+            <label for="darkModeToggle" class="theme-toggle-label">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="toggle-track">
+                    <span class="toggle-indicator">
+                        <span class="toggle-icon toggle-icon-light">☀️</span>
+                        <span class="toggle-icon toggle-icon-dark">🌙</span>
+                    </span>
+                </span>
+            </label>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
