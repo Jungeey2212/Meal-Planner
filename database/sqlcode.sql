@@ -286,8 +286,154 @@ VALUES
   'kangaroo fillet, pepper, salt', 'Carnivore', 'GF, NF, No Fish', 'Yes', 'Meal'),
   
 ('Roast Goose', 700, 42, 0, 0, 0, 60, 22, 38, 130, 120, 30, 2.8,
-  'goose, olive oil, rosemary', 'Carnivore', 'GF, NF, No Fish', 'Yes', 'Meal');
+  'goose, olive oil, rosemary', 'Carnivore', 'GF, NF, No Fish', 'Yes', 'Meal'),
  
+-- Snacks Mixed Diets 
 
+('Trail Mix', 163, 5, 12, 6, 3, 12, 2, 10, 0, 5, 34, 1.2, 
+  'Almonds, cashews, walnuts, dried cranberries, dark chocolate chips', 'Vegetarian', 'GF, NF', 'No', 'Snack'),
+  
+('Hummus with Carrot Sticks', 210, 7, 23, 5, 6, 11, 1.5, 9.5, 0, 375, 45, 1.8, 'Chickpeas, tahini, lemon juice, garlic, olive oil, carrots', 'Vegan', 'GF', 'Yes', 'Snack'),
+  
+('Greek Yogurt with Honey', 180, 17, 18, 17, 0, 4.5, 3, 1.5, 15, 65, 200, 0.1, 'Greek yogurt, honey, cinnamon', 'Vegetarian', 'GF', 'No', 'Snack'),
+  
+('Rice Cakes with Avocado', 145, 3, 17, 0, 4, 8, 1, 7, 0, 105, 12, 0.4, 'Rice cakes, avocado, salt, pepper, lemon juice', 'Vegan', 'GF', 'Yes', 'Snack'),
+
+('Edamame', 122, 11, 10, 2, 5, 5, 0.5, 4.5, 0, 9, 60, 2.3, 'Soybeans, sea salt', 'Vegan', 'GF', 'No', 'Snack'),
+
+  ('Beef Jerky', 116, 13, 7, 6, 0, 3, 1.5, 1.5, 25, 470, 5, 1.5, 
+  'Beef, salt, sugar, spices, smoke flavor', 'Omnivore', 'GF, No Pork', 'No', 'Snack'),
+
+  ('Crispy Roasted Chickpeas', 120, 6, 16, 1, 4, 3, 0.5, 2.5, 0, 170, 43, 1.1,
+  'Chickpeas, olive oil, cumin, paprika, salt', 'Vegan', 'GF', 'Yes', 'Snack'),
+
+  ('Cheese and Crackers', 220, 8, 20, 2, 1, 13, 7, 6, 30, 400, 200, 0.6,
+  'Cheddar cheese, whole grain crackers', 'Vegetarian', 'No', 'No', 'Snack'),
+
+  ('Fruit Leather', 80, 0, 20, 12, 1, 0, 0, 0, 0, 10, 10, 0.3,
+  'Pureed fruits, honey', 'Vegan', 'GF', 'Yes', 'Snack'),
+
+  ('Kale Chips', 110, 3, 11, 0, 2, 7, 1, 6, 0, 180, 90, 1.7,
+  'Kale, olive oil, nutritional yeast, salt', 'Vegan', 'GF', 'Yes', 'Snack'),
+
+  ('Peanut Butter Apple Slices', 190, 5, 22, 15, 4, 10, 2, 8, 0, 75, 20, 0.5,
+  'Apple, peanut butter', 'Vegan', 'No Fish', 'Yes', 'Snack'),
+
+  ('Seaweed Snacks', 30, 1, 3, 0, 1, 2, 0, 2, 0, 120, 15, 0.7,
+  'Seaweed, sesame oil, salt', 'Vegan', 'GF', 'No', 'Snack'),
+
+  ('Protein Shake', 160, 20, 7, 3, 1, 3, 1, 2, 5, 120, 250, 1.0,
+  'Whey protein, milk, banana, ice', 'Vegetarian', 'GF', 'Yes', 'Snack'),
+
+  ('Popcorn', 100, 3, 20, 0, 4, 2, 0.5, 1.5, 0, 200, 3, 0.9,
+  'Popcorn kernels, olive oil, salt', 'Vegan', 'GF', 'Yes', 'Snack'),
+
+  ('Hard-Boiled Egg', 78, 6, 1, 0, 0, 5, 1.5, 3.5, 212, 62, 25, 0.6,
+  'Egg', 'Vegetarian', 'GF, No Fish, No Pork', 'Yes', 'Snack'),
+
+  ('Chocolate Protein Ball', 110, 7, 11, 5, 3, 5, 1.5, 3.5, 0, 35, 35, 2.1,
+  'Dates, protein powder, cocoa powder, almond butter, chia seeds', 'Vegan', 'GF', 'Yes', 'Snack'),
+
+  ('Veggie Chips', 140, 2, 16, 2, 3, 7, 0.5, 6.5, 0, 220, 30, 1.3,
+  'Sweet potatoes, beets, carrots, olive oil, sea salt', 'Vegan', 'GF', 'No', 'Snack'),
+
+  ('Chia Pudding', 170, 6, 15, 8, 8, 10, 1, 9, 0, 45, 180, 2.2,
+  'Chia seeds, almond milk, honey, vanilla, berries', 'Vegan', 'GF, NF', 'Yes', 'Snack'),
+
+  ('Tuna Salad Cucumber Boats', 140, 15, 4, 2, 1, 7, 1, 6, 30, 350, 20, 0.9,
+  'Tuna, Greek yogurt, dill, cucumber, lemon juice', 'Pescatarian', 'GF, No Pork', 'Yes', 'Snack'),
+
+  ('Chocolate Covered Almonds', 200, 5, 15, 10, 4, 15, 4, 11, 5, 10, 80, 1.1,
+  'Almonds, dark chocolate, cocoa powder', 'Vegetarian', 'GF', 'No', 'Snack'),
+
+  ('Roasted Pumpkin Seeds', 126, 5, 5, 0, 3, 10, 2, 8, 0, 5, 20, 2.5,
+  'Pumpkin seeds, olive oil, salt, paprika', 'Vegan', 'GF', 'Yes', 'Snack'),
+
+  ('Veggie Sticks with Guacamole', 160, 2, 14, 3, 7, 11, 2, 9, 0, 250, 30, 0.8,
+  'Avocado, lime juice, onion, tomato, cilantro, bell peppers, carrots, celery', 'Vegan', 'GF', 'Yes', 'Snack'),
+
+  ('Cottage Cheese with Pineapple', 140, 14, 11, 10, 1, 3, 2, 1, 15, 430, 100, 0.3,
+  'Cottage cheese, pineapple chunks', 'Vegetarian', 'GF', 'No', 'Snack'),
+
+  ('Protein Bar', 220, 20, 23, 14, 7, 7, 2.5, 4.5, 10, 190, 50, 3.6,
+  'Protein blend, dates, nuts, chocolate chips', 'Vegetarian', 'No', 'No', 'Snack'),
+  
+  ('Stuffed Grape Leaves', 160, 3, 20, 1, 4, 8, 1, 7, 0, 320, 45, 1.5,
+  'Grape leaves, rice, herbs, olive oil, lemon juice', 'Vegan', 'GF', 'No', 'Snack'),
+
+  ('Chocolate Banana Smoothie', 200, 5, 35, 20, 5, 4, 2, 2, 5, 70, 200, 1.2,
+  'Banana, cocoa powder, milk, honey, ice', 'Vegetarian', 'GF', 'Yes', 'Snack'),
+
+  ('Smoked Salmon Rice Cakes', 130, 10, 13, 0, 1, 5, 1, 4, 10, 350, 15, 0.5,
+  'Rice cakes, smoked salmon, cream cheese, dill', 'Pescatarian', 'GF, No Pork', 'No', 'Snack'),
+
+  ('Deviled Eggs', 145, 6, 1, 0, 0, 13, 3, 10, 215, 150, 30, 0.6,
+  'Eggs, mayonnaise, mustard, paprika, salt', 'Vegetarian', 'GF, No Fish, No Pork', 'Yes', 'Snack'),
+
+  ('Fruit and Nut Bar', 185, 4, 21, 15, 3, 10, 1, 9, 0, 5, 25, 1.0,
+  'Dates, almonds, cashews, dried apricots', 'Vegan', 'GF', 'No', 'Snack'),
+
+  ('Tzatziki with Pita', 180, 6, 20, 3, 2, 8, 4, 4, 10, 340, 120, 1.2,
+  'Greek yogurt, cucumber, garlic, dill, olive oil, pita bread', 'Vegetarian', 'No', 'Yes', 'Snack'),
+
+  ('Buffalo Cauliflower Bites', 120, 3, 17, 3, 4, 5, 1, 4, 0, 380, 25, 0.7,
+  'Cauliflower, flour, buffalo sauce, garlic powder', 'Vegan', 'No', 'Yes', 'Snack'),
+
+  ('Avocado Chocolate Mousse', 180, 3, 19, 12, 8, 12, 3, 9, 0, 5, 20, 1.8,
+  'Avocado, cocoa powder, maple syrup, almond milk, vanilla', 'Vegan', 'GF', 'Yes', 'Snack'),
+
+  ('Coconut Date Rolls', 150, 1, 26, 24, 3, 6, 5, 1, 0, 15, 15, 0.4,
+  'Dates, shredded coconut, almonds', 'Vegan', 'GF', 'Yes', 'Snack'),
+
+  ('Mini Caprese Skewers', 110, 7, 2, 1, 0, 9, 4, 5, 15, 170, 200, 0.3,
+  'Cherry tomatoes, fresh mozzarella, basil, olive oil, balsamic glaze', 'Vegetarian', 'GF, No Fish, No Pork', 'Yes', 'Snack'),
+
+  ('Biltong', 90, 16, 1, 0, 0, 2, 1, 1, 30, 420, 10, 2.3,
+  'Beef, vinegar, salt, spices', 'Omnivore', 'GF, No Pork', 'No', 'Snack'),
+
+  ('Energy Balls', 135, 3, 18, 13, 2, 6, 1, 5, 0, 3, 30, 1.2,
+  'Oats, peanut butter, honey, chia seeds, chocolate chips', 'Vegetarian', 'No', 'Yes', 'Snack'),
+
+  ('Cucumber Sushi Rolls', 80, 3, 15, 2, 2, 0.5, 0, 0.5, 0, 320, 15, 0.9,
+  'Cucumber, rice, nori, avocado, carrot, rice vinegar', 'Vegan', 'GF', 'Yes', 'Snack'),
+
+  ('Feta and Watermelon Cubes', 130, 5, 13, 11, 1, 7, 5, 2, 25, 260, 150, 0.4,
+  'Watermelon, feta cheese, mint leaves', 'Vegetarian', 'GF', 'Yes', 'Snack'),
+
+  ('Wasabi Peas', 120, 5, 19, 2, 2, 2, 0, 2, 0, 240, 20, 1.0,
+  'Green peas, starch, wasabi, salt', 'Vegan', 'GF', 'No', 'Snack'),
+
+  ('Almond Flour Crackers', 150, 6, 10, 1, 3, 11, 1, 10, 0, 180, 60, 1.2,
+  'Almond flour, flaxseed, olive oil, herbs, salt', 'Vegan', 'GF', 'Yes', 'Snack'),
+
+  ('Olives and Cheese', 140, 7, 2, 0, 1, 12, 5, 7, 15, 560, 180, 0.5,
+  'Kalamata olives, feta cheese, olive oil, herbs', 'Vegetarian', 'GF', 'No', 'Snack'),
+
+  ('Lentil Chips', 130, 5, 18, 1, 3, 4, 0.5, 3.5, 0, 170, 20, 1.8,
+  'Lentil flour, potato starch, sunflower oil, salt', 'Vegan', 'GF', 'No', 'Snack'),
+
+  ('Turkey Roll-Ups', 120, 15, 2, 1, 0, 6, 2, 4, 35, 450, 20, 0.8,
+  'Turkey slices, cream cheese, bell peppers, spinach', 'Omnivore', 'GF, No Pork', 'Yes', 'Snack'),
+
+  ('Frozen Yogurt Bark', 110, 6, 15, 12, 1, 2, 1, 1, 5, 40, 150, 0.2,
+  'Greek yogurt, honey, berries, dark chocolate chips', 'Vegetarian', 'GF', 'Yes', 'Snack'),
+
+  ('Roasted Seaweed Tuna Wraps', 95, 12, 3, 0, 1, 4, 0.5, 3.5, 15, 280, 15, 1.0,
+  'Seaweed sheets, tuna, avocado, cucumber, sesame seeds', 'Pescatarian', 'GF, No Pork', 'Yes', 'Snack'),
+
+  ('Flaxseed Crackers', 140, 5, 6, 0, 5, 11, 1, 10, 0, 120, 40, 1.6,
+  'Flaxseeds, chia seeds, sunflower seeds, herbs, salt', 'Vegan', 'GF', 'Yes', 'Snack'),
+
+  ('Jackfruit Jerky', 70, 1, 15, 8, 3, 0, 0, 0, 0, 320, 30, 1.2,
+  'Jackfruit, soy sauce, maple syrup, liquid smoke, spices', 'Vegan', 'No', 'No', 'Snack'),
+
+  ('Chocolate Ricotta Dip', 160, 10, 13, 11, 1, 7, 4, 3, 25, 45, 150, 0.3,
+  'Ricotta cheese, cocoa powder, honey, vanilla, strawberries', 'Vegetarian', 'GF', 'Yes', 'Snack'),
+
+  ('Baked Plantain Chips', 150, 1, 29, 12, 3, 5, 2, 3, 0, 120, 5, 0.6,
+  'Plantains, coconut oil, cinnamon, salt', 'Vegan', 'GF', 'Yes', 'Snack'),
+
+  ('Mini Frittata Bites', 130, 10, 3, 1, 0, 9, 3, 6, 185, 210, 100, 1.0,
+  'Eggs, spinach, bell peppers, cheese, onions', 'Vegetarian', 'GF, No Fish, No Pork', 'Yes', 'Snack');
  
  SELECT * FROM meals;
