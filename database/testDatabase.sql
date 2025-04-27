@@ -1,5 +1,4 @@
 -- Database creation with proper charset defined at DB level
-
 CREATE DATABASE IF NOT EXISTS mealplans
 CHARACTER SET utf8mb4
 COLLATE utf8mb4_unicode_ci;
@@ -62,6 +61,7 @@ INSERT INTO meals (
   Ingredients, CategoryID, DietNotes, IsHomeCooked, IsMealorSnack
 )
 VALUES
+-- Carnivore meals (CategoryID = 1)
 -- Carnivore meals (CategoryID = 1)
 ('Crispy Chilli Turkey Noodles', 520, 35, 40, 6, 2, 25, 5, 18, 75, 950, 70, 2.1, 'Turkey mince, udon noodles, garlic, chili flakes, soy sauce, honey, spring onions, sesame oil', 1, 'Contains soy and gluten', TRUE, 'Meal'),
 ('Spicy Lamb & Feta Meatballs', 620, 38, 12, 5, 2, 45, 18, 20, 110, 700, 220, 3.0, 'Lamb mince, feta cheese, onion, garlic, chili flakes, parsley, egg, breadcrumbs, olive oil, tomato sauce', 1, 'Contains dairy and gluten', TRUE, 'Meal'),
@@ -179,8 +179,108 @@ VALUES
 ('Honey Glazed Chicken Wings', 620, 38, 15, 8, 0, 40, 12, 25, 110, 800, 60, 2.6, 'Chicken wings, honey, soy sauce, ginger, garlic', 1, 'Contains dairy and gluten', TRUE, 'Meal'),
 ('Spicy Beef Jerky', 300, 25, 4, 2, 0, 18, 7, 10, 85, 1200, 20, 3.2, 'Beef strips, soy sauce, chili flakes, garlic powder', 1, 'Contains dairy and gluten', TRUE, 'Meal');
 
+-- Vegetarian meals (CategoryID = 2)
+INSERT INTO meals (
+  MealName, Calories_cal, Protein_g, Carbs_g, Sugars_g, Fibers_g,
+  Fat_g, SatFat_g, UnsatFat_g, Cholesterol_mg, Sodium_mg, Calcium_mg, Iron_mg,
+  Ingredients, CategoryID, DietNotes, IsHomeCooked, IsMealorSnack
+)
+VALUES
+('Grilled Halloumi Salad', 407, 33.6, 52.8, 6.0, 7.4, 1.8, 15.2, 40, 421, 249, 249, 3.2,
+  'milk, black beans, garlic, yogurt, herbs, cauliflower, cheese, lemon juice, sour cream',
+  2, 'GF', TRUE, 'Meal'),
+
+('Sweet Potato & Black Bean Tacos', 464, 23.2, 32.6, 4.7, 8.1, 7.3, 12.4, 20, 0, 656, 179, 3.7,
+    'bell pepper, chickpeas, mushrooms, almonds, ginger, olive oil, tomatoes, soy sauce, paneer, multigrain bread, garlic, carrot',
+    2, 'Contains Dairy', TRUE, 'Meal'),
+
+('Eggplant Parmesan', 526, 26.3, 58.6, 9.3, 7.6, 5.4, 8.6, 30, 0, 797, 186, 2.4,
+ 'cheese, quinoa, basil, mushrooms, onion, spinach, sunflower seeds, lemon juice',
+ 2, 'Contains Dairy', TRUE, 'Meal'),
+
+('Vegetarian Burrito Bowl', 309, 29.7, 58.0, 4.7, 5.7, 1.7, 13.8, 0, 0, 320, 136, 2.2,
+ 'eggplant, sour cream, oats, cucumber, spices, tofu, broccoli, multigrain bread, olive oil, onion',
+ 2, 'Contains Gluten', TRUE, 'Meal'),
+
+('Paneer Butter Masala', 388, 12.8, 38.5, 2.3, 4.0, 2.0, 9.7, 0, 50, 358, 54, 1.8,
+ 'pumpkin seeds, pasta, lentils, broccoli, paneer, chickpeas, almonds, bell pepper, whole wheat tortillas',
+ 2, 'Contains Gluten', TRUE, 'Meal'),
+
+('Vegetarian Chili', 366, 28.0, 49.5, 3.6, 5.9, 4.5, 9.2, 0, 30, 649, 116, 3.0,
+ 'coconut milk, sesame oil, black beans, mushrooms, cheese, lentils, parsley, cucumber, chickpeas, olive oil, pasta, milk, paneer, kale',
+ 2, 'Contains Gluten', TRUE, 'Meal'),
+
+('Tofu Scramble Breakfast Bowl', 528, 11.1, 52.4, 3.1, 5.7, 5.4, 9.6, 0, 20, 439, 117, 1.9,
+ 'avocado, basil, carrot, coriander, lemon juice, soy sauce, paneer, garlic, broccoli, pumpkin seeds, quinoa, cheese',
+ 2, 'Egg-Free', TRUE, 'Meal'),
+
+('Vegetable Biryani', 352, 24.3, 51.1, 3.0, 3.6, 4.1, 14.4, 0, 0, 561, 130, 2.7,
+ 'sunflower seeds, kale, cottage cheese, multigrain bread, avocado, whole wheat tortillas, tempeh, cheese, cauliflower, basil',
+ 2, 'Contains Gluten', TRUE, 'Meal'),
+
+('Chickpea & Spinach Stew', 303, 19.6, 47.7, 5.3, 8.6, 1.4, 19.9, 0, 40, 300, 142, 3.1,
+ 'cauliflower, milk, sesame oil, tomatoes, eggs, lentils, tempeh, tofu, olive oil, sour cream, cheese, whole wheat tortillas',
+ 2, 'NF', TRUE, 'Meal'),
+
+('Miso Ramen with Tofu', 303, 12.6, 36.7, 8.4, 5.8, 5.5, 8.5, 0, 0, 433, 199, 1.9,
+ 'spices, soy sauce, sesame oil, yogurt, quinoa, zucchini, lentils, basil, cottage cheese, spinach, lemon juice',
+ 2, 'Egg-Free', TRUE, 'Meal'),
+
+('Veggie Tikka Masala', 519, 24.0, 48.2, 8.1, 9.9, 1.2, 8.8, 0, 60, 337, 188, 3.3,
+ 'broccoli, chickpeas, cashews, garlic, sesame oil, cottage cheese, avocado, sour cream, mushrooms, eggs, coriander, almonds, kale, whole wheat tortillas',
+ 2, 'GF', TRUE, 'Meal'),
+
+('Peanut Butter Banana Oatmeal', 445, 11.8, 49.1, 7.0, 4.8, 4.2, 14.3, 0, 50, 378, 167, 2.3,
+ 'almonds, garlic, black beans, lentils, soy sauce, brown rice, lemon juice, oats, multigrain bread, cottage cheese, broccoli',
+ 2, 'Egg-Free', TRUE, 'Meal'),
+
+('Mushroom Tacos', 408, 18.5, 46.2, 6.3, 7.8, 1.4, 5.9, 0, 30, 706, 168, 1.6,
+ 'mushrooms, onion, zucchini, coriander, soy sauce, vegetables, yogurt, tomatoes, lentils, peanuts, pumpkin seeds',
+ 2, 'GF', TRUE, 'Meal'),
+
+('Vegetarian Sushi Rolls', 392, 14.6, 59.2, 8.3, 5.1, 4.2, 0, 8.2, 30, 753, 70, 3.2,
+'cottage cheese, avocado, coconut milk, sour cream, oats, garlic, sesame oil, quinoa, coriander, milk, multigrain bread, spices, olive oil',
+ 2, 'GF', TRUE, 'Meal'),
+
+('Vegetable Gyoza', 585, 16.1, 59.7, 7.9, 3.7, 5.2, 17.9, 0, 40, 330, 54, 1.6,
+ 'tofu, sunflower seeds, pumpkin seeds, parsley, cashews, whole wheat tortillas, oats, almonds, milk, avocado',
+ 2, 'NF', TRUE, 'Meal'),
+
+('Curried Pumpkin Soup', 306, 33.0, 35.4, 3.0, 5.9, 6.5, 0, 16.3, 50, 349, 150, 1.3,
+ 'onion, carrot, sunflower seeds, broccoli, spinach, cheese, lentils, sweet potato, ginger',
+ 2, 'Egg-Free', TRUE, 'Meal'),
+
+('Three Bean Salad', 491, 13.5, 39.2, 5.4, 7.2, 4.3, 7.8, 0, 40, 369, 217, 1.6,
+ 'carrot, pumpkin seeds, avocado, cashews, bell pepper, cauliflower, lentils, sesame oil, ginger, coconut milk, eggplant, zucchini',
+ 2, 'NF', TRUE, 'Meal'),
+
+('Herbed Couscous with Vegetables', 362, 17.9, 40.7, 9.7, 8.5, 4.2, 7.5, 0, 50, 549, 205, 2.9,
+ 'mushrooms, lemon juice, peanuts, quinoa, garlic, almonds, whole wheat tortillas, cottage cheese, pumpkin seeds, sunflower seeds, sesame oil, basil, spices, tempeh',
+ 2, 'NF', TRUE, 'Meal'),
+  
+('Spicy Honey Garlic Tofu Noodles', 520, 35, 40, 6, 2, 25, 5, 18, 75, 950, 70, 2.1,
+ 'Tofu, udon noodles, garlic, chili flakes, soy sauce, honey, spring onions, sesame oil',
+ 2, 'Contains soy and gluten', TRUE, 'Meal'),
+ 
+('Mediterranean Tofu Feta Bake', 620, 38, 12, 5, 2, 45, 18, 20, 110, 700, 220, 3.0,
+ 'Tofu, feta cheese, onion, garlic, chili flakes, parsley, egg, breadcrumbs, olive oil, tomato sauce',
+ 2, 'Contains dairy and gluten', TRUE, 'Meal'),
+ 
+('Plant Protein Sweetcorn Fritters', 400, 30, 20, 3, 2, 22, 4, 15, 70, 500, 60, 1.8,
+ 'Plant-based protein, sweetcorn, egg, breadcrumbs, spring onions, lemon zest, olive oil, salt, pepper',
+ 2, 'Contains gluten and egg', TRUE, 'Meal'),
+ 
+('Harissa Spiced Tofu with Couscous', 480, 35, 30, 2, 2, 22, 3, 15, 120, 500, 100, 1.9,
+ 'Tofu, couscous, harissa paste, lemon juice, coriander, olive oil, garlic',
+ 2, 'Contains gluten and soy', TRUE, 'Meal'),
+ 
+('Lemon Herb Tofu Cutlets', 410, 36, 10, 1, 1, 25, 4, 18, 70, 450, 80, 1.2,
+ 'Tofu fillet, parsley, dill, lemon zest, breadcrumbs, olive oil, garlic',
+ 2, 'Contains gluten', TRUE, 'Meal');
+
 
 -- Vegan meals (CategoryID = 3)
+
 INSERT INTO meals (
   MealName, Calories_cal, Protein_g, Carbs_g, Sugars_g, Fibers_g, 
   Fat_g, SatFat_g, UnsatFat_g, Cholesterol_mg, Sodium_mg, Calcium_mg, Iron_mg, 
@@ -621,120 +721,84 @@ INSERT INTO meals (
  'Romaine lettuce, anchovies, parmesan cheese, croutons, egg yolk, garlic, lemon juice, olive oil', 
  4, 'Contains fish, gluten, egg and dairy', TRUE, 'Meal');
 
--- Vegetarian meals (CategoryID = 2)
+
+  -- Omnivore meals (CategoryID = 5)
+
 INSERT INTO meals (
   MealName, Calories_cal, Protein_g, Carbs_g, Sugars_g, Fibers_g,
   Fat_g, SatFat_g, UnsatFat_g, Cholesterol_mg, Sodium_mg, Calcium_mg, Iron_mg,
-  Ingredients, CategoryID, DietNotes, IsHomeCooked, IsMealorSnack
-)
-VALUES
-('Grilled Halloumi Salad', 407, 33.6, 52.8, 6.0, 7.4, 1.8, 15.2, 40, 421, 249, 249, 3.2,
-  'milk, black beans, garlic, yogurt, herbs, cauliflower, cheese, lemon juice, sour cream',
-  2, 'GF', TRUE, 'Meal'),
+  Ingredients, CategoryID, DietNotes, IsHomeCooked, IsMealOrSnack
+) VALUES
+('Crispy Chilli Turkey Noodles', 520, 35, 40, 6, 2, 25, 5, 18, 75, 950, 70, 2.1, 'Turkey mince, udon noodles, garlic, chili flakes, soy sauce, honey, spring onions, sesame oil', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Teriyaki Chicken Rice Bowl', 600, 40, 55, 12, 3, 18, 6, 12, 80, 850, 40, 2.5, 'Chicken thigh, jasmine rice, teriyaki sauce, broccoli, sesame seeds', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Beef and Vegetable Stir Fry', 650, 45, 30, 8, 4, 30, 10, 18, 100, 900, 50, 3.2, 'Beef strips, broccoli, carrots, soy sauce, garlic, ginger', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Grilled Salmon with Rice', 580, 42, 25, 1, 2, 25, 9, 16, 95, 700, 60, 3.8, 'Salmon fillet, white rice, lemon, dill, olive oil', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Chicken Alfredo Pasta', 700, 35, 50, 4, 2, 40, 16, 22, 105, 750, 100, 2.6, 'Chicken breast, fettuccine, alfredo sauce, parmesan, spinach', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Turkey and Cheese Sandwich', 480, 28, 35, 5, 2, 20, 8, 12, 60, 900, 60, 2.0, 'Turkey slices, whole wheat bread, cheddar cheese, lettuce, tomato', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Shrimp Fried Rice', 630, 35, 45, 5, 3, 28, 10, 18, 110, 950, 55, 3.1, 'Shrimp, white rice, peas, carrots, soy sauce, egg', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('BBQ Chicken Wrap', 550, 36, 40, 7, 3, 20, 8, 12, 85, 800, 45, 2.7, 'Chicken breast, whole wheat wrap, BBQ sauce, lettuce, cheese', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Pork Stir Fry Noodles', 670, 38, 50, 6, 2, 30, 12, 18, 120, 950, 50, 3.4, 'Pork strips, egg noodles, cabbage, soy sauce, sesame oil', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Tuna Pasta Salad', 510, 30, 35, 2, 3, 22, 8, 14, 85, 600, 70, 3.0, 'Tuna, pasta, mayonnaise, celery, peas', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Beef Taco Rice Bowl', 796, 42, 40, 6, 4, 26, 10.7, 15.3, 130, 918, 52, 4.9, 'Sample ingredients for beef taco rice bowl', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Chicken Caesar Wrap', 549, 41, 33, 4, 3, 24, 9.9, 14.1, 132, 937, 112, 2.1, 'Sample ingredients for chicken caesar wrap', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Grilled Fish with Couscous', 698, 39, 39, 1, 3, 26, 9.7, 16.3, 145, 979, 77, 3.6, 'Sample ingredients for grilled fish with couscous', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Lamb Gyros Plate', 799, 44, 52, 5, 5, 21, 6.9, 14.1, 138, 588, 85, 3.6, 'Sample ingredients for lamb gyros plate', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('BBQ Pork Fried Rice', 633, 33, 53, 1, 5, 35, 17.0, 18.0, 131, 976, 77, 3.0, 'Sample ingredients for bbq pork fried rice', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Shrimp Alfredo Pasta', 521, 37, 46, 2, 4, 23, 8.1, 14.9, 140, 683, 80, 2.7, 'Sample ingredients for shrimp alfredo pasta', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Turkey Pesto Sandwich', 466, 38, 48, 3, 5, 34, 11.3, 22.7, 67, 825, 88, 3.5, 'Sample ingredients for turkey pesto sandwich', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Steak and Potato Skillet', 606, 43, 30, 4, 3, 36, 15.8, 20.2, 131, 884, 100, 3.7, 'Sample ingredients for steak and potato skillet', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Salmon Sushi Rolls', 521, 42, 46, 4, 3, 34, 11.3, 22.7, 149, 631, 107, 4.5, 'Sample ingredients for salmon sushi rolls', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Pork Banh Mi', 564, 43, 42, 8, 1, 33, 11.0, 22.0, 84, 844, 118, 2.2, 'Sample ingredients for pork banh mi', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Chicken and Waffles', 523, 38, 53, 7, 2, 37, 17.1, 19.9, 117, 779, 88, 2.8, 'Sample ingredients for chicken and waffles', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Beef Burrito', 738, 38, 37, 10, 2, 20, 7.1, 12.9, 91, 540, 112, 4.0, 'Sample ingredients for beef burrito', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Butter Chicken and Rice', 734, 50, 40, 1, 1, 26, 11.8, 14.2, 144, 569, 100, 2.3, 'Sample ingredients for butter chicken and rice', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Chicken Teriyaki Skewers', 701, 35, 49, 8, 3, 28, 12.0, 16.0, 146, 885, 58, 4.9, 'Sample ingredients for chicken teriyaki skewers', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Prawn Coconut Curry', 725, 49, 34, 2, 1, 24, 8.6, 15.4, 72, 582, 89, 3.4, 'Sample ingredients for prawn coconut curry', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Ham and Cheese Croissant', 693, 47, 45, 1, 1, 33, 12.7, 20.3, 86, 683, 56, 3.9, 'Sample ingredients for ham and cheese croissant', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Fish Tacos', 676, 39, 50, 7, 2, 37, 14.4, 22.6, 69, 588, 66, 4.7, 'Sample ingredients for fish tacos', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Steak and Egg Breakfast Plate', 654, 35, 54, 4, 3, 32, 9.7, 22.3, 73, 696, 59, 4.5, 'Sample ingredients for steak and egg breakfast plate', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Grilled Chicken Quesadilla', 518, 49, 49, 3, 2, 32, 11.5, 20.5, 111, 967, 52, 4.9, 'Sample ingredients for grilled chicken quesadilla', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Seafood Paella', 506, 34, 58, 9, 4, 23, 7.1, 15.9, 129, 907, 109, 2.9, 'Sample ingredients for seafood paella', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Chili Con Carne', 578, 40, 60, 8, 2, 28, 11.2, 16.8, 150, 894, 76, 3.8, 'Sample ingredients for chili con carne', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Pulled Pork Tacos', 773, 42, 57, 3, 3, 20, 9.9, 10.1, 98, 967, 116, 3.3, 'Sample ingredients for pulled pork tacos', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Chicken Tikka Masala', 733, 30, 49, 10, 3, 23, 7.7, 15.3, 149, 690, 52, 3.5, 'Sample ingredients for chicken tikka masala', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Crab Cakes', 458, 32, 56, 5, 2, 31, 12.7, 18.3, 63, 632, 71, 4.7, 'Sample ingredients for crab cakes', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Grilled Lamb Chops', 498, 34, 53, 5, 3, 34, 15.0, 19.0, 84, 547, 46, 2.8, 'Sample ingredients for grilled lamb chops', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Pork Schnitzel Burger', 671, 35, 54, 2, 4, 22, 9.2, 12.8, 113, 989, 115, 4.3, 'Sample ingredients for pork schnitzel burger', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Korean BBQ Beef Bowl', 731, 35, 31, 8, 2, 31, 12.1, 18.9, 86, 967, 69, 4.0, 'Sample ingredients for korean bbq beef bowl', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Tuna Nicoise Salad', 738, 39, 40, 5, 3, 25, 8.4, 16.6, 61, 520, 104, 2.3, 'Sample ingredients for tuna nicoise salad', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Turkey Meatballs and Pasta', 687, 37, 53, 4, 2, 33, 13.0, 20.0, 139, 966, 83, 4.7, 'Sample ingredients for turkey meatballs and pasta', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Chicken Parmesan', 726, 38, 58, 7, 1, 34, 11.4, 22.6, 71, 707, 66, 3.7, 'Sample ingredients for chicken parmesan', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Shrimp Spring Rolls', 659, 46, 38, 10, 3, 29, 9.2, 19.8, 112, 809, 94, 3.9, 'Sample ingredients for shrimp spring rolls', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Beef Stroganoff', 719, 50, 42, 9, 1, 36, 13.7, 22.3, 134, 894, 102, 3.7, 'Sample ingredients for beef stroganoff', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Grilled Salmon Caesar Salad', 638, 31, 34, 3, 1, 20, 6.5, 13.5, 89, 702, 101, 3.4, 'Sample ingredients for grilled salmon caesar salad', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Pork Adobo Rice Bowl', 796, 50, 33, 6, 3, 21, 10.4, 10.6, 145, 805, 79, 4.6, 'Sample ingredients for pork adobo rice bowl', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Chicken Fried Rice', 630, 36, 37, 7, 4, 30, 11.6, 18.4, 64, 925, 50, 3.7, 'Sample ingredients for chicken fried rice', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Beef Enchiladas', 719, 45, 43, 3, 4, 38, 16.4, 21.6, 80, 963, 79, 3.3, 'Sample ingredients for beef enchiladas', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Chicken Shawarma Plate', 766, 43, 41, 8, 5, 40, 17.3, 22.7, 102, 518, 54, 4.5, 'Sample ingredients for chicken shawarma plate', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Seafood Pasta', 732, 49, 41, 8, 2, 21, 9.0, 12.0, 140, 886, 69, 3.8, 'Sample ingredients for seafood pasta', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Pork Dumplings', 781, 37, 49, 6, 1, 35, 14.5, 20.5, 139, 684, 62, 2.6, 'Sample ingredients for pork dumplings', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Chicken Fajitas', 491, 30, 42, 1, 4, 28, 10.2, 17.8, 63, 585, 76, 2.3, 'Sample ingredients for chicken fajitas', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Beef Kofta Wraps', 774, 32, 57, 2, 5, 20, 8.7, 11.3, 83, 687, 109, 4.2, 'Sample ingredients for beef kofta wraps', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Shrimp Pad Thai', 519, 36, 38, 10, 3, 25, 10.9, 14.1, 120, 761, 62, 3.0, 'Sample ingredients for shrimp pad thai', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Turkey Avocado Wrap', 494, 31, 39, 5, 2, 20, 7.6, 12.4, 144, 842, 96, 4.0, 'Sample ingredients for turkey avocado wrap', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Bacon Cheeseburger', 640, 48, 34, 5, 5, 24, 8.5, 15.5, 120, 792, 102, 4.0, 'Sample ingredients for bacon cheeseburger', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Thai Chicken Curry', 692, 32, 51, 10, 4, 27, 9.8, 17.2, 88, 661, 85, 3.8, 'Sample ingredients for thai chicken curry', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Baked Fish and Chips', 734, 32, 50, 1, 5, 23, 9.9, 13.1, 149, 653, 64, 2.2, 'Sample ingredients for baked fish and chips', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Pork Roast with Veggies', 665, 39, 49, 4, 5, 35, 13.7, 21.3, 122, 868, 74, 3.1, 'Sample ingredients for pork roast with veggies', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Lamb Curry', 601, 38, 52, 6, 3, 28, 11.0, 17.0, 61, 521, 91, 2.7, 'Sample ingredients for lamb curry', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Chicken Alfredo Pizza', 627, 42, 59, 1, 3, 31, 9.4, 21.6, 80, 834, 63, 3.7, 'Sample ingredients for chicken alfredo pizza', 5, 'Contains soy and gluten', TRUE, 'Meal'),
+('Beef Brisket Sandwich', 700, 34, 54, 8, 5, 32, 11.3, 20.7, 133, 517, 78, 2.7, 'Sample ingredients for beef brisket sandwich', 5, 'Contains soy and gluten', TRUE, 'Meal');
 
-('Sweet Potato & Black Bean Tacos', 464, 23.2, 32.6, 4.7, 8.1, 7.3, 12.4, 20, 0, 656, 179, 3.7,
-    'bell pepper, chickpeas, mushrooms, almonds, ginger, olive oil, tomatoes, soy sauce, paneer, multigrain bread, garlic, carrot',
-    2, 'Contains Dairy', TRUE, 'Meal'),
 
-('Eggplant Parmesan', 526, 26.3, 58.6, 9.3, 7.6, 5.4, 8.6, 30, 0, 797, 186, 2.4,
- 'cheese, quinoa, basil, mushrooms, onion, spinach, sunflower seeds, lemon juice',
- 2, 'Contains Dairy', TRUE, 'Meal'),
-
-('Vegetarian Burrito Bowl', 309, 29.7, 58.0, 4.7, 5.7, 1.7, 13.8, 0, 0, 320, 136, 2.2,
- 'eggplant, sour cream, oats, cucumber, spices, tofu, broccoli, multigrain bread, olive oil, onion',
- 2, 'Contains Gluten', TRUE, 'Meal'),
-
-('Paneer Butter Masala', 388, 12.8, 38.5, 2.3, 4.0, 2.0, 9.7, 0, 50, 358, 54, 1.8,
- 'pumpkin seeds, pasta, lentils, broccoli, paneer, chickpeas, almonds, bell pepper, whole wheat tortillas',
- 2, 'Contains Gluten', TRUE, 'Meal'),
-
-('Vegetarian Chili', 366, 28.0, 49.5, 3.6, 5.9, 4.5, 9.2, 0, 30, 649, 116, 3.0,
- 'coconut milk, sesame oil, black beans, mushrooms, cheese, lentils, parsley, cucumber, chickpeas, olive oil, pasta, milk, paneer, kale',
- 2, 'Contains Gluten', TRUE, 'Meal'),
-
-('Tofu Scramble Breakfast Bowl', 528, 11.1, 52.4, 3.1, 5.7, 5.4, 9.6, 0, 20, 439, 117, 1.9,
- 'avocado, basil, carrot, coriander, lemon juice, soy sauce, paneer, garlic, broccoli, pumpkin seeds, quinoa, cheese',
- 2, 'Egg-Free', TRUE, 'Meal'),
-
-('Vegetable Biryani', 352, 24.3, 51.1, 3.0, 3.6, 4.1, 14.4, 0, 0, 561, 130, 2.7,
- 'sunflower seeds, kale, cottage cheese, multigrain bread, avocado, whole wheat tortillas, tempeh, cheese, cauliflower, basil',
- 2, 'Contains Gluten', TRUE, 'Meal'),
-
-('Chickpea & Spinach Stew', 303, 19.6, 47.7, 5.3, 8.6, 1.4, 19.9, 0, 40, 300, 142, 3.1,
- 'cauliflower, milk, sesame oil, tomatoes, eggs, lentils, tempeh, tofu, olive oil, sour cream, cheese, whole wheat tortillas',
- 2, 'NF', TRUE, 'Meal'),
-
-('Miso Ramen with Tofu', 303, 12.6, 36.7, 8.4, 5.8, 5.5, 8.5, 0, 0, 433, 199, 1.9,
- 'spices, soy sauce, sesame oil, yogurt, quinoa, zucchini, lentils, basil, cottage cheese, spinach, lemon juice',
- 2, 'Egg-Free', TRUE, 'Meal'),
-
-('Veggie Tikka Masala', 519, 24.0, 48.2, 8.1, 9.9, 1.2, 8.8, 0, 60, 337, 188, 3.3,
- 'broccoli, chickpeas, cashews, garlic, sesame oil, cottage cheese, avocado, sour cream, mushrooms, eggs, coriander, almonds, kale, whole wheat tortillas',
- 2, 'GF', TRUE, 'Meal'),
-
-('Peanut Butter Banana Oatmeal', 445, 11.8, 49.1, 7.0, 4.8, 4.2, 14.3, 0, 50, 378, 167, 2.3,
- 'almonds, garlic, black beans, lentils, soy sauce, brown rice, lemon juice, oats, multigrain bread, cottage cheese, broccoli',
- 2, 'Egg-Free', TRUE, 'Meal'),
-
-('Mushroom Tacos', 408, 18.5, 46.2, 6.3, 7.8, 1.4, 5.9, 0, 30, 706, 168, 1.6,
- 'mushrooms, onion, zucchini, coriander, soy sauce, vegetables, yogurt, tomatoes, lentils, peanuts, pumpkin seeds',
- 2, 'GF', TRUE, 'Meal'),
-
-('Vegetarian Sushi Rolls', 392, 14.6, 59.2, 8.3, 5.1, 4.2, 0, 8.2, 30, 753, 70, 3.2,
-'cottage cheese, avocado, coconut milk, sour cream, oats, garlic, sesame oil, quinoa, coriander, milk, multigrain bread, spices, olive oil',
- 2, 'GF', TRUE, 'Meal'),
-
-('Vegetable Gyoza', 585, 16.1, 59.7, 7.9, 3.7, 5.2, 17.9, 0, 40, 330, 54, 1.6,
- 'tofu, sunflower seeds, pumpkin seeds, parsley, cashews, whole wheat tortillas, oats, almonds, milk, avocado',
- 2, 'NF', TRUE, 'Meal'),
-
-('Curried Pumpkin Soup', 306, 33.0, 35.4, 3.0, 5.9, 6.5, 0, 16.3, 50, 349, 150, 1.3,
- 'onion, carrot, sunflower seeds, broccoli, spinach, cheese, lentils, sweet potato, ginger',
- 2, 'Egg-Free', TRUE, 'Meal'),
-
-('Three Bean Salad', 491, 13.5, 39.2, 5.4, 7.2, 4.3, 7.8, 0, 40, 369, 217, 1.6,
- 'carrot, pumpkin seeds, avocado, cashews, bell pepper, cauliflower, lentils, sesame oil, ginger, coconut milk, eggplant, zucchini',
- 2, 'NF', TRUE, 'Meal'),
-
-('Herbed Couscous with Vegetables', 362, 17.9, 40.7, 9.7, 8.5, 4.2, 7.5, 0, 50, 549, 205, 2.9,
- 'mushrooms, lemon juice, peanuts, quinoa, garlic, almonds, whole wheat tortillas, cottage cheese, pumpkin seeds, sunflower seeds, sesame oil, basil, spices, tempeh',
- 2, 'NF', TRUE, 'Meal');
-
--- Insert the additional meals with descriptive names based on ingredients
-INSERT INTO meals (
-  MealName, Calories_cal, Protein_g, Carbs_g, Sugars_g, Fibers_g,
-  Fat_g, SatFat_g, UnsatFat_g, Cholesterol_mg, Sodium_mg, Calcium_mg, Iron_mg,
-  Ingredients, CategoryID, DietNotes, IsHomeCooked, IsMealorSnack
-)
-VALUES
-('Spicy Honey Garlic Tofu Noodles', 520, 35, 40, 6, 2, 25, 5, 18, 75, 950, 70, 2.1,
- 'Tofu, udon noodles, garlic, chili flakes, soy sauce, honey, spring onions, sesame oil',
- 2, 'Contains soy and gluten', TRUE, 'Meal'),
- 
-('Mediterranean Tofu Feta Bake', 620, 38, 12, 5, 2, 45, 18, 20, 110, 700, 220, 3.0,
- 'Tofu, feta cheese, onion, garlic, chili flakes, parsley, egg, breadcrumbs, olive oil, tomato sauce',
- 2, 'Contains dairy and gluten', TRUE, 'Meal'),
- 
-('Plant Protein Sweetcorn Fritters', 400, 30, 20, 3, 2, 22, 4, 15, 70, 500, 60, 1.8,
- 'Plant-based protein, sweetcorn, egg, breadcrumbs, spring onions, lemon zest, olive oil, salt, pepper',
- 2, 'Contains gluten and egg', TRUE, 'Meal'),
- 
-('Harissa Spiced Tofu with Couscous', 480, 35, 30, 2, 2, 22, 3, 15, 120, 500, 100, 1.9,
- 'Tofu, couscous, harissa paste, lemon juice, coriander, olive oil, garlic',
- 2, 'Contains gluten and soy', TRUE, 'Meal'),
- 
-('Lemon Herb Tofu Cutlets', 410, 36, 10, 1, 1, 25, 4, 18, 70, 450, 80, 1.2,
- 'Tofu fillet, parsley, dill, lemon zest, breadcrumbs, olive oil, garlic',
- 2, 'Contains gluten', TRUE, 'Meal');
-
--- Insert all snacks
-INSERT INTO meals (
-  MealName, Calories_cal, Protein_g, Carbs_g, Sugars_g, Fibers_g,
-  Fat_g, SatFat_g, UnsatFat_g, Cholesterol_mg, Sodium_mg, Calcium_mg, Iron_mg,
-  Ingredients, CategoryID, DietNotes, IsHomeCooked, IsMealorSnack
-)
-VALUES
 -- Mixed diet snacks
+
+INSERT INTO meals (
+  MealName, Calories_cal, Protein_g, Carbs_g, Sugars_g, Fibers_g,
+  Fat_g, SatFat_g, UnsatFat_g, Cholesterol_mg, Sodium_mg, Calcium_mg, Iron_mg,
+  Ingredients, CategoryID, DietNotes, IsHomeCooked, IsMealorSnack
+)
+VALUES
 ('Trail Mix', 163, 5, 12, 6, 3, 12, 2, 10, 0, 5, 34, 1.2, 
   'Almonds, cashews, walnuts, dried cranberries, dark chocolate chips', 2, 'GF, NF', FALSE, 'Snack'),
   
@@ -885,74 +949,6 @@ VALUES
 
 ('Mini Frittata Bites', 130, 10, 3, 1, 0, 9, 3, 6, 185, 210, 100, 1.0,
   'Eggs, spinach, bell peppers, cheese, onions', 2, 'GF, No Fish, No Pork', TRUE, 'Snack');
-  
-  -- Omnivore meals (CategoryID = 5)
-
-  INSERT INTO meals (
-  MealName, Calories_cal, Protein_g, Carbs_g, Sugars_g, Fibers_g,
-  Fat_g, SatFat_g, UnsatFat_g, Cholesterol_mg, Sodium_mg, Calcium_mg, Iron_mg,
-  Ingredients, CategoryID, DietNotes, IsHomeCooked, IsMealOrSnack
-) VALUES
-('Crispy Chilli Turkey Noodles', 520, 35, 40, 6, 2, 25, 5, 18, 75, 950, 70, 2.1, 'Turkey mince, udon noodles, garlic, chili flakes, soy sauce, honey, spring onions, sesame oil', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Teriyaki Chicken Rice Bowl', 600, 40, 55, 12, 3, 18, 6, 12, 80, 850, 40, 2.5, 'Chicken thigh, jasmine rice, teriyaki sauce, broccoli, sesame seeds', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Beef and Vegetable Stir Fry', 650, 45, 30, 8, 4, 30, 10, 18, 100, 900, 50, 3.2, 'Beef strips, broccoli, carrots, soy sauce, garlic, ginger', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Grilled Salmon with Rice', 580, 42, 25, 1, 2, 25, 9, 16, 95, 700, 60, 3.8, 'Salmon fillet, white rice, lemon, dill, olive oil', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Chicken Alfredo Pasta', 700, 35, 50, 4, 2, 40, 16, 22, 105, 750, 100, 2.6, 'Chicken breast, fettuccine, alfredo sauce, parmesan, spinach', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Turkey and Cheese Sandwich', 480, 28, 35, 5, 2, 20, 8, 12, 60, 900, 60, 2.0, 'Turkey slices, whole wheat bread, cheddar cheese, lettuce, tomato', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Shrimp Fried Rice', 630, 35, 45, 5, 3, 28, 10, 18, 110, 950, 55, 3.1, 'Shrimp, white rice, peas, carrots, soy sauce, egg', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('BBQ Chicken Wrap', 550, 36, 40, 7, 3, 20, 8, 12, 85, 800, 45, 2.7, 'Chicken breast, whole wheat wrap, BBQ sauce, lettuce, cheese', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Pork Stir Fry Noodles', 670, 38, 50, 6, 2, 30, 12, 18, 120, 950, 50, 3.4, 'Pork strips, egg noodles, cabbage, soy sauce, sesame oil', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Tuna Pasta Salad', 510, 30, 35, 2, 3, 22, 8, 14, 85, 600, 70, 3.0, 'Tuna, pasta, mayonnaise, celery, peas', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Beef Taco Rice Bowl', 796, 42, 40, 6, 4, 26, 10.7, 15.3, 130, 918, 52, 4.9, 'Sample ingredients for beef taco rice bowl', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Chicken Caesar Wrap', 549, 41, 33, 4, 3, 24, 9.9, 14.1, 132, 937, 112, 2.1, 'Sample ingredients for chicken caesar wrap', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Grilled Fish with Couscous', 698, 39, 39, 1, 3, 26, 9.7, 16.3, 145, 979, 77, 3.6, 'Sample ingredients for grilled fish with couscous', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Lamb Gyros Plate', 799, 44, 52, 5, 5, 21, 6.9, 14.1, 138, 588, 85, 3.6, 'Sample ingredients for lamb gyros plate', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('BBQ Pork Fried Rice', 633, 33, 53, 1, 5, 35, 17.0, 18.0, 131, 976, 77, 3.0, 'Sample ingredients for bbq pork fried rice', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Shrimp Alfredo Pasta', 521, 37, 46, 2, 4, 23, 8.1, 14.9, 140, 683, 80, 2.7, 'Sample ingredients for shrimp alfredo pasta', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Turkey Pesto Sandwich', 466, 38, 48, 3, 5, 34, 11.3, 22.7, 67, 825, 88, 3.5, 'Sample ingredients for turkey pesto sandwich', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Steak and Potato Skillet', 606, 43, 30, 4, 3, 36, 15.8, 20.2, 131, 884, 100, 3.7, 'Sample ingredients for steak and potato skillet', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Salmon Sushi Rolls', 521, 42, 46, 4, 3, 34, 11.3, 22.7, 149, 631, 107, 4.5, 'Sample ingredients for salmon sushi rolls', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Pork Banh Mi', 564, 43, 42, 8, 1, 33, 11.0, 22.0, 84, 844, 118, 2.2, 'Sample ingredients for pork banh mi', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Chicken and Waffles', 523, 38, 53, 7, 2, 37, 17.1, 19.9, 117, 779, 88, 2.8, 'Sample ingredients for chicken and waffles', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Beef Burrito', 738, 38, 37, 10, 2, 20, 7.1, 12.9, 91, 540, 112, 4.0, 'Sample ingredients for beef burrito', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Butter Chicken and Rice', 734, 50, 40, 1, 1, 26, 11.8, 14.2, 144, 569, 100, 2.3, 'Sample ingredients for butter chicken and rice', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Chicken Teriyaki Skewers', 701, 35, 49, 8, 3, 28, 12.0, 16.0, 146, 885, 58, 4.9, 'Sample ingredients for chicken teriyaki skewers', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Prawn Coconut Curry', 725, 49, 34, 2, 1, 24, 8.6, 15.4, 72, 582, 89, 3.4, 'Sample ingredients for prawn coconut curry', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Ham and Cheese Croissant', 693, 47, 45, 1, 1, 33, 12.7, 20.3, 86, 683, 56, 3.9, 'Sample ingredients for ham and cheese croissant', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Fish Tacos', 676, 39, 50, 7, 2, 37, 14.4, 22.6, 69, 588, 66, 4.7, 'Sample ingredients for fish tacos', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Steak and Egg Breakfast Plate', 654, 35, 54, 4, 3, 32, 9.7, 22.3, 73, 696, 59, 4.5, 'Sample ingredients for steak and egg breakfast plate', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Grilled Chicken Quesadilla', 518, 49, 49, 3, 2, 32, 11.5, 20.5, 111, 967, 52, 4.9, 'Sample ingredients for grilled chicken quesadilla', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Seafood Paella', 506, 34, 58, 9, 4, 23, 7.1, 15.9, 129, 907, 109, 2.9, 'Sample ingredients for seafood paella', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Chili Con Carne', 578, 40, 60, 8, 2, 28, 11.2, 16.8, 150, 894, 76, 3.8, 'Sample ingredients for chili con carne', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Pulled Pork Tacos', 773, 42, 57, 3, 3, 20, 9.9, 10.1, 98, 967, 116, 3.3, 'Sample ingredients for pulled pork tacos', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Chicken Tikka Masala', 733, 30, 49, 10, 3, 23, 7.7, 15.3, 149, 690, 52, 3.5, 'Sample ingredients for chicken tikka masala', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Crab Cakes', 458, 32, 56, 5, 2, 31, 12.7, 18.3, 63, 632, 71, 4.7, 'Sample ingredients for crab cakes', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Grilled Lamb Chops', 498, 34, 53, 5, 3, 34, 15.0, 19.0, 84, 547, 46, 2.8, 'Sample ingredients for grilled lamb chops', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Pork Schnitzel Burger', 671, 35, 54, 2, 4, 22, 9.2, 12.8, 113, 989, 115, 4.3, 'Sample ingredients for pork schnitzel burger', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Korean BBQ Beef Bowl', 731, 35, 31, 8, 2, 31, 12.1, 18.9, 86, 967, 69, 4.0, 'Sample ingredients for korean bbq beef bowl', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Tuna Nicoise Salad', 738, 39, 40, 5, 3, 25, 8.4, 16.6, 61, 520, 104, 2.3, 'Sample ingredients for tuna nicoise salad', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Turkey Meatballs and Pasta', 687, 37, 53, 4, 2, 33, 13.0, 20.0, 139, 966, 83, 4.7, 'Sample ingredients for turkey meatballs and pasta', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Chicken Parmesan', 726, 38, 58, 7, 1, 34, 11.4, 22.6, 71, 707, 66, 3.7, 'Sample ingredients for chicken parmesan', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Shrimp Spring Rolls', 659, 46, 38, 10, 3, 29, 9.2, 19.8, 112, 809, 94, 3.9, 'Sample ingredients for shrimp spring rolls', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Beef Stroganoff', 719, 50, 42, 9, 1, 36, 13.7, 22.3, 134, 894, 102, 3.7, 'Sample ingredients for beef stroganoff', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Grilled Salmon Caesar Salad', 638, 31, 34, 3, 1, 20, 6.5, 13.5, 89, 702, 101, 3.4, 'Sample ingredients for grilled salmon caesar salad', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Pork Adobo Rice Bowl', 796, 50, 33, 6, 3, 21, 10.4, 10.6, 145, 805, 79, 4.6, 'Sample ingredients for pork adobo rice bowl', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Chicken Fried Rice', 630, 36, 37, 7, 4, 30, 11.6, 18.4, 64, 925, 50, 3.7, 'Sample ingredients for chicken fried rice', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Beef Enchiladas', 719, 45, 43, 3, 4, 38, 16.4, 21.6, 80, 963, 79, 3.3, 'Sample ingredients for beef enchiladas', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Chicken Shawarma Plate', 766, 43, 41, 8, 5, 40, 17.3, 22.7, 102, 518, 54, 4.5, 'Sample ingredients for chicken shawarma plate', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Seafood Pasta', 732, 49, 41, 8, 2, 21, 9.0, 12.0, 140, 886, 69, 3.8, 'Sample ingredients for seafood pasta', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Pork Dumplings', 781, 37, 49, 6, 1, 35, 14.5, 20.5, 139, 684, 62, 2.6, 'Sample ingredients for pork dumplings', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Chicken Fajitas', 491, 30, 42, 1, 4, 28, 10.2, 17.8, 63, 585, 76, 2.3, 'Sample ingredients for chicken fajitas', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Beef Kofta Wraps', 774, 32, 57, 2, 5, 20, 8.7, 11.3, 83, 687, 109, 4.2, 'Sample ingredients for beef kofta wraps', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Shrimp Pad Thai', 519, 36, 38, 10, 3, 25, 10.9, 14.1, 120, 761, 62, 3.0, 'Sample ingredients for shrimp pad thai', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Turkey Avocado Wrap', 494, 31, 39, 5, 2, 20, 7.6, 12.4, 144, 842, 96, 4.0, 'Sample ingredients for turkey avocado wrap', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Bacon Cheeseburger', 640, 48, 34, 5, 5, 24, 8.5, 15.5, 120, 792, 102, 4.0, 'Sample ingredients for bacon cheeseburger', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Thai Chicken Curry', 692, 32, 51, 10, 4, 27, 9.8, 17.2, 88, 661, 85, 3.8, 'Sample ingredients for thai chicken curry', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Baked Fish and Chips', 734, 32, 50, 1, 5, 23, 9.9, 13.1, 149, 653, 64, 2.2, 'Sample ingredients for baked fish and chips', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Pork Roast with Veggies', 665, 39, 49, 4, 5, 35, 13.7, 21.3, 122, 868, 74, 3.1, 'Sample ingredients for pork roast with veggies', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Lamb Curry', 601, 38, 52, 6, 3, 28, 11.0, 17.0, 61, 521, 91, 2.7, 'Sample ingredients for lamb curry', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Chicken Alfredo Pizza', 627, 42, 59, 1, 3, 31, 9.4, 21.6, 80, 834, 63, 3.7, 'Sample ingredients for chicken alfredo pizza', 5, 'Contains soy and gluten', TRUE, 'Meal'),
-('Beef Brisket Sandwich', 700, 34, 54, 8, 5, 32, 11.3, 20.7, 133, 517, 78, 2.7, 'Sample ingredients for beef brisket sandwich', 5, 'Contains soy and gluten', TRUE, 'Meal');
 
 -- Create views for common reporting needs
 CREATE VIEW nutrition_summary AS
@@ -1129,23 +1125,22 @@ DELIMITER ;
 -- GROUP BY dc.CategoryName, m.IsHomeCooked
 -- ORDER BY dc.CategoryName, m.IsHomeCooked DESC;
 
--- Count total number of entries in the meals table
-SELECT COUNT(*) AS TotalMeals FROM meals;
+-- -- Count total number of entries in the meals table
+-- SELECT COUNT(*) AS TotalMeals FROM meals;
 
--- Count with breakdown by meal or snack
-SELECT 
-    IsMealorSnack, 
-    COUNT(*) AS Count
-FROM meals
-GROUP BY IsMealorSnack;
+-- -- Count with breakdown by meal or snack
+-- SELECT 
+--     IsMealorSnack, 
+--     COUNT(*) AS Count
+-- FROM meals
+-- GROUP BY IsMealorSnack;
 
 -- Total count with percentage breakdown by category
--- SELECT 
---     dc.CategoryName,
---     COUNT(*) AS CategoryCount,
---     ROUND((COUNT(*) / (SELECT COUNT(*) FROM meals)) * 100, 2) AS Percentage
--- FROM meals m
--- JOIN diet_categories dc ON m.CategoryID = dc.CategoryID
--- GROUP BY dc.CategoryName
--- ORDER BY CategoryCount DESC;
-
+SELECT 
+    dc.CategoryName,
+    COUNT(*) AS CategoryCount,
+    ROUND((COUNT(*) / (SELECT COUNT(*) FROM meals)) * 100, 2) AS Percentage
+FROM meals m
+JOIN diet_categories dc ON m.CategoryID = dc.CategoryID
+GROUP BY dc.CategoryName
+ORDER BY CategoryCount DESC;
