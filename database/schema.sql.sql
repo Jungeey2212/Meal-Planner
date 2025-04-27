@@ -182,10 +182,6 @@ VALUES
  'Turkey mince, udon noodles, garlic, chili flakes, soy sauce, honey, spring onions, sesame oil',
  1, 'Contains soy and gluten', TRUE, 'Meal'),
 
-('Spicy Lamb & Feta Meatballs', 620, 38, 12, 5, 2, 45, 18, 20, 110, 700, 220, 3.0,
- 'Lamb mince, feta cheese, onion, garlic, chili flakes, parsley, egg, breadcrumbs, olive oil, tomato sauce',
- 1, 'Contains dairy and gluten', TRUE, 'Meal'),
-
 ('Classic Beef Burger', 650, 40, 30, 5, 2, 42, 18, 20, 115, 850, 150, 4.2,
  'Ground beef, burger bun, lettuce, tomato, onion, cheddar cheese, ketchup, mayonnaise, mustard, pickle',
  1, 'Contains dairy and gluten', TRUE, 'Meal'),
@@ -362,7 +358,7 @@ VALUES
  'T-bone steak, butter, garlic, rosemary, thyme, salt, black pepper',
  1, 'Contains dairy, gluten-free', TRUE, 'Meal'),
 
-('Shepherd\'s Pie', 580, 35, 45, 6, 8, 28, 14, 12, 95, 780, 100, 4.0,
+('Shepherds Pie', 580, 35, 45, 6, 8, 28, 14, 12, 95, 780, 100, 4.0,
  'Ground lamb, onion, carrots, peas, corn, tomato paste, Worcestershire sauce, beef broth, potatoes, butter, milk',
  1, 'Contains dairy', TRUE, 'Meal'),
 
@@ -538,7 +534,7 @@ VALUES
  'Pizza dough, tomatoes, fresh mozzarella, basil, olive oil, garlic',
  2, 'Contains dairy and gluten', TRUE, 'Meal'),
 
-('Lentil Shepherd\'s Pie', 420, 18, 65, 10, 14, 10, 2, 7, 0, 580, 80, 6.0,
+('Lentil Shepherds Pie', 420, 18, 65, 10, 14, 10, 2, 7, 0, 580, 80, 6.0,
  'Lentils, carrots, peas, corn, onion, garlic, tomato paste, vegetable broth, potatoes, butter, milk',
  2, 'Contains dairy', TRUE, 'Meal'),
 
@@ -710,7 +706,7 @@ INSERT INTO meals (
  'Chickpeas, quinoa, sweet potato, kale, tahini, lemon juice, maple syrup, paprika, cumin, olive oil', 
  3, 'Contains sesame', TRUE, 'Meal'),
  
-('Lentil Shepherd\'s Pie', 420, 16, 65, 10, 14, 10, 1, 8, 0, 480, 90, 6.0, 
+('Lentil Shepherds Pie', 420, 16, 65, 10, 14, 10, 1, 8, 0, 480, 90, 6.0, 
  'Green lentils, potatoes, carrots, peas, onion, garlic, tomato paste, thyme, rosemary, olive oil', 
  3, 'No common allergens', TRUE, 'Meal'),
 
@@ -998,7 +994,7 @@ INSERT INTO meals (
  'Kale, white beans, carrots, celery, onion, garlic, vegetable broth, thyme, rosemary, olive oil',
  3, 'Gluten-free', TRUE, 'Meal'),
 
-('Lentil Shepherd\'s Pie', 450, 18, 70, 10, 14, 10, 1, 8, 0, 560, 80, 6.0,
+('Lentil Shepherds Pie', 450, 18, 70, 10, 14, 10, 1, 8, 0, 560, 80, 6.0,
  'Lentils, carrots, peas, corn, onion, garlic, tomato paste, mashed potatoes, thyme, rosemary',
  3, 'Gluten-free', TRUE, 'Meal'),
 
