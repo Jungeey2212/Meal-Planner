@@ -1,99 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Member Dashboard - F45 Gym Meal Planner</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f8ff;
-    }
-    .navbar {
-      background-color: #2e8b57;
-      padding: 15px 30px;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .navbar a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-    }
-    .navbar a:hover {
-      text-decoration: underline;
-    }
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      background-color: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    h1 {
-      color: #2e8b57;
-      margin-bottom: 20px;
-    }
-    p {
-      color: #555;
-      margin-bottom: 20px;
-    }
-    .button-group {
-      margin-top: 30px;
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-    }
-    .button-group a {
-      background-color: #2e8b57;
-      color: white;
-      padding: 12px 30px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-    .button-group a:hover {
-      background-color: #256f46;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Dashboard - F45 Gym Meal Planner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <style>
+        /* Additional dashboard-specific styles */
+        .dashboard-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 12px 12px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0;
+        }
+        
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+        
+        .navbar a:hover {
+            opacity: 0.8;
+        }
+        
+        .dashboard-card {
+            padding: 30px;
+            border-radius: 0 0 12px 12px;
+        }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .menu-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            color: var(--text-color);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .menu-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .menu-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .menu-description {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .welcome-section {
+            background-color: rgba(0, 123, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-box {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="dashboard-container">
+        <!-- Navbar -->
+        <div class="navbar">
+            <div><strong>F45 Member Dashboard</strong></div>
+            <div>
+                <a href="{{ url_for('profile') }}">Profile</a>
+                <a href="{{ url_for('logout') }}">Logout</a>
+            </div>
+        </div>
 
-<div class="navbar">
-  <div><strong>F45 Member Dashboard</strong></div>
-  <div>
-    <a href="index.html">Logout</a>
-  </div>
-</div>
+        <!-- Main content -->
+        <div class="form-container dashboard-card">
+            <!-- Flash Messages -->
+            {% if get_flashed_messages() %}
+                {% for category, message in get_flashed_messages(with_categories=true) %}
+                    <div class="flash-message {{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
 
-<div class="container">
-    <h1 id="welcome-text"></h1>
+            <div class="welcome-section">
+                <h1 id="welcome-text">Welcome to Your Fitness Journey</h1>
+                <p>Track your progress, access your personalized meal plans, and achieve your fitness goals!</p>
+            </div>
 
- 
+            <!-- Statistics Summary -->
+            <h2>Your Fitness Overview</h2>
+            <div class="stats-container">
+                <div class="stat-box">
+                    <div class="stat-value" id="bmiValue">--</div>
+                    <div class="stat-label">Current BMI</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="weekValue">0</div>
+                    <div class="stat-label">Weeks Active</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="mealValue">0</div>
+                    <div class="stat-label">Meal Plans</div>
+                </div>
+            </div>
 
-  <div class="button-group">
-    <a href="survey1.php">Start Survey</a>
-    <a href="view_meal_plan.php">View Meal Plan</a>
-  </div>
-</div>
+            <!-- Menu Items -->
+            <h2>Quick Actions</h2>
+            <div class="menu-grid">
+                <a href="{{ url_for('form1') }}" class="menu-item">
+                    <div class="menu-icon">📋</div>
+                    <div class="menu-title">Start Fitness Survey</div>
+                    <div class="menu-description">Complete your profile to get personalized recommendations</div>
+                </a>
+                
+                <a href="{{ url_for('meal_plan') }}" class="menu-item">
+                    <div class="menu-icon">🍽️</div>
+                    <div class="menu-title">View Meal Plans</div>
+                    <div class="menu-description">Access your personalized nutrition plans</div>
+                </a>
+                
+                <a href="{{ url_for('workout_plan') }}" class="menu-item">
+                    <div class="menu-icon">💪</div>
+                    <div class="menu-title">Workout Plans</div>
+                    <div class="menu-description">View recommended exercise routines</div>
+                </a>
+                
+                <a href="{{ url_for('progress') }}" class="menu-item">
+                    <div class="menu-icon">📊</div>
+                    <div class="menu-title">Track Progress</div>
+                    <div class="menu-description">Monitor your fitness journey</div>
+                </a>
+            </div>
+        </div>
+    </div>
 
-<script>
-  const urlParams = new URLSearchParams(window.location.search);
-  const name = urlParams.get('name');
-  if (name) {
-    document.getElementById('welcome-text').textContent = "Welcome, " + name;
-  }
-</script>
+    <!-- Dark Mode toggle -->
+    <div class="theme-toggle">
+        <label for="darkModeToggle" class="theme-toggle-label">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="toggle-track">
+                <span class="toggle-indicator">
+                    <span class="toggle-icon toggle-icon-light">☀️</span>
+                    <span class="toggle-icon toggle-icon-dark">🌙</span>
+                </span>
+            </span>
+        </label>
+    </div>
 
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get user name from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get('name');
+            
+            // Update welcome message if name exists
+            if (name) {
+                document.getElementById('welcome-text').textContent = "Welcome, " + name;
+            }
+            
+            // Example data - In a real app, this would come from a server/database
+            // Load sample data for demonstration
+            const userData = {
+                bmi: localStorage.getItem('userBMI') || '24.8',
+                weeksActive: localStorage.getItem('weeksActive') || '3',
+                mealPlans: localStorage.getItem('mealPlans') || '2'
+            };
+            
+            // Update the stats
+            document.getElementById('bmiValue').textContent = userData.bmi;
+            document.getElementById('weekValue').textContent = userData.weeksActive;
+            document.getElementById('mealValue').textContent = userData.mealPlans;
+            
+            // Try to load BMI from form1 if available
+            const form1Data = localStorage.getItem('fitnessForm1');
+            if (form1Data) {
+                try {
+                    const parsedData = JSON.parse(form1Data);
+                    const weight = parseFloat(parsedData.weight);
+                    const height = parseFloat(parsedData.height) / 100; // Convert cm to meters
+                    
+                    if (!isNaN(weight) && !isNaN(height) && height > 0) {
+                        const bmi = (weight / (height * height)).toFixed(1);
+                        document.getElementById('bmiValue').textContent = bmi;
+                    }
+                } catch(e) {
+                    console.error('Error parsing form data:', e);
+                }
+            }
+        });
+    </script>
 </body>
 </html>

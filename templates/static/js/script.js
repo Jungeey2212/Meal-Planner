@@ -11,6 +11,26 @@ function debounce(func, wait = 300) {
   };
 }
 
+// Login and redirect function for index page
+function redirectToDashboard(event) {
+  event.preventDefault();
+  
+  // First validate the form
+  const loginForm = document.getElementById('loginForm');
+  if (!formValidator.validateForm(loginForm)) {
+    return;
+  }
+  
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+  
+  if (email && password) {
+    // In a real application, you'd verify credentials before redirecting
+    // For demo purposes, we're just redirecting to form1
+    window.location.href = "form1";
+  }
+}
+
 // Form persistence handling
 const formStorage = {
   saveFormData: function(formId, data) {
@@ -154,6 +174,20 @@ const formValidator = {
           element.classList.add('input-error');
         }
       }
+      
+      // Email validation
+      if (element.type === 'email' && element.value !== '') {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(element.value)) {
+          isValid = false;
+          const errorElement = document.getElementById(`${element.id}-error`);
+          if (errorElement) {
+            errorElement.textContent = 'Please enter a valid email address.';
+          }
+          element.setAttribute('aria-invalid', 'true');
+          element.classList.add('input-error');
+        }
+      }
     });
     
     return isValid;
@@ -207,6 +241,18 @@ const formValidator = {
               this.classList.add('input-error');
             }
           }
+          
+          // Email validation
+          if (this.type === 'email') {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(this.value)) {
+              if (errorElement) {
+                errorElement.textContent = 'Please enter a valid email address.';
+              }
+              this.setAttribute('aria-invalid', 'true');
+              this.classList.add('input-error');
+            }
+          }
         }
       });
     });
@@ -247,8 +293,7 @@ const themeToggle = {
   }
 };
 
-// Define updateSlidersAndBMI function BEFORE it gets called
-// The original version called this before it was defined
+// Define updateSlidersAndBMI function
 const updateSlidersAndBMI = debounce(function() {
   const weightSlider = document.getElementById('weightSlider');
   const heightSlider = document.getElementById('heightSlider');
@@ -296,9 +341,34 @@ window.onload = function() {
   console.log("Window loaded");
   
   // Get form elements
+  const loginForm = document.getElementById('loginForm');
   const form1 = document.getElementById('fitnessForm1');
   const form2 = document.getElementById('fitnessForm2');
   const form3 = document.getElementById('fitnessForm3');
+  
+  // Handle login form if it exists
+  if (loginForm) {
+    // Set up real-time validation
+    formValidator.setupRealTimeValidation(loginForm);
+    
+    // Only set up event listener if not using the redirectToDashboard function directly
+    if (!loginForm.hasAttribute('onsubmit')) {
+      loginForm.addEventListener('submit', function(event) {
+        // Only prevent default if you want to handle submission in JS
+        if (loginForm.getAttribute('action') === '#') {
+          event.preventDefault();
+          
+          if (!formValidator.validateForm(loginForm)) {
+            return;
+          }
+          
+          // Here you would typically handle login logic
+          // For now, redirect to form1
+          window.location.href = "form1";
+        }
+      });
+    }
+  }
   
   // Sliders and labels
   const weightSlider = document.getElementById('weightSlider');
