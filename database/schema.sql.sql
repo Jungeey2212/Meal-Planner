@@ -159,22 +159,15 @@ VALUES
 ('Pork Chop Skillet Dinner', 680, 48, 6, 2, 0, 45, 18, 27, 135, 800, 75, 3.3, 'Pork chops, garlic, mushrooms, butter', 1, 'Gluten-free', TRUE, 'Meal'),
 ('Herb Roasted Chicken Legs', 620, 45, 4, 1, 0, 40, 15, 22, 115, 750, 70, 2.7, 'Chicken legs, rosemary, thyme, olive oil', 1, 'Gluten-free', TRUE, 'Meal'),
 ('Salmon Patties', 580, 40, 5, 2, 1, 35, 14, 20, 95, 700, 65, 2.9, 'Salmon, eggs, almond flour, parsley', 1, 'Contains seafood and nuts', TRUE, 'Meal'),
-('Beef Stroganoff', 690, 50, 9, 4, 1, 48, 20, 28, 140, 850, 90, 3.5,
- 'Beef strips, sour cream, mushrooms, butter', 1, 'Contains dairy', TRUE, 'Meal'),
-('Chicken and Bacon Alfredo', 720, 50, 8, 4, 1, 50, 20, 30, 140, 850, 95, 3.4,
- 'Chicken breast, bacon, heavy cream, parmesan cheese', 1, 'Contains dairy', TRUE, 'Meal'),
-('Tuna Stuffed Avocado', 480, 38, 5, 1, 3, 28, 10, 16, 90, 600, 70, 3.2,
- 'Tuna, avocado, mayonnaise, lemon juice', 1, 'Contains seafood', TRUE, 'Meal'),
-('Chorizo Egg Muffins', 510, 35, 4, 2, 0, 36, 14, 22, 120, 800, 70, 2.8,
- 'Chorizo sausage, eggs, cheddar cheese', 1, 'Contains dairy', TRUE, 'Meal'),
-('Grilled Pork Tenderloin', 650, 50, 4, 1, 0, 40, 16, 24, 130, 850, 75, 3.5,
- 'Pork tenderloin, thyme, garlic, olive oil', 1, 'Gluten-free', TRUE, 'Meal'),
-('Duck Fat Fried Chicken', 720, 50, 6, 2, 0, 55, 22, 30, 150, 900, 80, 4.2,
- 'Chicken thighs, duck fat, paprika, garlic', 1, 'Gluten-free', TRUE, 'Meal'),
-('Steak with Garlic Butter', 700, 55, 3, 1, 0, 50, 20, 28, 145, 850, 75, 4.0,
- 'Steak, butter, garlic, parsley', 1, 'Contains dairy', TRUE, 'Meal'),
+('Beef Stroganoff', 690, 50, 9, 4, 1, 48, 20, 28, 140, 850, 90, 3.5, 'Beef strips, sour cream, mushrooms, butter', 1, 'Contains dairy', TRUE, 'Meal'),
+('Chicken and Bacon Alfredo', 720, 50, 8, 4, 1, 50, 20, 30, 140, 850, 95, 3.4, 'Chicken breast, bacon, heavy cream, parmesan cheese', 1, 'Contains dairy', TRUE, 'Meal'),
+('Tuna Stuffed Avocado', 480, 38, 5, 1, 3, 28, 10, 16, 90, 600, 70, 3.2, 'Tuna, avocado, mayonnaise, lemon juice', 1, 'Contains seafood', TRUE, 'Meal'),
+('Chorizo Egg Muffins', 510, 35, 4, 2, 0, 36, 14, 22, 120, 800, 70, 2.8, 'Chorizo sausage, eggs, cheddar cheese', 1, 'Contains dairy', TRUE, 'Meal'),
+('Grilled Pork Tenderloin', 650, 50, 4, 1, 0, 40, 16, 24, 130, 850, 75, 3.5, 'Pork tenderloin, thyme, garlic, olive oil', 1, 'Gluten-free', TRUE, 'Meal'),
+('Duck Fat Fried Chicken', 720, 50, 6, 2, 0, 55, 22, 30, 150, 900, 80, 4.2, 'Chicken thighs, duck fat, paprika, garlic', 1, 'Gluten-free', TRUE, 'Meal'),
+('Steak with Garlic Butter', 700, 55, 3, 1, 0, 50, 20, 28, 145, 850, 75, 4.0, 'Steak, butter, garlic, parsley', 1, 'Contains dairy', TRUE, 'Meal'),
 ('Stuffed Chicken Breasts', 680, 50, 7, 3, 0, 45, 18, 26, 135, 850, 90, 3.3,'Chicken breast, cream cheese, spinach, bacon', 1, 'Contains dairy', TRUE, 'Meal'), 
- ('Grilled Ribeye Steak', 750, 60, 2, 0, 0, 55, 25, 30, 150, 500, 40, 4.2, 'Ribeye steak, salt, pepper, butter', 1, 'Contains dairy and gluten', TRUE, 'Meal'),
+('Grilled Ribeye Steak', 750, 60, 2, 0, 0, 55, 25, 30, 150, 500, 40, 4.2, 'Ribeye steak, salt, pepper, butter', 1, 'Contains dairy and gluten', TRUE, 'Meal'),
 ('BBQ Pulled Pork', 680, 48, 10, 7, 1, 45, 15, 25, 130, 1100, 60, 2.7, 'Pork shoulder, BBQ sauce, onion powder, garlic powder', 1, 'Contains dairy and gluten', TRUE, 'Meal'),
 ('Garlic Butter Chicken Thighs', 550, 40, 5, 1, 0, 35, 12, 20, 95, 600, 50, 2.5, 'Chicken thighs, garlic, butter, thyme, parsley', 1, 'Contains dairy and gluten', TRUE, 'Meal'),
 ('Beef and Bacon Skewers', 620, 45, 4, 2, 0, 48, 18, 25, 140, 950, 45, 3.5, 'Beef cubes, bacon strips, black pepper, olive oil', 1, 'Contains dairy and gluten', TRUE, 'Meal'),
@@ -274,6 +267,59 @@ VALUES
 ('Chicken Bacon Wraps Variant 98', 600, 42, 8, 4, 0, 40, 15, 22, 120, 850, 75, 2.8, 'Chicken breast, bacon, cream cheese, chives', 1, 'Contains dairy and gluten', TRUE, 'Meal'),
 ('Honey Glazed Chicken Wings Variant 99', 620, 38, 15, 8, 0, 40, 12, 25, 110, 800, 60, 2.6, 'Chicken wings, honey, soy sauce, ginger, garlic', 1, 'Contains dairy and gluten', TRUE, 'Meal'),
 ('Spicy Beef Jerky Variant 100', 300, 25, 4, 2, 0, 18, 7, 10, 85, 1200, 20, 3.2, 'Beef strips, soy sauce, chili flakes, garlic powder', 1, 'Contains dairy and gluten', TRUE, 'Meal');
+('Crispy Chilli Turkey Noodles', 520, 35, 40, 6, 2, 25, 5, 18, 75, 950, 70, 2.1, 'Turkey mince, udon noodles, garlic, chili flakes, soy sauce, honey, spring onions, sesame oil', 1, 'Contains soy and gluten', TRUE, 'Meal'),
+('Spicy Lamb & Feta Meatballs', 620, 38, 12, 5, 2, 45, 18, 20, 110, 700, 220, 3.0, 'Lamb mince, feta cheese, onion, garlic, chili flakes, parsley, egg, breadcrumbs, olive oil, tomato sauce', 1, 'Contains dairy and gluten', TRUE, 'Meal'),
+('Classic Beef Burger', 650, 40, 30, 5, 2, 42, 18, 20, 115, 850, 150, 4.2, 'Ground beef, burger bun, lettuce, tomato, onion, cheddar cheese, ketchup, mayonnaise, mustard, pickle', 1, 'Contains dairy and gluten', TRUE, 'Meal'),
+('Ribeye Steak with Garlic Butter', 680, 48, 2, 0, 0, 52, 22, 25, 130, 520, 45, 4.5, 'Ribeye steak, butter, garlic, rosemary, thyme, salt, black pepper', 1, 'Contains dairy, gluten-free', TRUE, 'Meal'),
+('BBQ Pulled Pork Sandwich', 580, 35, 45, 12, 2, 28, 10, 16, 95, 980, 100, 3.0, 'Pork shoulder, BBQ sauce, hamburger bun, coleslaw, pickle', 1, 'Contains gluten', TRUE, 'Meal'),
+('Honey Garlic Chicken Thighs', 490, 38, 25, 20, 1, 26, 8, 16, 120, 650, 40, 2.2, 'Chicken thighs, honey, garlic, soy sauce, butter, thyme, rice', 1, 'Contains soy and gluten', TRUE, 'Meal'),
+('Beef Stroganoff', 580, 35, 40, 5, 3, 32, 18, 12, 110, 780, 180, 3.5, 'Beef sirloin, mushrooms, onion, garlic, sour cream, beef broth, butter, flour, egg noodles, parsley', 1, 'Contains dairy and gluten', TRUE, 'Meal'),
+('Bacon Wrapped Chicken Breast', 450, 50, 2, 1, 0, 28, 10, 16, 130, 680, 30, 1.8, 'Chicken breast, bacon, garlic powder, paprika, black pepper, olive oil', 1, 'Gluten-free', TRUE, 'Meal'),
+('Lamb Chops with Mint Sauce', 520, 42, 8, 6, 1, 35, 15, 18, 110, 480, 60, 3.8, 'Lamb chops, mint, sugar, vinegar, olive oil, garlic, rosemary, salt, pepper', 1, 'Gluten-free', TRUE, 'Meal'),
+('Beef Chili', 580, 40, 35, 8, 10, 30, 12, 16, 100, 850, 120, 6.0, 'Ground beef, kidney beans, tomatoes, onion, bell pepper, garlic, chili powder, cumin, oregano, beef broth', 1, 'Gluten-free', TRUE, 'Meal'),
+('Chicken Parmesan', 650, 45, 40, 6, 3, 35, 15, 18, 120, 980, 400, 3.0, 'Chicken breast, breadcrumbs, parmesan cheese, mozzarella, eggs, marinara sauce, spaghetti, basil', 1, 'Contains dairy, gluten, and egg', TRUE, 'Meal'),
+('Pork Tenderloin with Apple Glaze', 420, 45, 18, 15, 2, 16, 5, 10, 95, 580, 40, 2.0, 'Pork tenderloin, apples, apple cider, brown sugar, dijon mustard, cinnamon, cloves, butter', 1, 'Contains dairy, gluten-free', TRUE, 'Meal'),
+('Beef Tacos', 510, 30, 35, 4, 8, 28, 12, 14, 85, 750, 200, 3.5, 'Ground beef, corn tortillas, lettuce, tomato, onion, cheese, sour cream, salsa, cumin, chili powder', 1, 'Contains dairy', TRUE, 'Meal'),
+('Butter Chicken', 580, 40, 20, 8, 2, 38, 18, 18, 130, 720, 150, 3.0, 'Chicken thighs, yogurt, tomato sauce, heavy cream, butter, onion, garlic, ginger, garam masala, rice', 1, 'Contains dairy', TRUE, 'Meal'),
+('Beef Stir Fry', 480, 35, 30, 8, 5, 24, 8, 14, 90, 950, 80, 4.0, 'Beef sirloin, broccoli, bell pepper, carrot, onion, garlic, ginger, soy sauce, sesame oil, rice', 1, 'Contains soy', TRUE, 'Meal'),
+('Italian Meatballs with Pasta', 620, 38, 55, 6, 4, 28, 12, 14, 95, 780, 150, 3.5, 'Ground beef, ground pork, breadcrumbs, parmesan, eggs, garlic, spaghetti, marinara sauce, basil, oregano', 1, 'Contains dairy, gluten, and egg', TRUE, 'Meal'),
+('Buffalo Chicken Wings', 580, 45, 5, 2, 0, 42, 15, 25, 180, 1250, 60, 1.8, 'Chicken wings, hot sauce, butter, garlic powder, paprika, celery, blue cheese dressing', 1, 'Contains dairy, gluten-free', TRUE, 'Meal'),
+('Steak Fajitas', 550, 38, 40, 6, 5, 28, 10, 16, 95, 850, 120, 4.0, 'Beef flank steak, bell peppers, onion, flour tortillas, sour cream, cheese, lime, cumin, chili powder', 1, 'Contains dairy and gluten', TRUE, 'Meal'),
+('Braised Short Ribs', 680, 45, 15, 6, 2, 48, 22, 22, 120, 780, 80, 5.0, 'Beef short ribs, red wine, onion, carrot, celery, garlic, tomato paste, beef broth, thyme, bay leaves', 1, 'Gluten-free', TRUE, 'Meal'),
+('Chicken Alfredo Pasta', 720, 40, 55, 3, 2, 40, 22, 15, 120, 820, 350, 2.0, 'Chicken breast, fettuccine, heavy cream, parmesan cheese, butter, garlic, parsley', 1, 'Contains dairy and gluten', TRUE, 'Meal'),
+('Pork Chops with Mushroom Gravy', 480, 40, 15, 2, 3, 28, 10, 16, 100, 720, 60, 2.5, 'Pork chops, mushrooms, onion, garlic, beef broth, heavy cream, butter, flour, thyme', 1, 'Contains dairy and gluten', TRUE, 'Meal'),
+('Beef Bourguignon', 620, 40, 15, 5, 4, 40, 16, 20, 110, 780, 60, 5.0, 'Beef chuck, bacon, red wine, pearl onions, mushrooms, carrots, garlic, thyme, bay leaves, butter, flour', 1, 'Contains gluten', TRUE, 'Meal'),
+('Honey Mustard Glazed Ham', 480, 35, 20, 18, 0, 30, 10, 18, 95, 1200, 40, 2.0, 'Ham, honey, dijon mustard, brown sugar, apple cider vinegar, cloves, cinnamon', 1, 'Gluten-free', TRUE, 'Meal'),
+('Beef and Broccoli', 450, 35, 25, 6, 5, 22, 8, 12, 85, 980, 80, 3.5, 'Beef sirloin, broccoli, garlic, ginger, soy sauce, brown sugar, sesame oil, rice', 1, 'Contains soy', TRUE, 'Meal'),
+('Chicken Enchiladas', 580, 38, 50, 6, 5, 26, 12, 12, 95, 950, 300, 3.0, 'Chicken breast, corn tortillas, enchilada sauce, cheese, onion, bell pepper, sour cream, cilantro', 1, 'Contains dairy', TRUE, 'Meal'),
+('Salisbury Steak', 520, 35, 25, 4, 2, 32, 14, 16, 100, 780, 80, 4.0, 'Ground beef, onion, mushrooms, beef broth, Worcestershire sauce, ketchup, flour, mashed potatoes', 1, 'Contains gluten', TRUE, 'Meal'),
+('BBQ Ribs', 650, 45, 25, 18, 1, 40, 16, 20, 130, 850, 60, 2.5, 'Pork ribs, BBQ sauce, brown sugar, paprika, garlic powder, onion powder, cayenne pepper', 1, 'Gluten-free', TRUE, 'Meal'),
+('Chicken Cordon Bleu', 580, 48, 20, 2, 1, 35, 15, 18, 130, 980, 250, 2.0, 'Chicken breast, ham, Swiss cheese, breadcrumbs, eggs, flour, dijon mustard, butter', 1, 'Contains dairy, gluten, and egg', TRUE, 'Meal'),
+('Beef Kabobs', 480, 40, 15, 5, 3, 28, 10, 16, 95, 620, 60, 4.0, 'Beef sirloin, bell peppers, onion, mushrooms, olive oil, garlic, oregano, lemon juice, salt, pepper', 1, 'Gluten-free', TRUE, 'Meal'),
+('Swedish Meatballs', 550, 35, 30, 5, 2, 35, 18, 15, 110, 780, 120, 3.0, 'Ground beef, ground pork, breadcrumbs, egg, onion, allspice, nutmeg, beef broth, heavy cream, flour, egg noodles', 1, 'Contains dairy, gluten, and egg', TRUE, 'Meal'),
+('Bacon Cheeseburger', 680, 40, 35, 6, 2, 45, 20, 22, 120, 980, 200, 4.5, 'Ground beef, bacon, cheddar cheese, burger bun, lettuce, tomato, onion, pickle, ketchup, mayonnaise', 1, 'Contains dairy and gluten', TRUE, 'Meal'),
+('Garlic Butter Steak Bites', 520, 40, 2, 0, 0, 40, 20, 18, 110, 650, 40, 3.5, 'Beef sirloin, butter, garlic, parsley, olive oil, salt, black pepper', 1, 'Contains dairy, gluten-free', TRUE, 'Meal'),
+('Chicken and Dumplings', 580, 35, 55, 4, 3, 25, 8, 15, 90, 850, 80, 3.0, 'Chicken thighs, carrots, celery, onion, garlic, flour, butter, chicken broth, thyme, bay leaves, biscuit dough', 1, 'Contains dairy and gluten', TRUE, 'Meal'),
+('Meatloaf with Mashed Potatoes', 620, 38, 45, 6, 3, 32, 14, 16, 100, 820, 100, 4.0, 'Ground beef, onion, bell pepper, egg, breadcrumbs, ketchup, Worcestershire sauce, potatoes, butter, milk', 1, 'Contains dairy, gluten, and egg', TRUE, 'Meal'),
+('Teriyaki Chicken', 480, 40, 35, 25, 1, 18, 5, 12, 95, 1100, 40, 2.0, 'Chicken thighs, soy sauce, brown sugar, honey, garlic, ginger, rice vinegar, sesame oil, rice', 1, 'Contains soy', TRUE, 'Meal'),
+('Lamb Curry', 580, 40, 25, 6, 5, 38, 18, 18, 110, 780, 120, 5.0, 'Lamb shoulder, onion, garlic, ginger, tomatoes, yogurt, heavy cream, curry powder, turmeric, cumin, rice', 1, 'Contains dairy', TRUE, 'Meal'),
+('Beef Enchiladas', 620, 35, 55, 6, 4, 30, 14, 14, 95, 950, 350, 4.0, 'Ground beef, corn tortillas, enchilada sauce, cheese, onion, garlic, cumin, chili powder, sour cream', 1, 'Contains dairy', TRUE, 'Meal'),
+('Honey Baked Ham', 450, 35, 18, 16, 0, 28, 10, 16, 90, 1150, 30, 1.8, 'Ham, honey, brown sugar, dijon mustard, cinnamon, cloves', 1, 'Gluten-free', TRUE, 'Meal'),
+('Korean BBQ Beef', 520, 35, 25, 15, 2, 32, 12, 18, 90, 980, 60, 4.5, 'Beef short ribs, soy sauce, brown sugar, garlic, ginger, sesame oil, green onions, rice', 1, 'Contains soy', TRUE, 'Meal'),
+('Chicken Marsala', 450, 35, 15, 3, 2, 28, 10, 16, 95, 680, 40, 2.5, 'Chicken breast, mushrooms, marsala wine, chicken broth, shallots, garlic, butter, flour, parsley', 1, 'Contains dairy and gluten', TRUE, 'Meal'),
+('Philly Cheesesteak Sandwich', 580, 35, 45, 5, 2, 30, 12, 16, 90, 980, 250, 4.0, 'Beef sirloin, hoagie roll, provolone cheese, onion, bell pepper, mushrooms, mayonnaise', 1, 'Contains dairy and gluten', TRUE, 'Meal'),
+('Bacon Wrapped Pork Tenderloin', 480, 40, 5, 2, 0, 32, 12, 18, 100, 720, 30, 2.5, 'Pork tenderloin, bacon, garlic, rosemary, thyme, brown sugar, olive oil', 1, 'Gluten-free', TRUE, 'Meal'),
+('Chicken Pot Pie', 580, 30, 50, 5, 4, 30, 15, 13, 85, 850, 100, 3.0, 'Chicken breast, carrots, peas, celery, onion, butter, flour, chicken broth, heavy cream, pie crust', 1, 'Contains dairy and gluten', TRUE, 'Meal'),
+('Spaghetti and Meatballs', 650, 38, 65, 10, 5, 28, 12, 14, 90, 820, 150, 4.5, 'Ground beef, ground pork, breadcrumbs, parmesan, egg, garlic, spaghetti, marinara sauce, onion, basil', 1, 'Contains dairy, gluten, and egg', TRUE, 'Meal'),
+('Tandoori Chicken', 450, 45, 10, 3, 2, 22, 6, 14, 110, 680, 80, 3.0, 'Chicken thighs, yogurt, lemon juice, garlic, ginger, paprika, turmeric, cumin, coriander, garam masala', 1, 'Contains dairy, gluten-free', TRUE, 'Meal'),
+('T-Bone Steak', 650, 50, 0, 0, 0, 48, 20, 24, 130, 520, 40, 4.8, 'T-bone steak, butter, garlic, rosemary, thyme, salt, black pepper', 1, 'Contains dairy, gluten-free', TRUE, 'Meal'),
+('Shepherd\'s Pie', 580, 35, 45, 6, 8, 28, 14, 12, 95, 780, 100, 4.0, 'Ground lamb, onion, carrots, peas, corn, tomato paste, Worcestershire sauce, beef broth, potatoes, butter, milk', 1, 'Contains dairy', TRUE, 'Meal'),
+('Orange Chicken', 550, 35, 50, 25, 1, 22, 5, 15, 90, 950, 40, 2.0, 'Chicken breast, orange juice, orange zest, soy sauce, honey, garlic, ginger, cornstarch, egg, flour, rice', 1, 'Contains soy, gluten, and egg', TRUE, 'Meal'),
+('Beef Wellington', 720, 40, 40, 3, 2, 45, 20, 22, 120, 680, 60, 5.0, 'Beef tenderloin, mushrooms, shallots, garlic, thyme, prosciutto, puff pastry, dijon mustard, egg', 1, 'Contains gluten and egg', TRUE, 'Meal'),
+('Chicken Fajitas', 520, 38, 40, 5, 5, 22, 7, 13, 95, 780, 120, 3.5, 'Chicken breast, bell peppers, onion, flour tortillas, sour cream, cheese, lime, cumin, chili powder', 1, 'Contains dairy and gluten', TRUE, 'Meal'),
+('Beef Lasagna', 650, 35, 55, 8, 4, 35, 18, 15, 100, 880, 400, 4.0, 'Ground beef, lasagna noodles, ricotta cheese, mozzarella, parmesan, eggs, tomato sauce, onion, garlic, basil', 1, 'Contains dairy, gluten, and egg', TRUE, 'Meal'),
+('Pork Tenderloin with Maple Glaze', 420, 40, 20, 18, 1, 18, 5, 12, 95, 520, 30, 2.5, 'Pork tenderloin, maple syrup, dijon mustard, garlic, rosemary, thyme, olive oil', 1, 'Gluten-free', TRUE, 'Meal'),
+('Beef and Mushroom Stew', 520, 35, 30, 5, 6, 28, 12, 14, 90, 780, 60, 5.0, 'Beef chuck, mushrooms, onion, carrots, celery, garlic, red wine, beef broth, tomato paste, thyme, bay leaves', 1, 'Gluten-free', TRUE, 'Meal');
 
 
 
@@ -499,7 +545,218 @@ INSERT INTO meals (
 
 ('Mediterranean Quinoa Stuffed Peppers', 380, 12, 50, 8, 9, 16, 2, 12, 0, 460, 80, 4.5, 
  'Bell peppers, quinoa, chickpeas, sun-dried tomatoes, spinach, olives, garlic, lemon juice, herbs, olive oil', 
- 3, 'No common allergens', TRUE, 'Meal');
+ 3, 'No common allergens', TRUE, 'Meal'),
+('Roasted Vegetable Buddha Bowl', 450, 15, 60, 8, 12, 18, 2, 14, 0, 320, 120, 4.2,
+ 'Quinoa, sweet potato, chickpeas, kale, avocado, tahini, lemon juice, olive oil, nutritional yeast',
+ 3, 'Gluten-free', TRUE, 'Meal'),
+
+('Black Bean Tacos', 380, 14, 50, 6, 10, 15, 2, 10, 0, 450, 150, 3.8,
+ 'Black beans, corn tortillas, avocado, tomato salsa, lime juice, cilantro, red onion, cumin',
+ 3, 'Gluten-free', TRUE, 'Meal'),
+
+('Coconut Chickpea Curry', 520, 16, 65, 10, 12, 22, 14, 6, 0, 560, 120, 4.5,
+ 'Chickpeas, coconut milk, tomatoes, spinach, garlic, ginger, curry powder, onion, cilantro',
+ 3, 'Gluten-free', TRUE, 'Meal'),
+
+('Lentil Bolognese', 420, 18, 70, 8, 14, 8, 1, 6, 0, 520, 80, 5.2,
+ 'Lentils, tomatoes, carrots, celery, onion, garlic, oregano, basil, nutritional yeast, whole grain pasta',
+ 3, 'Contains gluten', TRUE, 'Meal'),
+
+('Mushroom Risotto', 480, 12, 75, 4, 6, 15, 2, 12, 0, 680, 40, 2.8,
+ 'Arborio rice, mushrooms, vegetable broth, white wine, onion, garlic, nutritional yeast, thyme, olive oil',
+ 3, 'Gluten-free', TRUE, 'Meal'),
+
+('Sweet Potato & Chickpea Salad', 390, 12, 60, 12, 11, 14, 2, 10, 0, 410, 100, 3.6,
+ 'Sweet potato, chickpeas, spinach, tahini, lemon juice, olive oil, garlic, cumin, paprika',
+ 3, 'Gluten-free', TRUE, 'Meal'),
+
+('Tofu Stir Fry', 380, 20, 35, 8, 8, 18, 3, 13, 0, 650, 250, 5.0,
+ 'Tofu, broccoli, bell peppers, carrots, snow peas, brown rice, garlic, ginger, soy sauce, sesame oil',
+ 3, 'Contains soy', TRUE, 'Meal'),
+
+('Falafel Wrap', 520, 18, 70, 5, 12, 20, 3, 15, 0, 720, 120, 4.8,
+ 'Chickpeas, parsley, cilantro, garlic, cumin, whole wheat wrap, tahini sauce, tomatoes, lettuce, cucumber',
+ 3, 'Contains gluten', TRUE, 'Meal'),
+
+('Quinoa Power Bowl', 450, 16, 65, 10, 14, 16, 2, 12, 0, 380, 100, 6.0,
+ 'Quinoa, roasted vegetables, edamame, avocado, kale, tahini dressing, pumpkin seeds, lemon juice',
+ 3, 'Contains soy, gluten-free', TRUE, 'Meal'),
+
+('Red Lentil Dahl', 320, 18, 50, 6, 12, 8, 1, 6, 0, 480, 80, 4.5,
+ 'Red lentils, tomatoes, onion, garlic, ginger, curry powder, turmeric, coconut milk, cilantro',
+ 3, 'Gluten-free', TRUE, 'Meal'),
+
+('Stuffed Bell Peppers', 340, 12, 55, 12, 8, 10, 1, 8, 0, 420, 60, 3.2,
+ 'Bell peppers, quinoa, black beans, corn, tomatoes, onion, garlic, cumin, chili powder, cilantro',
+ 3, 'Gluten-free', TRUE, 'Meal'),
+
+('Mediterranean Couscous Bowl', 430, 14, 70, 8, 10, 12, 2, 9, 0, 550, 90, 3.5,
+ 'Couscous, chickpeas, cucumber, tomatoes, olives, red onion, parsley, mint, lemon juice, olive oil',
+ 3, 'Contains gluten', TRUE, 'Meal'),
+
+('Portobello Mushroom Burger', 380, 10, 45, 6, 8, 18, 3, 14, 0, 650, 120, 2.8,
+ 'Portobello mushrooms, whole grain bun, lettuce, tomato, onion, avocado, mustard, vegan mayo',
+ 3, 'Contains gluten', TRUE, 'Meal'),
+
+('Tempeh Taco Salad', 420, 22, 40, 8, 12, 20, 3, 15, 0, 580, 150, 4.2,
+ 'Tempeh, romaine lettuce, black beans, corn, tomatoes, avocado, tortilla chips, lime juice, cilantro',
+ 3, 'Contains soy', TRUE, 'Meal'),
+
+('Vegetable Paella', 410, 12, 75, 6, 8, 8, 1, 6, 0, 560, 60, 3.6,
+ 'Arborio rice, bell peppers, artichokes, peas, tomatoes, onion, garlic, saffron, paprika, veggie broth',
+ 3, 'Gluten-free', TRUE, 'Meal'),
+
+('Cauliflower Buffalo Wings', 280, 8, 30, 4, 6, 18, 2, 14, 0, 680, 40, 2.0,
+ 'Cauliflower, almond flour, garlic powder, onion powder, hot sauce, maple syrup, vegan butter',
+ 3, 'Gluten-free, contains nuts', TRUE, 'Meal'),
+
+('Tofu Scramble', 320, 20, 20, 3, 5, 18, 3, 13, 0, 520, 300, 5.0,
+ 'Tofu, nutritional yeast, turmeric, onion, bell peppers, spinach, garlic, black salt, black pepper',
+ 3, 'Contains soy, gluten-free', TRUE, 'Meal'),
+
+('Vegan Chili', 380, 16, 60, 12, 16, 8, 1, 6, 0, 620, 100, 6.5,
+ 'Kidney beans, black beans, tomatoes, bell peppers, onion, garlic, chili powder, cumin, oregano',
+ 3, 'Gluten-free', TRUE, 'Meal'),
+
+('Kale & White Bean Soup', 290, 15, 45, 5, 10, 8, 1, 6, 0, 580, 150, 5.0,
+ 'Kale, white beans, carrots, celery, onion, garlic, vegetable broth, thyme, rosemary, olive oil',
+ 3, 'Gluten-free', TRUE, 'Meal'),
+
+('Lentil Shepherd\'s Pie', 450, 18, 70, 10, 14, 10, 1, 8, 0, 560, 80, 6.0,
+ 'Lentils, carrots, peas, corn, onion, garlic, tomato paste, mashed potatoes, thyme, rosemary',
+ 3, 'Gluten-free', TRUE, 'Meal'),
+
+('Thai Green Curry', 450, 14, 45, 8, 10, 24, 18, 5, 0, 680, 100, 4.0,
+ 'Tofu, green curry paste, coconut milk, bamboo shoots, bell peppers, eggplant, basil, lime leaves, brown rice',
+ 3, 'Contains soy, gluten-free', TRUE, 'Meal'),
+
+('Maple Glazed Brussels Sprouts', 320, 8, 40, 15, 8, 16, 2, 12, 0, 450, 80, 3.0,
+ 'Brussels sprouts, maple syrup, balsamic vinegar, pecans, cranberries, olive oil, garlic, thyme',
+ 3, 'Contains nuts, gluten-free', TRUE, 'Meal'),
+
+('Moroccan Chickpea Stew', 380, 15, 55, 10, 12, 12, 1, 10, 0, 520, 150, 5.5,
+ 'Chickpeas, tomatoes, carrots, onion, garlic, ginger, cumin, cinnamon, paprika, cilantro, couscous',
+ 3, 'Contains gluten', TRUE, 'Meal'),
+
+('Eggplant Rollatini', 410, 12, 35, 8, 10, 24, 3, 19, 0, 580, 100, 3.0,
+ 'Eggplant, tofu ricotta, spinach, nutritional yeast, marinara sauce, basil, garlic, olive oil',
+ 3, 'Contains soy, gluten-free', TRUE, 'Meal'),
+
+('Black Bean & Sweet Potato Burgers', 380, 14, 58, 10, 12, 12, 1, 10, 0, 520, 80, 4.2,
+ 'Black beans, sweet potato, quinoa, onion, garlic, cumin, paprika, flaxseed, whole grain buns',
+ 3, 'Contains gluten', TRUE, 'Meal'),
+
+('Pad Thai', 450, 15, 70, 15, 5, 12, 2, 9, 0, 850, 120, 3.5,
+ 'Rice noodles, tofu, bean sprouts, carrots, green onions, peanuts, tamarind paste, soy sauce, lime',
+ 3, 'Contains soy and nuts', TRUE, 'Meal'),
+
+('Mushroom Stroganoff', 420, 12, 55, 4, 6, 18, 3, 14, 0, 580, 60, 3.2,
+ 'Mushrooms, garlic, onion, paprika, vegan sour cream, vegetable broth, thyme, whole grain pasta',
+ 3, 'Contains gluten', TRUE, 'Meal'),
+
+('Chickpea & Spinach Curry', 380, 16, 50, 8, 10, 15, 10, 4, 0, 520, 150, 5.0,
+ 'Chickpeas, spinach, tomatoes, onion, garlic, ginger, coconut milk, curry powder, turmeric, cumin, rice',
+ 3, 'Gluten-free', TRUE, 'Meal'),
+
+('Vegetable Lasagna', 450, 16, 60, 10, 8, 15, 2, 12, 0, 620, 120, 4.0,
+ 'Lasagna noodles, tofu ricotta, zucchini, spinach, mushrooms, marinara sauce, nutritional yeast, basil',
+ 3, 'Contains soy and gluten', TRUE, 'Meal'),
+
+('Miso Ramen', 380, 14, 60, 5, 6, 8, 1, 6, 0, 820, 100, 3.5,
+ 'Ramen noodles, tofu, miso paste, mushrooms, bok choy, carrots, green onions, seaweed, sesame oil',
+ 3, 'Contains soy and gluten', TRUE, 'Meal'),
+
+('BBQ Jackfruit Sandwich', 350, 8, 55, 20, 7, 8, 1, 6, 0, 680, 60, 2.5,
+ 'Jackfruit, BBQ sauce, whole grain bun, coleslaw, pickles, onion, vegan mayo',
+ 3, 'Contains gluten', TRUE, 'Meal'),
+
+('Teriyaki Tempeh Bowl', 420, 20, 55, 18, 8, 12, 2, 9, 0, 850, 100, 4.0,
+ 'Tempeh, broccoli, carrots, snap peas, teriyaki sauce, ginger, garlic, brown rice, sesame seeds',
+ 3, 'Contains soy', TRUE, 'Meal'),
+
+('Smoky Bean Burritos', 480, 18, 75, 6, 14, 12, 2, 9, 0, 750, 120, 5.0,
+ 'Pinto beans, black beans, brown rice, bell peppers, onion, garlic, chipotle, cumin, avocado, whole wheat tortilla',
+ 3, 'Contains gluten', TRUE, 'Meal'),
+
+('Roasted Vegetable Penne', 450, 15, 75, 8, 8, 10, 1, 8, 0, 520, 80, 3.5,
+ 'Whole grain penne, zucchini, eggplant, bell peppers, cherry tomatoes, garlic, basil, olive oil, nutritional yeast',
+ 3, 'Contains gluten', TRUE, 'Meal'),
+
+('Sweet & Sour Tofu', 380, 18, 50, 20, 4, 12, 2, 9, 0, 750, 150, 3.0,
+ 'Tofu, bell peppers, pineapple, onion, garlic, brown sugar, rice vinegar, tomato paste, soy sauce, rice',
+ 3, 'Contains soy', TRUE, 'Meal'),
+
+('Farro Salad with Roasted Vegetables', 420, 14, 75, 10, 12, 10, 1, 8, 0, 480, 80, 4.2,
+ 'Farro, zucchini, bell peppers, cherry tomatoes, red onion, arugula, balsamic vinegar, olive oil, herbs',
+ 3, 'Contains gluten', TRUE, 'Meal'),
+
+('Vegetable Biryani', 450, 12, 80, 5, 8, 10, 1, 8, 0, 520, 80, 3.5,
+ 'Basmati rice, mixed vegetables, onion, garlic, ginger, turmeric, cumin, coriander, cardamom, cinnamon',
+ 3, 'Gluten-free', TRUE, 'Meal'),
+
+('Broccoli & Chickpea Stir Fry', 380, 18, 45, 6, 12, 14, 2, 11, 0, 620, 150, 5.0,
+ 'Broccoli, chickpeas, carrots, snow peas, garlic, ginger, soy sauce, rice vinegar, sesame oil, brown rice',
+ 3, 'Contains soy', TRUE, 'Meal'),
+
+('Stuffed Butternut Squash', 420, 12, 65, 15, 10, 12, 2, 9, 0, 380, 120, 4.0,
+ 'Butternut squash, quinoa, cranberries, pecans, kale, onion, garlic, sage, maple syrup, olive oil',
+ 3, 'Contains nuts, gluten-free', TRUE, 'Meal'),
+
+('Creamy Tomato Pasta', 450, 14, 70, 8, 6, 15, 2, 12, 0, 580, 100, 3.0,
+ 'Whole grain pasta, tomatoes, cashews, nutritional yeast, garlic, basil, onion, olive oil',
+ 3, 'Contains nuts and gluten', TRUE, 'Meal'),
+
+('Roasted Cauliflower Tacos', 350, 10, 45, 5, 8, 16, 2, 12, 0, 480, 100, 3.2,
+ 'Cauliflower, corn tortillas, avocado, lime, cilantro, red cabbage, red onion, cumin, chili powder',
+ 3, 'Gluten-free', TRUE, 'Meal'),
+
+('Three Bean Chili', 380, 18, 60, 8, 16, 6, 1, 4, 0, 580, 120, 6.0,
+ 'Kidney beans, black beans, pinto beans, tomatoes, bell pepper, onion, garlic, chili powder, cumin, oregano',
+ 3, 'Gluten-free', TRUE, 'Meal'),
+
+('Sesame Soba Noodles', 420, 16, 65, 6, 5, 12, 2, 9, 0, 680, 80, 3.0,
+ 'Soba noodles, edamame, carrots, cucumber, green onion, sesame oil, rice vinegar, soy sauce, ginger',
+ 3, 'Contains soy and gluten', TRUE, 'Meal'),
+
+('Chickpea Mediterranean Bowl', 450, 15, 55, 6, 12, 20, 3, 15, 0, 520, 120, 4.5,
+ 'Chickpeas, cucumber, tomatoes, red onion, kalamata olives, parsley, lemon juice, olive oil, tahini, quinoa',
+ 3, 'Gluten-free', TRUE, 'Meal'),
+
+('Sweet Potato Black Bean Enchiladas', 480, 15, 70, 12, 14, 14, 2, 11, 0, 680, 150, 4.0,
+ 'Sweet potatoes, black beans, corn tortillas, enchilada sauce, avocado, cilantro, lime, cumin, chili powder',
+ 3, 'Gluten-free', TRUE, 'Meal'),
+
+('Buffalo Cauliflower Wrap', 420, 12, 60, 6, 8, 16, 3, 12, 0, 750, 100, 3.5,
+ 'Cauliflower, hot sauce, whole wheat wrap, lettuce, tomato, red onion, avocado, vegan ranch',
+ 3, 'Contains gluten', TRUE, 'Meal'),
+
+('Vegetable Pot Pie', 480, 10, 60, 8, 10, 22, 4, 16, 0, 620, 80, 3.0,
+ 'Carrots, peas, potatoes, celery, onion, vegetable broth, almond milk, vegan butter, flour, thyme, pie crust',
+ 3, 'Contains gluten', TRUE, 'Meal'),
+
+('Spinach & Mushroom Stuffed Shells', 450, 16, 65, 6, 5, 12, 2, 9, 0, 580, 120, 4.0,
+ 'Pasta shells, tofu ricotta, spinach, mushrooms, nutritional yeast, marinara sauce, garlic, basil',
+ 3, 'Contains soy and gluten', TRUE, 'Meal'),
+
+('Vegetable Tikka Masala', 420, 14, 55, 10, 12, 16, 12, 3, 0, 580, 120, 4.5,
+ 'Cauliflower, chickpeas, peas, tomatoes, coconut milk, onion, garlic, ginger, garam masala, turmeric, rice',
+ 3, 'Gluten-free', TRUE, 'Meal'),
+
+('Roasted Vegetable & Hummus Wrap', 380, 14, 50, 6, 10, 15, 2, 12, 0, 520, 100, 3.5,
+ 'Whole wheat wrap, hummus, roasted zucchini, bell peppers, eggplant, spinach, red onion, tahini',
+ 3, 'Contains gluten', TRUE, 'Meal'),
+
+('Peanut Noodle Salad', 450, 15, 65, 10, 8, 16, 3, 12, 0, 750, 100, 3.0,
+ 'Rice noodles, edamame, carrots, cucumber, red cabbage, peanut butter, lime juice, soy sauce, maple syrup, ginger',
+ 3, 'Contains soy and nuts', TRUE, 'Meal'),
+
+('Stuffed Portobello Mushrooms', 350, 12, 35, 5, 8, 20, 3, 16, 0, 480, 80, 3.5,
+ 'Portobello mushrooms, quinoa, bell peppers, spinach, sun-dried tomatoes, garlic, thyme, nutritional yeast',
+ 3, 'Gluten-free', TRUE, 'Meal'),
+
+('Lentil & Vegetable Soup', 320, 16, 45, 8, 14, 8, 1, 6, 0, 550, 80, 5.5,
+ 'Lentils, carrots, celery, onion, tomatoes, spinach, garlic, vegetable broth, thyme, bay leaves',
+ 3, 'Gluten-free', TRUE, 'Meal');
 
 -- Pescatarian meals (CategoryID = 4)
 
@@ -718,7 +975,218 @@ INSERT INTO meals (
 
 ('Caesar Salad with Anchovies', 380, 18, 15, 2, 3, 28, 6, 20, 60, 720, 200, 2.0, 
  'Romaine lettuce, anchovies, parmesan cheese, croutons, egg yolk, garlic, lemon juice, olive oil', 
- 4, 'Contains fish, gluten, egg and dairy', TRUE, 'Meal');
+ 4, 'Contains fish, gluten, egg and dairy', TRUE, 'Meal'),
+('Grilled Salmon with Asparagus', 420, 35, 10, 2, 4, 25, 5, 18, 85, 450, 60, 2.5,
+ 'Salmon fillet, asparagus, lemon, garlic, olive oil, dill, black pepper, sea salt',
+ 4, 'Gluten-free, dairy-free', TRUE, 'Meal'),
+
+('Tuna Sweetcorn Cakes', 400, 30, 20, 3, 2, 22, 4, 15, 70, 500, 60, 1.8,
+ 'Canned tuna, sweetcorn, egg, breadcrumbs, spring onions, lemon zest, olive oil, salt, pepper',
+ 4, 'Contains gluten and egg', TRUE, 'Meal'),
+
+('Harissa Prawns with Couscous', 480, 35, 30, 2, 2, 22, 3, 15, 120, 500, 100, 1.9,
+ 'Prawns, couscous, harissa paste, lemon juice, coriander, olive oil, garlic',
+ 4, 'Contains shellfish and gluten', TRUE, 'Meal'),
+
+('Baked Cod with Herby Crust', 410, 36, 10, 1, 1, 25, 4, 18, 70, 450, 80, 1.2,
+ 'Cod fillet, parsley, dill, lemon zest, breadcrumbs, olive oil, garlic',
+ 4, 'Contains gluten', TRUE, 'Meal'),
+
+('Mediterranean Fish Stew', 380, 32, 20, 6, 4, 18, 3, 13, 85, 680, 80, 2.8,
+ 'White fish, tomatoes, onion, garlic, fennel, white wine, olives, capers, herbs de provence, olive oil',
+ 4, 'Gluten-free, dairy-free', TRUE, 'Meal'),
+
+('Shrimp Scampi with Zoodles', 340, 30, 12, 4, 5, 20, 4, 14, 185, 680, 120, 2.0,
+ 'Shrimp, zucchini noodles, garlic, butter, white wine, lemon juice, parsley, red pepper flakes',
+ 4, 'Contains shellfish and dairy, gluten-free', TRUE, 'Meal'),
+
+('Tuna Niçoise Salad', 380, 28, 20, 5, 6, 20, 3, 15, 90, 520, 100, 3.0,
+ 'Tuna, eggs, green beans, potatoes, tomatoes, olives, lettuce, dijon mustard, olive oil, lemon juice',
+ 4, 'Contains eggs, gluten-free', TRUE, 'Meal'),
+
+('Miso Glazed Cod', 350, 30, 20, 8, 2, 14, 2, 10, 75, 780, 40, 1.2,
+ 'Cod fillet, miso paste, honey, soy sauce, ginger, garlic, green onions, sesame seeds, brown rice',
+ 4, 'Contains soy', TRUE, 'Meal'),
+
+('Crab Cakes with Remoulade', 420, 25, 25, 2, 2, 25, 4, 19, 120, 650, 120, 2.2,
+ 'Crab meat, breadcrumbs, egg, bell pepper, onion, celery, mayonnaise, dijon mustard, Old Bay seasoning',
+ 4, 'Contains shellfish, gluten, and eggs', TRUE, 'Meal'),
+
+('Grilled Shrimp & Pineapple Skewers', 320, 26, 25, 18, 3, 10, 1, 8, 180, 480, 80, 1.8,
+ 'Shrimp, pineapple, bell peppers, red onion, olive oil, lime juice, cilantro, brown rice',
+ 4, 'Contains shellfish, gluten-free', TRUE, 'Meal'),
+
+('Lemon Butter Baked Cod', 350, 35, 5, 1, 0, 20, 8, 10, 85, 420, 40, 1.0,
+ 'Cod fillet, butter, lemon, garlic, parsley, thyme, black pepper',
+ 4, 'Contains dairy, gluten-free', TRUE, 'Meal'),
+
+('Tuna Poke Bowl', 450, 30, 45, 6, 5, 16, 2, 12, 60, 580, 60, 2.2,
+ 'Tuna, brown rice, cucumber, avocado, edamame, seaweed, soy sauce, sesame oil, sriracha mayo',
+ 4, 'Contains soy', TRUE, 'Meal'),
+
+('Lobster Mac & Cheese', 620, 32, 55, 4, 2, 32, 18, 12, 120, 780, 450, 2.0,
+ 'Lobster meat, macaroni, cheddar, gruyere, milk, flour, butter, breadcrumbs, mustard powder',
+ 4, 'Contains shellfish, dairy, and gluten', TRUE, 'Meal'),
+
+('Blackened Tilapia Tacos', 380, 28, 30, 3, 4, 16, 3, 12, 70, 620, 120, 2.0,
+ 'Tilapia, corn tortillas, cabbage slaw, avocado, lime crema, blackening spice, cilantro',
+ 4, 'Contains dairy', TRUE, 'Meal'),
+
+('Salmon Sushi Bowl', 450, 28, 45, 5, 3, 18, 3, 13, 65, 720, 80, 2.5,
+ 'Salmon, sushi rice, avocado, cucumber, edamame, nori, soy sauce, wasabi, pickled ginger',
+ 4, 'Contains soy', TRUE, 'Meal'),
+
+('Trout with Almonds & Green Beans', 420, 32, 10, 3, 5, 25, 4, 19, 80, 360, 100, 3.0,
+ 'Trout fillet, almonds, green beans, lemon, butter, parsley, garlic',
+ 4, 'Contains nuts and dairy, gluten-free', TRUE, 'Meal'),
+
+('Coconut Shrimp Curry', 520, 25, 35, 8, 6, 32, 18, 12, 170, 680, 120, 4.2,
+ 'Shrimp, coconut milk, curry paste, bell peppers, onion, garlic, ginger, cilantro, lime juice, rice',
+ 4, 'Contains shellfish, gluten-free', TRUE, 'Meal'),
+
+('Mediterranean Sardine Salad', 360, 24, 20, 6, 7, 22, 3, 17, 40, 580, 350, 3.8,
+ 'Canned sardines, romaine lettuce, tomatoes, cucumber, red onion, olives, feta, olive oil, lemon juice',
+ 4, 'Contains dairy, gluten-free', TRUE, 'Meal'),
+
+('Fish Tacos with Mango Salsa', 420, 25, 40, 12, 5, 18, 3, 13, 70, 520, 100, 2.0,
+ 'White fish, corn tortillas, mango, red onion, cilantro, lime juice, cabbage, avocado, sour cream',
+ 4, 'Contains dairy', TRUE, 'Meal'),
+
+('Sesame Crusted Tuna Steak', 380, 35, 15, 2, 3, 20, 3, 15, 65, 450, 60, 2.5,
+ 'Tuna steak, sesame seeds, soy sauce, ginger, honey, wasabi, mixed greens, rice vinegar',
+ 4, 'Contains soy', TRUE, 'Meal'),
+
+('Scallops with Lemon Butter Sauce', 350, 25, 10, 2, 1, 25, 12, 11, 80, 520, 40, 1.0,
+ 'Scallops, butter, lemon, white wine, garlic, parsley, shallots, black pepper',
+ 4, 'Contains shellfish and dairy, gluten-free', TRUE, 'Meal'),
+
+('Shrimp Pasta Primavera', 480, 28, 55, 6, 4, 18, 4, 12, 160, 620, 100, 3.0,
+ 'Shrimp, fettuccine, zucchini, cherry tomatoes, bell peppers, peas, garlic, olive oil, parmesan',
+ 4, 'Contains shellfish, dairy, and gluten', TRUE, 'Meal'),
+
+('Honey Garlic Salmon', 420, 35, 15, 12, 1, 22, 4, 16, 85, 580, 60, 2.0,
+ 'Salmon fillet, honey, soy sauce, garlic, lemon juice, butter, green onions, sesame seeds',
+ 4, 'Contains soy and dairy', TRUE, 'Meal'),
+
+('Ceviche with Avocado', 280, 24, 15, 5, 6, 14, 2, 10, 60, 450, 60, 1.5,
+ 'White fish, lime juice, red onion, tomato, cilantro, jalapeño, avocado, salt, pepper',
+ 4, 'Gluten-free, dairy-free', TRUE, 'Meal'),
+
+('Fish & Vegetable Curry', 450, 30, 35, 8, 8, 22, 15, 5, 70, 650, 100, 3.5,
+ 'White fish, coconut milk, curry powder, tomatoes, bell peppers, spinach, onion, garlic, ginger, rice',
+ 4, 'Gluten-free, dairy-free', TRUE, 'Meal'),
+
+('Calamari Stir Fry', 380, 28, 30, 5, 4, 16, 2, 12, 150, 720, 80, 2.5,
+ 'Squid, bell peppers, snow peas, carrots, garlic, ginger, soy sauce, sesame oil, rice',
+ 4, 'Contains soy', TRUE, 'Meal'),
+
+('Smoked Salmon Breakfast Bowl', 420, 25, 30, 3, 5, 22, 6, 14, 250, 680, 120, 2.5,
+ 'Smoked salmon, quinoa, eggs, avocado, spinach, cherry tomatoes, red onion, capers, dill',
+ 4, 'Contains eggs, gluten-free', TRUE, 'Meal'),
+
+('Fish Chowder', 450, 25, 35, 5, 3, 24, 12, 10, 80, 750, 150, 2.0,
+ 'White fish, potatoes, corn, celery, onion, bacon, milk, cream, butter, thyme, bay leaf',
+ 4, 'Contains dairy', TRUE, 'Meal'),
+
+('Clam Linguine', 520, 28, 60, 4, 3, 18, 3, 13, 70, 680, 80, 5.0,
+ 'Clams, linguine, white wine, garlic, red pepper flakes, parsley, olive oil, butter, lemon zest',
+ 4, 'Contains shellfish, dairy, and gluten', TRUE, 'Meal'),
+
+('Teriyaki Salmon Bowl', 480, 32, 45, 15, 4, 18, 3, 13, 85, 850, 60, 2.0,
+ 'Salmon fillet, teriyaki sauce, brown rice, broccoli, carrots, edamame, green onions, sesame seeds',
+ 4, 'Contains soy', TRUE, 'Meal'),
+
+('Cajun Shrimp and Grits', 520, 30, 45, 3, 2, 25, 12, 11, 180, 750, 150, 2.0,
+ 'Shrimp, grits, bell peppers, onion, celery, garlic, cajun seasoning, butter, cheese, green onions',
+ 4, 'Contains shellfish and dairy, gluten-free', TRUE, 'Meal'),
+
+('Baked Tilapia with Roasted Vegetables', 380, 32, 20, 6, 5, 16, 3, 12, 70, 450, 80, 2.0,
+ 'Tilapia fillet, zucchini, bell peppers, cherry tomatoes, red onion, garlic, thyme, olive oil, lemon',
+ 4, 'Gluten-free, dairy-free', TRUE, 'Meal'),
+
+('Anchovy and Olive Pasta', 450, 18, 60, 3, 4, 20, 3, 15, 35, 880, 80, 3.0,
+ 'Spaghetti, anchovies, kalamata olives, capers, garlic, red pepper flakes, parsley, olive oil',
+ 4, 'Contains gluten', TRUE, 'Meal'),
+
+('Seared Scallops with Risotto', 550, 30, 65, 3, 2, 18, 6, 10, 80, 680, 60, 1.5,
+ 'Scallops, arborio rice, white wine, vegetable broth, shallots, garlic, parmesan, butter, parsley',
+ 4, 'Contains shellfish and dairy', TRUE, 'Meal'),
+
+('Mediterranean Tuna Salad Wrap', 420, 28, 40, 3, 6, 16, 3, 12, 60, 580, 120, 3.0,
+ 'Canned tuna, whole wheat wrap, hummus, cucumber, tomato, red onion, feta cheese, olives, mixed greens',
+ 4, 'Contains dairy and gluten', TRUE, 'Meal'),
+
+('Steamed Fish with Ginger and Scallions', 320, 30, 10, 1, 2, 18, 3, 13, 80, 520, 60, 1.2,
+ 'White fish, ginger, scallions, soy sauce, sesame oil, cilantro, steamed vegetables, rice',
+ 4, 'Contains soy, gluten-free', TRUE, 'Meal'),
+
+('Shrimp and Avocado Salad', 350, 25, 15, 3, 8, 22, 3, 17, 175, 480, 100, 2.0,
+ 'Shrimp, avocado, mixed greens, cucumber, cherry tomatoes, red onion, lime juice, olive oil, cilantro',
+ 4, 'Contains shellfish, gluten-free, dairy-free', TRUE, 'Meal'),
+
+('Lemon Garlic Butter Shrimp Pasta', 520, 28, 55, 3, 3, 24, 12, 10, 180, 620, 100, 3.0,
+ 'Shrimp, linguine, butter, garlic, lemon juice, parsley, red pepper flakes, parmesan cheese',
+ 4, 'Contains shellfish, dairy, and gluten', TRUE, 'Meal'),
+
+('Salmon with Dill Sauce', 420, 35, 5, 2, 1, 28, 10, 16, 85, 480, 100, 2.0,
+ 'Salmon fillet, Greek yogurt, dill, lemon juice, garlic, cucumber, capers, olive oil',
+ 4, 'Contains dairy, gluten-free', TRUE, 'Meal'),
+
+('Fish Curry with Coconut Rice', 520, 30, 60, 5, 4, 22, 16, 4, 75, 680, 80, 3.0,
+ 'White fish, coconut milk, curry paste, tomatoes, onion, garlic, ginger, jasmine rice, cilantro, lime',
+ 4, 'Gluten-free, dairy-free', TRUE, 'Meal'),
+
+('Tuna Melt Sandwich', 480, 30, 35, 4, 3, 24, 10, 12, 75, 750, 350, 2.5,
+ 'Canned tuna, whole grain bread, cheddar cheese, Greek yogurt, celery, red onion, mustard, pickles',
+ 4, 'Contains dairy and gluten', TRUE, 'Meal'),
+
+('Sardines on Toast', 380, 25, 25, 2, 4, 20, 4, 14, 50, 650, 350, 4.0,
+ 'Canned sardines, whole grain bread, tomatoes, red onion, parsley, lemon juice, olive oil, black pepper',
+ 4, 'Contains gluten', TRUE, 'Meal'),
+
+('Shrimp and Vegetable Skewers', 320, 28, 15, 6, 4, 16, 3, 12, 180, 450, 80, 2.0,
+ 'Shrimp, bell peppers, zucchini, red onion, cherry tomatoes, olive oil, garlic, lemon juice, oregano',
+ 4, 'Contains shellfish, gluten-free, dairy-free', TRUE, 'Meal'),
+
+('Cioppino (Seafood Stew)', 420, 35, 20, 6, 4, 18, 3, 13, 150, 680, 100, 3.5,
+ 'Mixed seafood (shrimp, mussels, fish), tomatoes, fennel, onion, garlic, white wine, herbs, red pepper flakes',
+ 4, 'Contains shellfish, gluten-free, dairy-free', TRUE, 'Meal'),
+
+('Tuna Stuffed Bell Peppers', 380, 30, 25, 8, 5, 16, 3, 12, 65, 520, 120, 2.5,
+ 'Canned tuna, bell peppers, quinoa, spinach, onion, garlic, tomatoes, feta cheese, lemon juice, olive oil',
+ 4, 'Contains dairy, gluten-free', TRUE, 'Meal'),
+
+('Baked Salmon with Sweet Potato', 450, 35, 30, 10, 5, 20, 4, 14, 85, 420, 80, 3.0,
+ 'Salmon fillet, sweet potato, olive oil, garlic, rosemary, thyme, lemon, green beans',
+ 4, 'Gluten-free, dairy-free', TRUE, 'Meal'),
+
+('Shrimp Fried Rice', 480, 25, 60, 3, 4, 16, 3, 12, 170, 750, 60, 3.0,
+ 'Shrimp, brown rice, eggs, peas, carrots, onion, garlic, ginger, soy sauce, sesame oil, green onions',
+ 4, 'Contains shellfish, soy, and eggs', TRUE, 'Meal'),
+
+('Fish and Chips (Baked)', 520, 30, 50, 3, 5, 22, 4, 16, 70, 580, 60, 2.5,
+ 'Cod fillet, potatoes, breadcrumbs, eggs, lemon, tartar sauce, peas, olive oil, garlic, dill',
+ 4, 'Contains gluten and eggs', TRUE, 'Meal'),
+
+('Shrimp and Spinach Quesadilla', 450, 28, 35, 3, 4, 22, 10, 10, 180, 680, 350, 3.0,
+ 'Shrimp, whole wheat tortilla, spinach, bell peppers, onion, cheddar cheese, Greek yogurt, salsa',
+ 4, 'Contains shellfish, dairy, and gluten', TRUE, 'Meal'),
+
+('Salmon Cakes with Dill Sauce', 420, 30, 25, 3, 3, 22, 5, 15, 85, 580, 100, 2.5,
+ 'Salmon, breadcrumbs, eggs, onion, bell pepper, Greek yogurt, dill, lemon juice, dijon mustard',
+ 4, 'Contains gluten, dairy, and eggs', TRUE, 'Meal'),
+
+('Shrimp and Broccoli Alfredo', 520, 30, 45, 3, 4, 28, 16, 10, 180, 750, 350, 2.0,
+ 'Shrimp, fettuccine, broccoli, garlic, parmesan cheese, heavy cream, butter, black pepper',
+ 4, 'Contains shellfish, dairy, and gluten', TRUE, 'Meal'),
+
+('Tuna and White Bean Salad', 350, 30, 25, 3, 8, 15, 2, 12, 60, 480, 100, 4.0,
+ 'Canned tuna, white beans, cherry tomatoes, red onion, parsley, lemon juice, olive oil, capers',
+ 4, 'Gluten-free, dairy-free', TRUE, 'Meal'),
+
+('Mussels in White Wine Sauce', 380, 25, 15, 2, 1, 18, 3, 13, 60, 650, 80, 6.0,
+ 'Mussels, white wine, shallots, garlic, butter, parsley, lemon juice, baguette',
+ 4, 'Contains shellfish, dairy, and gluten', TRUE, 'Meal');
 
 -- Vegetarian meals (CategoryID = 2)
 INSERT INTO meals (
@@ -797,7 +1265,214 @@ VALUES
 
 ('Herbed Couscous with Vegetables', 362, 17.9, 40.7, 9.7, 8.5, 4.2, 7.5, 0, 50, 549, 205, 2.9,
  'mushrooms, lemon juice, peanuts, quinoa, garlic, almonds, whole wheat tortillas, cottage cheese, pumpkin seeds, sunflower seeds, sesame oil, basil, spices, tempeh',
- 2, 'NF', TRUE, 'Meal');
+ 2, 'NF', TRUE, 'Meal'),
+('Spinach & Ricotta Stuffed Shells', 520, 24, 60, 8, 6, 22, 12, 8, 60, 680, 450, 3.2,
+ 'Pasta shells, ricotta cheese, spinach, egg, parmesan, mozzarella, marinara sauce, garlic, basil',
+ 2, 'Contains dairy, gluten, and egg', TRUE, 'Meal'),
+
+('Black Bean & Sweet Potato Enchiladas', 480, 18, 70, 15, 12, 15, 7, 7, 20, 720, 220, 4.0,
+ 'Black beans, sweet potatoes, tortillas, enchilada sauce, cheese, onion, garlic, cumin, oregano',
+ 2, 'Contains dairy and gluten', TRUE, 'Meal'),
+
+('Shakshuka', 350, 16, 20, 10, 5, 22, 6, 14, 372, 620, 180, 5.2,
+ 'Eggs, tomatoes, bell peppers, onion, garlic, cumin, paprika, feta cheese, parsley, olive oil',
+ 2, 'Contains dairy and eggs, gluten-free', TRUE, 'Meal'),
+
+('Caprese Stuffed Portobello Mushrooms', 320, 18, 10, 5, 3, 24, 10, 12, 45, 480, 350, 2.0,
+ 'Portobello mushrooms, mozzarella, tomatoes, basil, balsamic glaze, olive oil, garlic',
+ 2, 'Contains dairy, gluten-free', TRUE, 'Meal'),
+
+('Vegetable Lasagna', 490, 22, 55, 12, 8, 20, 10, 8, 50, 650, 400, 3.5,
+ 'Lasagna noodles, ricotta, mozzarella, parmesan, zucchini, spinach, mushrooms, marinara sauce, garlic',
+ 2, 'Contains dairy and gluten', TRUE, 'Meal'),
+
+('Feta & Spinach Quiche', 420, 16, 30, 4, 3, 28, 14, 12, 180, 550, 300, 3.8,
+ 'Pie crust, eggs, feta cheese, spinach, onion, milk, cream, nutmeg, olive oil',
+ 2, 'Contains dairy, gluten, and eggs', TRUE, 'Meal'),
+
+('Halloumi & Roasted Vegetable Wrap', 480, 18, 50, 8, 6, 24, 12, 10, 40, 720, 350, 2.8,
+ 'Halloumi cheese, zucchini, bell peppers, eggplant, onion, whole wheat wrap, hummus, spinach',
+ 2, 'Contains dairy and gluten', TRUE, 'Meal'),
+
+('Mushroom Risotto with Parmesan', 520, 15, 70, 4, 4, 20, 10, 8, 25, 780, 220, 2.5,
+ 'Arborio rice, mushrooms, vegetable broth, white wine, parmesan, onion, garlic, butter, thyme',
+ 2, 'Contains dairy', TRUE, 'Meal'),
+
+('Spinach & Feta Pie', 450, 18, 40, 5, 4, 26, 14, 10, 110, 680, 380, 4.2,
+ 'Phyllo dough, spinach, feta cheese, eggs, onion, dill, parsley, olive oil',
+ 2, 'Contains dairy, gluten, and eggs', TRUE, 'Meal'),
+
+('Eggplant Parmesan', 480, 20, 45, 12, 8, 25, 12, 11, 45, 750, 380, 2.5,
+ 'Eggplant, breadcrumbs, parmesan, mozzarella, eggs, marinara sauce, basil, garlic, olive oil',
+ 2, 'Contains dairy, gluten, and eggs', TRUE, 'Meal'),
+
+('Vegetarian Chili', 380, 16, 60, 12, 15, 10, 2, 7, 0, 820, 120, 5.5,
+ 'Kidney beans, black beans, tomatoes, bell pepper, onion, garlic, chili powder, cumin, oregano, vegetable broth',
+ 2, 'Gluten-free, vegan-adaptable', TRUE, 'Meal'),
+
+('Margherita Pizza', 650, 25, 80, 8, 5, 24, 12, 10, 50, 950, 400, 3.0,
+ 'Pizza dough, tomatoes, fresh mozzarella, basil, olive oil, garlic',
+ 2, 'Contains dairy and gluten', TRUE, 'Meal'),
+
+('Lentil Shepherd\'s Pie', 420, 18, 65, 10, 14, 10, 2, 7, 0, 580, 80, 6.0,
+ 'Lentils, carrots, peas, corn, onion, garlic, tomato paste, vegetable broth, potatoes, butter, milk',
+ 2, 'Contains dairy', TRUE, 'Meal'),
+
+('Mediterranean Quinoa Bowl', 450, 15, 60, 8, 10, 18, 3, 13, 10, 580, 150, 4.2,
+ 'Quinoa, cucumber, tomatoes, red onion, kalamata olives, feta cheese, chickpeas, parsley, lemon juice, olive oil',
+ 2, 'Contains dairy, gluten-free', TRUE, 'Meal'),
+
+('Bean & Cheese Enchiladas', 550, 20, 70, 8, 10, 20, 10, 8, 40, 880, 350, 3.5,
+ 'Pinto beans, black beans, corn tortillas, enchilada sauce, cheddar cheese, onion, garlic, sour cream, cilantro',
+ 2, 'Contains dairy', TRUE, 'Meal'),
+
+('Stuffed Bell Peppers', 380, 15, 50, 10, 8, 12, 5, 6, 20, 650, 150, 3.0,
+ 'Bell peppers, quinoa, black beans, corn, tomatoes, onion, garlic, cumin, chili powder, cheese',
+ 2, 'Contains dairy, gluten-free', TRUE, 'Meal'),
+
+('Three Cheese Macaroni', 650, 25, 70, 5, 3, 30, 18, 10, 80, 950, 450, 2.0,
+ 'Macaroni, cheddar cheese, gruyere, parmesan, milk, butter, flour, breadcrumbs, mustard powder',
+ 2, 'Contains dairy and gluten', TRUE, 'Meal'),
+
+('Falafel Pita', 520, 18, 75, 5, 10, 18, 3, 13, 0, 720, 150, 4.0,
+ 'Chickpeas, parsley, cilantro, garlic, cumin, pita bread, tahini sauce, lettuce, tomato, cucumber, red onion',
+ 2, 'Contains gluten', TRUE, 'Meal'),
+
+('Sweet Potato & Black Bean Tacos', 420, 14, 65, 10, 12, 15, 3, 10, 10, 580, 150, 3.5,
+ 'Sweet potatoes, black beans, corn tortillas, avocado, lime, cilantro, cumin, chili powder, sour cream',
+ 2, 'Contains dairy', TRUE, 'Meal'),
+
+('Caprese Pasta Salad', 450, 16, 55, 6, 4, 20, 8, 10, 30, 580, 300, 2.5,
+ 'Pasta, cherry tomatoes, fresh mozzarella, basil, balsamic vinegar, olive oil, garlic, black pepper',
+ 2, 'Contains dairy and gluten', TRUE, 'Meal'),
+
+('Vegetable Pad Thai', 480, 15, 70, 15, 5, 18, 3, 13, 0, 950, 100, 3.0,
+ 'Rice noodles, tofu, bean sprouts, carrots, green onions, peanuts, eggs, tamarind paste, soy sauce, lime',
+ 2, 'Contains soy, nuts, and eggs', TRUE, 'Meal'),
+
+('Mushroom & Lentil Bolognese', 420, 18, 65, 8, 12, 10, 2, 7, 0, 650, 80, 5.0,
+ 'Lentils, mushrooms, carrots, celery, onion, garlic, tomatoes, red wine, spaghetti, nutritional yeast',
+ 2, 'Contains gluten, vegan-adaptable', TRUE, 'Meal'),
+
+('Greek Stuffed Tomatoes', 350, 12, 40, 10, 6, 18, 5, 11, 20, 580, 150, 3.0,
+ 'Tomatoes, rice, feta cheese, spinach, onion, garlic, oregano, mint, olive oil, lemon juice',
+ 2, 'Contains dairy, gluten-free', TRUE, 'Meal'),
+
+('Butternut Squash Risotto', 480, 12, 75, 8, 6, 15, 8, 6, 30, 680, 150, 2.5,
+ 'Arborio rice, butternut squash, vegetable broth, white wine, parmesan, onion, garlic, sage, butter',
+ 2, 'Contains dairy, gluten-free', TRUE, 'Meal'),
+
+('Spanakopita', 480, 15, 45, 3, 4, 28, 10, 16, 80, 680, 350, 3.5,
+ 'Phyllo dough, spinach, feta cheese, eggs, onion, dill, parsley, olive oil, black pepper',
+ 2, 'Contains dairy, gluten, and eggs', TRUE, 'Meal'),
+
+('Vegetable Curry', 420, 10, 65, 10, 12, 15, 10, 4, 0, 650, 100, 4.0,
+ 'Cauliflower, chickpeas, carrots, peas, onion, garlic, ginger, coconut milk, curry powder, turmeric, rice',
+ 2, 'Gluten-free, vegan-adaptable', TRUE, 'Meal'),
+
+('Baked Ziti', 580, 25, 70, 10, 4, 22, 12, 8, 50, 750, 400, 3.0,
+ 'Ziti pasta, ricotta cheese, mozzarella, parmesan, marinara sauce, garlic, basil, oregano',
+ 2, 'Contains dairy and gluten', TRUE, 'Meal'),
+
+('Stuffed Acorn Squash', 380, 12, 55, 15, 8, 16, 3, 11, 10, 480, 120, 3.5,
+ 'Acorn squash, quinoa, cranberries, pecans, spinach, onion, garlic, maple syrup, feta cheese',
+ 2, 'Contains dairy and nuts, gluten-free', TRUE, 'Meal'),
+
+('Pesto Pasta with Roasted Vegetables', 520, 15, 65, 8, 6, 22, 5, 15, 10, 580, 150, 3.0,
+ 'Pasta, zucchini, bell peppers, cherry tomatoes, basil, garlic, pine nuts, parmesan, olive oil',
+ 2, 'Contains dairy, nuts, and gluten', TRUE, 'Meal'),
+
+('Avocado Quinoa Power Bowl', 480, 15, 60, 5, 12, 22, 3, 17, 0, 580, 100, 4.5,
+ 'Quinoa, avocado, black beans, corn, cherry tomatoes, red onion, cilantro, lime juice, olive oil',
+ 2, 'Gluten-free, vegan-adaptable', TRUE, 'Meal'),
+
+('Mushroom Wellington', 580, 12, 50, 5, 4, 35, 12, 20, 30, 650, 80, 3.5,
+ 'Portobello mushrooms, puff pastry, spinach, walnuts, onion, garlic, thyme, dijon mustard, egg',
+ 2, 'Contains gluten, nuts, and egg', TRUE, 'Meal'),
+
+('Thai Red Curry with Tofu', 450, 15, 40, 8, 6, 25, 18, 5, 0, 780, 150, 3.5,
+ 'Tofu, red curry paste, coconut milk, bell peppers, bamboo shoots, carrots, basil, lime, brown rice',
+ 2, 'Contains soy, gluten-free', TRUE, 'Meal'),
+
+('Goat Cheese & Beetroot Salad', 320, 12, 25, 15, 5, 22, 8, 12, 30, 480, 150, 2.5,
+ 'Mixed greens, roasted beetroot, goat cheese, walnuts, balsamic vinegar, honey, olive oil, thyme',
+ 2, 'Contains dairy and nuts, gluten-free', TRUE, 'Meal'),
+
+('Zucchini Boats', 350, 18, 20, 8, 5, 22, 10, 10, 45, 580, 300, 2.0,
+ 'Zucchini, quinoa, bell peppers, onion, garlic, tomatoes, feta cheese, mozzarella, olive oil, oregano',
+ 2, 'Contains dairy, gluten-free', TRUE, 'Meal'),
+
+('Vegetable Paella', 420, 10, 75, 6, 8, 10, 1, 8, 0, 580, 60, 3.0,
+ 'Arborio rice, artichokes, bell peppers, peas, tomatoes, onion, garlic, saffron, paprika, vegetable broth',
+ 2, 'Gluten-free, vegan-adaptable', TRUE, 'Meal'),
+
+('Three Bean Casserole', 380, 18, 60, 8, 14, 8, 2, 5, 0, 650, 120, 5.0,
+ 'Kidney beans, black beans, cannellini beans, tomatoes, bell peppers, onion, garlic, cumin, paprika, cheese',
+ 2, 'Contains dairy, gluten-free', TRUE, 'Meal'),
+
+('Tomato Basil Gnocchi', 450, 12, 70, 6, 4, 15, 8, 6, 20, 680, 150, 2.5,
+ 'Potato gnocchi, cherry tomatoes, basil, garlic, parmesan, olive oil, butter, black pepper',
+ 2, 'Contains dairy and gluten', TRUE, 'Meal'),
+
+('Vegetarian Moussaka', 480, 15, 35, 12, 8, 30, 10, 18, 30, 650, 200, 3.0,
+ 'Eggplant, potatoes, lentils, tomatoes, onion, garlic, cinnamon, allspice, bechamel sauce, parmesan',
+ 2, 'Contains dairy and gluten', TRUE, 'Meal'),
+
+('Cauliflower Buffalo Wings', 350, 10, 40, 5, 6, 18, 3, 13, 0, 750, 80, 2.0,
+ 'Cauliflower, flour, milk, garlic powder, hot sauce, butter, celery, blue cheese dressing',
+ 2, 'Contains dairy and gluten', TRUE, 'Meal'),
+
+('Spinach Artichoke Pasta', 520, 20, 65, 4, 5, 22, 10, 10, 40, 780, 300, 3.0,
+ 'Pasta, spinach, artichoke hearts, cream cheese, parmesan, mozzarella, garlic, olive oil',
+ 2, 'Contains dairy and gluten', TRUE, 'Meal'),
+
+('Greek Quinoa Salad', 380, 12, 45, 5, 8, 20, 4, 14, 15, 580, 150, 3.5,
+ 'Quinoa, cucumber, tomatoes, red onion, kalamata olives, feta cheese, parsley, lemon juice, olive oil',
+ 2, 'Contains dairy, gluten-free', TRUE, 'Meal'),
+
+('Vegetarian Jambalaya', 420, 14, 75, 8, 10, 8, 1, 6, 0, 780, 80, 4.0,
+ 'Brown rice, kidney beans, bell peppers, celery, onion, garlic, tomatoes, cajun seasoning, hot sauce',
+ 2, 'Gluten-free, vegan-adaptable', TRUE, 'Meal'),
+
+('Tofu Stir Fry', 380, 18, 35, 8, 6, 18, 3, 13, 0, 680, 200, 4.0,
+ 'Tofu, broccoli, bell peppers, carrots, snow peas, garlic, ginger, soy sauce, sesame oil, rice',
+ 2, 'Contains soy', TRUE, 'Meal'),
+
+('Miso Ramen with Tofu', 450, 18, 65, 5, 4, 12, 2, 9, 0, 850, 150, 3.5,
+ 'Ramen noodles, tofu, miso paste, mushrooms, spinach, green onions, carrots, sesame oil, soy sauce',
+ 2, 'Contains soy and gluten', TRUE, 'Meal'),
+
+('Vegetarian Pot Pie', 520, 12, 60, 8, 6, 24, 12, 10, 30, 680, 100, 3.0,
+ 'Carrots, peas, potatoes, celery, onion, butter, flour, vegetable broth, milk, pie crust',
+ 2, 'Contains dairy and gluten', TRUE, 'Meal'),
+
+('Farro Salad with Roasted Vegetables', 420, 14, 70, 10, 12, 12, 2, 9, 0, 480, 80, 4.0,
+ 'Farro, zucchini, bell peppers, cherry tomatoes, red onion, feta cheese, arugula, balsamic vinegar, olive oil',
+ 2, 'Contains dairy and gluten', TRUE, 'Meal'),
+
+('Vegetable Biryani', 450, 10, 80, 5, 8, 10, 2, 7, 0, 580, 80, 3.5,
+ 'Basmati rice, mixed vegetables, onion, garlic, ginger, yogurt, turmeric, cumin, coriander, cardamom',
+ 2, 'Contains dairy, gluten-free', TRUE, 'Meal'),
+
+('Mushroom & Truffle Risotto', 580, 12, 75, 4, 3, 25, 12, 11, 30, 650, 180, 2.5,
+ 'Arborio rice, mushrooms, truffle oil, vegetable broth, white wine, parmesan, onion, garlic, butter',
+ 2, 'Contains dairy, gluten-free', TRUE, 'Meal'),
+
+('Chickpea & Spinach Curry', 380, 15, 50, 8, 12, 14, 8, 5, 0, 580, 150, 4.5,
+ 'Chickpeas, spinach, tomatoes, onion, garlic, ginger, coconut milk, curry powder, turmeric, cumin, rice',
+ 2, 'Gluten-free, vegan-adaptable', TRUE, 'Meal'),
+
+('Broccoli Cheddar Soup', 450, 18, 25, 5, 6, 30, 15, 13, 50, 750, 350, 2.0,
+ 'Broccoli, carrots, onion, garlic, cheddar cheese, milk, cream, flour, butter, vegetable broth',
+ 2, 'Contains dairy and gluten', TRUE, 'Meal'),
+
+('Stuffed Cabbage Rolls', 420, 15, 55, 10, 8, 14, 4, 9, 30, 580, 120, 3.5,
+ 'Cabbage, rice, lentils, onion, garlic, vegetable broth, tomato sauce, parsley, dill, paprika',
+ 2, 'Gluten-free, vegan-adaptable', TRUE, 'Meal'),
+
+('Red Lentil Dal', 350, 18, 50, 6, 12, 8, 1, 6, 0, 520, 80, 5.0,
+ 'Red lentils, tomatoes, onion, garlic, ginger, curry powder, turmeric, cumin, coconut milk, cilantro',
+ 2, 'Gluten-free, vegan-adaptable', TRUE, 'Meal');
 
 -- Insert the additional meals with descriptive names based on ingredients
 INSERT INTO meals (
@@ -983,7 +1658,210 @@ VALUES
   'Plantains, coconut oil, cinnamon, salt', 3, 'GF', TRUE, 'Snack'),
 
 ('Mini Frittata Bites', 130, 10, 3, 1, 0, 9, 3, 6, 185, 210, 100, 1.0,
-  'Eggs, spinach, bell peppers, cheese, onions', 2, 'GF, No Fish, No Pork', TRUE, 'Snack');
+  'Eggs, spinach, bell peppers, cheese, onions', 2, 'GF, No Fish, No Pork', TRUE, 'Snack'),
+  ('Greek Yogurt Parfait', 280, 15, 35, 25, 5, 8, 5, 2, 25, 120, 300, 1.0,
+ 'Greek yogurt, granola, berries, honey, chia seeds',
+ 2, 'Contains dairy and gluten', TRUE, 'Snack'),
+
+('Caprese Salad Bites', 180, 10, 5, 3, 1, 12, 7, 4, 25, 220, 250, 0.8,
+ 'Cherry tomatoes, fresh mozzarella balls, basil, balsamic glaze, olive oil, salt, pepper',
+ 2, 'Contains dairy, gluten-free', TRUE, 'Snack'),
+
+('Hummus & Veggie Plate', 250, 8, 25, 4, 8, 14, 2, 10, 0, 450, 80, 2.0,
+ 'Hummus, carrots, cucumber, bell peppers, cherry tomatoes, olives, pita bread',
+ 2, 'Contains gluten', TRUE, 'Snack'),
+
+('Cheese & Fruit Plate', 320, 12, 25, 20, 3, 18, 10, 7, 45, 350, 300, 0.8,
+ 'Cheddar, brie, grapes, apple slices, walnuts, crackers, honey',
+ 2, 'Contains dairy, nuts, and gluten', TRUE, 'Snack'),
+
+('Avocado Toast', 220, 6, 25, 2, 6, 12, 2, 9, 0, 280, 40, 1.5,
+ 'Whole grain bread, avocado, cherry tomatoes, microgreens, red pepper flakes, sea salt',
+ 2, 'Contains gluten', TRUE, 'Snack'),
+
+('Spinach & Feta Mini Quiches', 260, 14, 15, 2, 1, 18, 9, 7, 160, 380, 200, 1.5,
+ 'Eggs, spinach, feta cheese, milk, pie crust, onion, garlic, nutmeg',
+ 2, 'Contains dairy, gluten, and eggs', TRUE, 'Snack'),
+
+('Cottage Cheese with Fruit', 180, 15, 15, 12, 2, 5, 3, 1, 15, 400, 150, 0.5,
+ 'Cottage cheese, peaches, berries, honey, cinnamon',
+ 2, 'Contains dairy, gluten-free', TRUE, 'Snack'),
+
+('Stuffed Mushrooms', 220, 10, 12, 3, 2, 16, 6, 8, 25, 350, 100, 1.2,
+ 'Mushroom caps, cream cheese, parmesan, garlic, breadcrumbs, parsley, olive oil',
+ 2, 'Contains dairy and gluten', TRUE, 'Snack'),
+
+('Tomato Soup with Grilled Cheese Dipper', 350, 12, 30, 8, 3, 20, 12, 6, 45, 650, 300, 1.5,
+ 'Tomatoes, vegetable broth, cream, bread, cheddar cheese, butter, basil',
+ 2, 'Contains dairy and gluten', TRUE, 'Snack'),
+
+('Egg Salad on Crackers', 280, 14, 18, 3, 2, 18, 5, 11, 280, 450, 80, 1.5,
+ 'Eggs, mayonnaise, mustard, celery, green onions, paprika, whole grain crackers',
+ 2, 'Contains eggs and gluten', TRUE, 'Snack'),
+
+-- Vegan Snacks (CategoryID = 3)
+('Trail Mix', 420, 12, 35, 20, 6, 28, 4, 22, 0, 180, 80, 3.5,
+ 'Almonds, walnuts, cashews, pumpkin seeds, dried cranberries, dark chocolate chips',
+ 3, 'Contains nuts', TRUE, 'Snack'),
+
+('Apple with Almond Butter', 280, 8, 35, 25, 8, 16, 2, 12, 0, 120, 80, 1.5,
+ 'Apple, almond butter, cinnamon',
+ 3, 'Contains nuts, gluten-free', TRUE, 'Snack'),
+
+('Roasted Chickpeas', 220, 10, 30, 2, 8, 8, 1, 6, 0, 350, 60, 2.5,
+ 'Chickpeas, olive oil, cumin, paprika, garlic powder, sea salt',
+ 3, 'Gluten-free', TRUE, 'Snack'),
+
+('Chia Pudding', 280, 8, 35, 15, 10, 14, 2, 10, 0, 150, 200, 3.0,
+ 'Chia seeds, almond milk, maple syrup, vanilla extract, berries',
+ 3, 'Gluten-free', TRUE, 'Snack'),
+
+('Kale Chips', 150, 5, 15, 1, 3, 9, 1, 7, 0, 320, 100, 1.5,
+ 'Kale, olive oil, nutritional yeast, garlic powder, sea salt',
+ 3, 'Gluten-free', TRUE, 'Snack'),
+
+('Fruit & Nut Energy Balls', 240, 6, 25, 15, 4, 14, 2, 10, 0, 50, 60, 2.0,
+ 'Dates, oats, almond butter, flaxseed, chia seeds, dark chocolate chips, vanilla extract',
+ 3, 'Contains nuts', TRUE, 'Snack'),
+
+('Avocado & Cucumber Sushi Rolls', 220, 6, 30, 2, 5, 10, 1, 8, 0, 350, 40, 1.0,
+ 'Nori, sushi rice, avocado, cucumber, carrot, sesame seeds, rice vinegar, soy sauce',
+ 3, 'Contains soy', TRUE, 'Snack'),
+
+('Edamame', 180, 16, 15, 2, 8, 8, 1, 6, 0, 280, 60, 2.5,
+ 'Edamame beans, sea salt',
+ 3, 'Contains soy, gluten-free', TRUE, 'Snack'),
+
+('Vegetable Spring Rolls', 250, 6, 35, 5, 4, 10, 1, 8, 0, 400, 45, 1.5,
+ 'Rice paper, carrots, cucumber, bell pepper, avocado, mint, basil, rice noodles, peanut sauce',
+ 3, 'Contains nuts', TRUE, 'Snack'),
+
+('Dark Chocolate Covered Strawberries', 180, 2, 25, 20, 4, 10, 6, 3, 0, 5, 25, 1.0,
+ 'Strawberries, dark chocolate, coconut oil',
+ 3, 'Gluten-free', TRUE, 'Snack'),
+
+-- Pescatarian Snacks (CategoryID = 4)
+('Tuna Salad Lettuce Cups', 220, 25, 5, 2, 3, 12, 2, 9, 50, 480, 40, 1.5,
+ 'Canned tuna, Greek yogurt, celery, red onion, dill, lemon juice, lettuce leaves',
+ 4, 'Contains dairy, gluten-free', TRUE, 'Snack'),
+
+('Smoked Salmon Cucumber Rounds', 180, 15, 5, 2, 1, 12, 3, 8, 25, 580, 40, 0.8,
+ 'Smoked salmon, cucumber, cream cheese, dill, capers, lemon zest',
+ 4, 'Contains dairy and fish, gluten-free', TRUE, 'Snack'),
+
+('Shrimp Cocktail', 150, 25, 5, 3, 1, 2, 0, 1, 170, 450, 60, 1.0,
+ 'Shrimp, cocktail sauce, lemon, parsley',
+ 4, 'Contains shellfish, gluten-free', TRUE, 'Snack'),
+
+('Crab Stuffed Mushrooms', 220, 15, 10, 2, 2, 14, 5, 8, 80, 480, 100, 1.0,
+ 'Mushroom caps, crab meat, cream cheese, green onions, garlic, breadcrumbs, lemon juice',
+ 4, 'Contains shellfish, dairy, and gluten', TRUE, 'Snack'),
+
+('Tuna Sushi Roll', 250, 12, 40, 2, 1, 5, 1, 3, 25, 550, 30, 1.0,
+ 'Nori, sushi rice, tuna, cucumber, avocado, sesame seeds, soy sauce, wasabi',
+ 4, 'Contains fish and soy', TRUE, 'Snack'),
+
+('Salmon and Cream Cheese Pinwheels', 240, 15, 20, 2, 1, 12, 6, 5, 40, 580, 100, 1.0,
+ 'Smoked salmon, cream cheese, tortilla, capers, dill, lemon juice, red onion',
+ 4, 'Contains fish, dairy, and gluten', TRUE, 'Snack'),
+
+('Tuna Stuffed Avocado', 280, 20, 12, 1, 8, 18, 3, 13, 45, 380, 50, 1.5,
+ 'Avocado, canned tuna, mayo, celery, red onion, lemon juice, salt, pepper',
+ 4, 'Contains fish, gluten-free', TRUE, 'Snack'),
+
+('Mini Crab Cakes', 220, 15, 18, 1, 1, 12, 3, 8, 80, 450, 80, 1.2,
+ 'Crab meat, breadcrumbs, egg, bell pepper, onion, mayonnaise, dijon mustard, Old Bay seasoning',
+ 4, 'Contains shellfish, gluten, and eggs', TRUE, 'Snack'),
+
+('Seaweed Snacks', 50, 2, 5, 0, 1, 3, 0, 2, 0, 180, 20, 0.5,
+ 'Nori seaweed, olive oil, sea salt',
+ 4, 'Gluten-free', TRUE, 'Snack'),
+
+('Prawn and Mango Skewers', 180, 15, 15, 12, 2, 6, 1, 4, 120, 380, 40, 1.0,
+ 'Prawns, mango, lime juice, cilantro, olive oil, chili flakes',
+ 4, 'Contains shellfish, gluten-free', TRUE, 'Snack'),
+
+-- Carnivore Snacks (CategoryID = 1)
+('Beef Jerky', 150, 25, 5, 4, 0, 3, 1, 1, 40, 620, 20, 2.0,
+ 'Beef, soy sauce, Worcestershire sauce, honey, black pepper, garlic powder',
+ 1, 'Contains soy, gluten-free', TRUE, 'Snack'),
+
+('Turkey Roll-Ups', 180, 20, 3, 2, 0, 10, 3, 6, 60, 580, 100, 1.0,
+ 'Turkey slices, cheese, lettuce, mustard',
+ 1, 'Contains dairy, gluten-free', TRUE, 'Snack'),
+
+('Bacon-Wrapped Dates', 220, 8, 25, 20, 2, 12, 4, 7, 25, 480, 30, 1.0,
+ 'Dates, bacon, maple syrup',
+ 1, 'Gluten-free', TRUE, 'Snack'),
+
+('Pepperoni Chips', 180, 10, 2, 0, 0, 15, 6, 8, 40, 850, 20, 1.0,
+ 'Pepperoni slices',
+ 1, 'Gluten-free', TRUE, 'Snack'),
+
+('Mini Meatballs', 280, 22, 10, 2, 1, 18, 7, 9, 80, 500, 60, 2.0,
+ 'Ground beef, breadcrumbs, egg, onion, garlic, parsley, parmesan, olive oil',
+ 1, 'Contains dairy, gluten, and eggs', TRUE, 'Snack'),
+
+('Chicken Salad Cucumber Boats', 220, 20, 5, 2, 2, 14, 3, 9, 65, 380, 40, 1.0,
+ 'Chicken breast, mayo, celery, grapes, walnuts, cucumber',
+ 1, 'Contains nuts, gluten-free', TRUE, 'Snack'),
+
+('Ham and Cheese Roll-Ups', 200, 18, 2, 1, 0, 14, 7, 6, 55, 850, 250, 0.8,
+ 'Ham slices, cheese slices, cream cheese, green onions',
+ 1, 'Contains dairy, gluten-free', TRUE, 'Snack'),
+
+('BBQ Chicken Wings', 320, 28, 5, 4, 0, 22, 6, 14, 120, 750, 40, 1.5,
+ 'Chicken wings, BBQ sauce, garlic powder, onion powder, paprika',
+ 1, 'Gluten-free', TRUE, 'Snack'),
+
+('Salami and Cheese Bites', 250, 15, 2, 0, 0, 20, 9, 9, 60, 750, 200, 1.0,
+ 'Salami, cheddar cheese, olives',
+ 1, 'Contains dairy, gluten-free', TRUE, 'Snack'),
+
+('Prosciutto-Wrapped Asparagus', 160, 12, 5, 1, 2, 12, 3, 8, 25, 580, 30, 1.5,
+ 'Asparagus, prosciutto, olive oil, black pepper',
+ 1, 'Gluten-free', TRUE, 'Snack'),
+
+-- Omnivore Snacks (CategoryID = 5)
+('Protein Energy Balls', 250, 10, 25, 15, 4, 14, 3, 10, 10, 120, 80, 2.0,
+ 'Oats, peanut butter, honey, whey protein, chia seeds, dark chocolate chips',
+ 5, 'Contains dairy and nuts', TRUE, 'Snack'),
+
+('Mini Quiches', 280, 15, 18, 2, 1, 18, 9, 8, 220, 420, 150, 1.5,
+ 'Eggs, milk, cheese, spinach, bacon, pie crust',
+ 5, 'Contains dairy, gluten, and eggs', TRUE, 'Snack'),
+
+('Peanut Butter Banana Toast', 300, 12, 35, 15, 5, 14, 3, 9, 0, 280, 60, 2.0,
+ 'Whole grain bread, peanut butter, banana, honey, cinnamon',
+ 5, 'Contains gluten and nuts', TRUE, 'Snack'),
+
+('Deviled Eggs', 160, 10, 2, 1, 0, 12, 3, 8, 240, 320, 40, 1.0,
+ 'Eggs, mayonnaise, mustard, paprika, chives, salt, pepper',
+ 5, 'Contains eggs, gluten-free', TRUE, 'Snack'),
+
+('Chicken Quesadilla Triangles', 280, 18, 25, 2, 2, 14, 6, 7, 60, 550, 200, 1.5,
+ 'Flour tortilla, chicken breast, cheddar cheese, bell peppers, onion, salsa',
+ 5, 'Contains dairy and gluten', TRUE, 'Snack'),
+
+('Yogurt and Granola Bowl', 250, 12, 35, 18, 4, 8, 3, 4, 15, 120, 250, 1.5,
+ 'Greek yogurt, granola, mixed berries, honey, almonds',
+ 5, 'Contains dairy, gluten, and nuts', TRUE, 'Snack'),
+
+('Vegetable and Hummus Wrap', 280, 10, 38, 4, 6, 12, 2, 9, 0, 480, 80, 2.5,
+ 'Whole wheat wrap, hummus, cucumber, carrot, bell pepper, spinach, olives',
+ 5, 'Contains gluten', TRUE, 'Snack'),
+
+('Apple and Cheese Slices', 200, 7, 25, 20, 4, 9, 5, 3, 25, 180, 200, 0.5,
+ 'Apple, cheddar cheese',
+ 5, 'Contains dairy, gluten-free', TRUE, 'Snack'),
+
+('Pizza Bagel Bites', 320, 15, 40, 3, 2, 12, 5, 6, 25, 580, 200, 2.0,
+ 'Mini bagels, pizza sauce, mozzarella cheese, pepperoni, dried oregano',
+ 5, 'Contains dairy and gluten', TRUE, 'Snack'),
+
+('Fruit and Yogurt Smoothie', 220, 15, 35, 28, 3, 3, 2, 1, 10, 80, 300, 1.0,
+ 'Greek yogurt, banana, berries, honey, milk, ice',
+ 5, 'Contains dairy, gluten-free', TRUE, 'Snack');
 
 -- Create views for common reporting needs
 CREATE VIEW nutrition_summary AS
