@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitness Profile - Page 1</title>
+    <title>F45 Gym Meal Planner - Member Login</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <div class="form-container">
-        <!-- Progress bar -->
+        <!-- Progress indicator for login page -->
         <div class="progress-container">
             <div class="progress-bar">
-                <div class="progress-fill" style="width: 33.3%"></div>
+                <div class="progress-fill" style="width: 100%"></div>
             </div>
             <div class="progress-steps">
                 <div class="progress-step active">1</div>
-                <div class="progress-step">2</div>
-                <div class="progress-step">3</div>
             </div>
-            <p class="progress-text">Step 1 of 3: Basic Information</p>
+            <p class="progress-text">Login</p>
         </div>
 
         <!-- Flash Messages -->
@@ -30,74 +28,38 @@
             {% endfor %}
         {% endif %}
 
-        <h1>Your Fitness Profile</h1>
+        <h1>Welcome to the F45 Gym Meal Planner</h1>
         
-        <form id="fitnessForm1" action="{{ url_for('form2') }}" method="get" novalidate>
+        <form id="loginForm" action="{{ url_for('login') }}" method="post" novalidate>
             <div class="form-group">
-                <label for="ageRange" id="ageRangeLabel">Your Age Range</label>
-                <select id="ageRange" name="ageRange" aria-labelledby="ageRangeLabel" required aria-required="true">
-                    <option value="">-- Please choose an option --</option>
-                    <option value="12-18">12-18</option>
-                    <option value="19-25">19-25</option>
-                    <option value="26-32">26-32</option>
-                    <option value="33-64">33-64</option>
-                    <option value="65+">65+</option>
-                </select>
-                <div class="error-message" id="ageRange-error"></div>
+                <label for="email" id="emailLabel">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required aria-labelledby="emailLabel" aria-required="true">
+                <div class="error-message" id="email-error"></div>
             </div>
 
             <div class="form-group">
-                <label for="gender" id="genderLabel">Your Gender</label>
-                <select id="gender" name="gender" aria-labelledby="genderLabel" required aria-required="true">
-                    <option value="">-- Please choose an option --</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Other">Other</option>
-                </select>
-                <div class="error-message" id="gender-error"></div>
+                <label for="password" id="passwordLabel">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required aria-labelledby="passwordLabel" aria-required="true">
+                <div class="error-message" id="password-error"></div>
             </div>
 
-            <div class="form-group">
-                <label for="weightSlider" id="weightLabel">
-                    What is your current weight? (<span id="weightValue">90</span> kg)
-                </label>
-                <input type="range" id="weightSlider" name="weight" min="40" max="140" value="90" step="5" 
-                    aria-labelledby="weightLabel" aria-valuemin="40" aria-valuemax="140" aria-valuenow="90">
-            </div>
-            
-            <div class="form-group">
-                <label for="heightSlider" id="heightLabel">
-                    What is your height? (<span id="heightValue">170</span> cm)
-                </label>
-                <input type="range" id="heightSlider" name="height" min="140" max="220" value="170" step="5" 
-                    aria-labelledby="heightLabel" aria-valuemin="140" aria-valuemax="220" aria-valuenow="170">
-            </div>
-
-            <div class="result-card">
-                <p>Your BMI: <strong id="bmiValue">---</strong> 
-                   <span id="bmiCategory" class="bmi-category"></span>
-                </p>
-                <div id="bmiDescription" class="bmi-description"></div>
-            </div>
-            
-            <div class="form-group">
-                <label for="fitnessTarget" id="fitnessTargetLabel">What's your fitness target?</label>
-                <select id="fitnessTarget" name="fitnessTarget" aria-labelledby="fitnessTargetLabel" required aria-required="true">
-                    <option value="">-- Please choose an option --</option>
-                    <option value="Lose weight">Lose Weight</option>
-                    <option value="Gain muscle">Gain Muscle</option>
-                    <option value="Improve stamina">Improve Stamina</option>
-                    <option value="General fitness">General Fitness</option>
-                    <option value="Bulking">Bulking</option>
-                </select>
-                <div class="error-message" id="fitnessTarget-error"></div>
+            <div class="forgot-link" style="text-align: right; margin-bottom: 20px;">
+                <a href="{{ url_for('forgot_password') }}">Forgotten Password?</a>
             </div>
 
             <div class="form-navigation">
-                <button type="button" class="btn-secondary" disabled>Previous</button>
-                <button type="submit" class="btn-primary">Next Page</button>
+                <button type="button" class="btn-secondary" disabled>Back</button>
+                <button type="submit" class="btn-primary">Log In</button>
+            </div>
+            
+            <div class="form-group" style="margin-top: 20px; text-align: center;">
+                <p>Don't have an account?</p>
+                <a href="{{ url_for('register') }}" style="width: 100%; display: block; margin-top: 10px;">
+                    <button type="button" class="btn-primary" style="width: 100%;">Create Account</button>
+                </a>
             </div>
         </form>
+
         <!-- Dark Mode toggle -->
         <div class="theme-toggle">
             <label for="darkModeToggle" class="theme-toggle-label">
@@ -110,8 +72,36 @@
                 </span>
             </label>
         </div>
-
     </div>
+
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        // Add login specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('loginForm');
+            
+            if (loginForm) {
+                // Set up real-time validation
+                formValidator.setupRealTimeValidation(loginForm);
+                
+                // Handle form submission if not using server-side processing
+                loginForm.addEventListener('submit', function(event) {
+                    // Only prevent default if you want to handle submission in JS
+                    // Remove this if you're using server-side processing
+                    if (loginForm.getAttribute('action') === '#') {
+                        event.preventDefault();
+                        
+                        if (!formValidator.validateForm(loginForm)) {
+                            return;
+                        }
+                        
+                        // Here you would typically handle login logic
+                        // For now, redirect to form1
+                        window.location.href = "{{ url_for('form1') }}";
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>

@@ -2375,7 +2375,7 @@ DELIMITER ;
 -- ORDER BY dc.CategoryName, m.IsHomeCooked DESC;
 
 -- -- Count total number of entries in the meals table
--- SELECT COUNT(*) AS TotalMeals FROM meals;
+SELECT COUNT(*) AS TotalMeals FROM meals;
 
 -- -- Count with breakdown by meal or snack
 -- SELECT 
@@ -2384,13 +2384,13 @@ DELIMITER ;
 -- FROM meals
 -- GROUP BY IsMealorSnack;
 
--- -- Total count with percentage breakdown by category
--- SELECT 
---     dc.CategoryName,
---     COUNT(*) AS CategoryCount,
---     ROUND((COUNT(*) / (SELECT COUNT(*) FROM meals)) * 100, 2) AS Percentage
--- FROM meals m
--- JOIN diet_categories dc ON m.CategoryID = dc.CategoryID
--- GROUP BY dc.CategoryName
--- ORDER BY CategoryCount DESC;
+-- Total count with percentage breakdown by category
+SELECT 
+    dc.CategoryName,
+    COUNT(*) AS CategoryCount,
+    ROUND((COUNT(*) / (SELECT COUNT(*) FROM meals)) * 100, 2) AS Percentage
+FROM meals m
+JOIN diet_categories dc ON m.CategoryID = dc.CategoryID
+GROUP BY dc.CategoryName
+ORDER BY CategoryCount DESC;
 
